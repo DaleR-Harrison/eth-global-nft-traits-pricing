@@ -1,220 +1,220 @@
 {
     "Earring": {
         "Silver Hoop": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Gold Stud": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Silver Stud": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         }
     },
     "Background": {
         "Orange": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Aquamarine": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Purple": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Blue": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Army Green": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Yellow": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Gray": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         }
     },
     "Fur": {
         "Robot": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Cheetah": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Golden Brown": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Brown": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Cream": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Zombie": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Dmt": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         }
     },
     "Clothes": {
         "Striped Tee": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Vietnam Jacket": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Bone Necklace": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Navy Striped Tee": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Bayc T Red": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Tweed Suit": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Wool Turtleneck": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Stunt Jacket": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         }
     },
     "Mouth": {
         "Discomfort": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Grin": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Bored Cigarette": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Tongue Out": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Phoneme L": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Dumbfounded": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Bored": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Small Grin": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         }
     },
     "Eyes": {
         "X Eyes": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Blue Beams": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "3d": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Bored": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Closed": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Crazy": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Angry": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Robot": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Sleepy": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Eyepatch": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         }
     },
     "Hat": {
         "Sea Captain's Hat": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Party Hat 2": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Bayc Flipped Brim": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "S&m Hat": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Stuntman Helmet": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Beanie": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Seaman's Hat": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         },
         "Bayc Hat Red": {
-            "MinPrice": 0,
-            "MaxPrice": 100000
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
         }
     }
 }
