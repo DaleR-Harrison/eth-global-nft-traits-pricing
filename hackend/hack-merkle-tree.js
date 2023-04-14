@@ -67,11 +67,20 @@ const inputMap = allKeys.reduce((item, _data) => {
     return item;
 }, {});
 
-console.log(pricedNFTs, 'pricedNFTs');
-console.log(inputMap, 'inputMap');
-
 const result = parseBalanceMap(
     inputMap
 );
 
 console.log(result, 'result');
+
+fs.writeFile(
+    `trees-output/${_collectionName}.json`,
+    JSON.stringify(
+        result,
+        null,
+        4
+    ),
+    (err) => {
+        console.log(err);
+    }
+);
