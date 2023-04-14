@@ -1,34 +1,5 @@
 export function parseBalanceMap(balances) {
-  const dataByAddress = balancesInNewFormat.reduce(
-      (memo, {
-          address: account,
-          earnings,
-          reasons
-      }) => {
-          if (!isAddress(account)) {
-              throw new Error(`Found invalid address: ${account}`)
-          }
-          const parsed = getAddress(account)
-          if (memo[parsed]) throw new Error(`Duplicate address: ${parsed}`)
-          const parsedNum = BigNumber.from(earnings)
-          if (parsedNum.lte(0))
-              throw new Error(`Invalid amount for account: ${account}`)
 
-          const flags = {
-              isSOCKS: reasons.includes("socks"),
-              isLP: reasons.includes("lp"),
-              isUser: reasons.includes("user")
-          }
-
-          memo[parsed] = {
-              amount: parsedNum,
-              ...(reasons === "" ? {} : {
-                  flags
-              })
-          }
-          return memo
-      }, {}
-  )
 
   const sortedAddresses = Object.keys(dataByAddress).sort()
 
