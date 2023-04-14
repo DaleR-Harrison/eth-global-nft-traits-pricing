@@ -1,7 +1,7 @@
 {
-    "collectionName": "BoredApes",
-    "merkleRoot": "0xaa1689e26a2b2b80bfaa6fb9ce5c1fdc66db370636b76d468841fb432fe2b4ee",
-    "pricings": [
+    "CollectionName": "BoredApes",
+    "MerkleRoot": "0xaa1689e26a2b2b80bfaa6fb9ce5c1fdc66db370636b76d468841fb432fe2b4ee",
+    "PricingData": [
         {
             "index": 0,
             "tokenId": "0",
@@ -130,5 +130,6 @@
                 "0x984856aa68012e8117b7657594d928208b466bd6f1b4724b7e62cc8c146e1056"
             ]
         }
-    ]
+    ],
+    "GenerationTime": "2023-04-14T18:23:13.107Z"
 }
