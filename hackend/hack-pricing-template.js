@@ -87,6 +87,7 @@ fs.writeFile(
             "CollectionName": collectionName,
             "CollectionAddress": CollectionAddress,
             "RelativePrices": priceEntry,
+            "GenerationTime": new Date().toISOString()
         },
         null,
         4
@@ -104,6 +105,7 @@ fs.writeFile(
             "CollectionName": collectionName,
             "CollectionAddress": CollectionAddress,
             "TraitTypes": traitTokens,
+            "GenerationTime": new Date().toISOString()
         },
         null,
         4
