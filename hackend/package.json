@@ -1,6 +1,7 @@
 {
     "name": "nft-traits-pricing-oracle",
     "type": "module",
+    "license": "UNLICENSED",
     "author": {
         "name": "Vitalik Marincenko"
     },
