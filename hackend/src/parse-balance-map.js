@@ -1,40 +1,18 @@
 import BalanceTree from  "./balance-tree.js";
 
-    const sortedAddresses = Object.keys(dataByAddress).sort()
+export function parseBalanceMap(_balanceMap) {
+
+    const allKeys = Object.keys(_balanceMap);
+    const treeElements = allKeys.map((tokenId) => ({
+        tokenId,
+        percent: _balanceMap[tokenId].percent,
+        ceiling: _balanceMap[tokenId].ceiling
+    }));
 
     // construct a tree
     const tree = new BalanceTree(
-        sortedAddresses.map(address => ({
-            account: address,
-            amount: dataByAddress[address].amount
-        }))
-    )
+        treeElements
+    );
 
-    // generate claims
-    const claims = sortedAddresses.reduce((memo, address, index) => {
-        const {
-            amount,
-            flags
-        } = dataByAddress[address]
-        memo[address] = {
-            index,
-            amount: amount.toHexString(),
-            proof: tree.getProof(index, address, amount),
-            ...(flags ? {
-                flags
-            } : {})
-        }
-        return memo
-    }, {})
-
-    const tokenTotal = sortedAddresses.reduce(
-        (memo, key) => memo.add(dataByAddress[key].amount),
-        BigNumber.from(0)
-    )
-
-    return {
-        merkleRoot: tree.getHexRoot(),
-        tokenTotal: tokenTotal.toHexString(),
-        claims
-    }
+    console.log(tree, 'tree');
 }
