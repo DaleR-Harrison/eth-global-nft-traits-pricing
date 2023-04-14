@@ -1,4 +1,8 @@
-import MerkleTree from "./merkle-tree";
+// merkle-tree builder for balances:
+// boilerplate code -> https://github.com/Uniswap/merkle-distributor/tree/master/src
+// modified to work with a simplified data object for project needs
+
+import MerkleTree from "./merkle-tree.js";
 import { utils } from "ethers";
 
 export default class BalanceTree {
