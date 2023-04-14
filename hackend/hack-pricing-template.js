@@ -82,7 +82,10 @@ collectionTokens.map((token) => {
 fs.writeFile(
     `templates/${_collectionName}-pricing.json`,
     JSON.stringify(
-        priceEntry,
+        {
+            "CollectionName": _collectionName,
+            "RelativePrices": priceEntry,
+        },
         null,
         4
     ),
@@ -95,7 +98,10 @@ fs.writeFile(
 fs.writeFile(
     `templates/${_collectionName}-sorting.json`,
     JSON.stringify(
-        traitTokens,
+        {
+            "CollectionName": _collectionName,
+            "TraitTypes": traitTokens,
+        },
         null,
         4
     ),
