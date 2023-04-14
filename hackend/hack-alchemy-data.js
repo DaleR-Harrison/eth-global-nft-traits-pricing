@@ -56,7 +56,8 @@ for (let tokenId = 0; tokenId <= 1; tokenId++) {
 const result = {
     "CollectionName": _collectionName,
     "CollectionAddress": _collectionAddress,
-    "CollectionTokens": collectionTokens
+    "CollectionTokens": collectionTokens,
+    "GenerationTime": new Date().toISOString()
 }
 
 fs.writeFile(
