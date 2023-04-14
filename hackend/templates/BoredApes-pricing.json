@@ -1,0 +1,220 @@
+{
+    "Earring": {
+        "Silver Hoop": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Gold Stud": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Silver Stud": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        }
+    },
+    "Background": {
+        "Orange": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Aquamarine": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Purple": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Blue": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Army Green": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Yellow": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Gray": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        }
+    },
+    "Fur": {
+        "Robot": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Cheetah": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Golden Brown": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Brown": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Cream": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Zombie": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Dmt": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        }
+    },
+    "Clothes": {
+        "Striped Tee": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Vietnam Jacket": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Bone Necklace": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Navy Striped Tee": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Bayc T Red": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Tweed Suit": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Wool Turtleneck": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Stunt Jacket": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        }
+    },
+    "Mouth": {
+        "Discomfort": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Grin": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Bored Cigarette": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Tongue Out": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Phoneme L": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Dumbfounded": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Bored": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Small Grin": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        }
+    },
+    "Eyes": {
+        "X Eyes": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Blue Beams": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "3d": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Bored": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Closed": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Crazy": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Angry": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Robot": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Sleepy": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Eyepatch": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        }
+    },
+    "Hat": {
+        "Sea Captain's Hat": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Party Hat 2": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Bayc Flipped Brim": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "S&m Hat": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Stuntman Helmet": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Beanie": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Seaman's Hat": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        },
+        "Bayc Hat Red": {
+            "FloorPercent": 100,
+            "MaximumPrice": 1000
+        }
+    }
+}
