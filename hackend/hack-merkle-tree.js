@@ -11,11 +11,23 @@ program.parse(
 
 const _collectionName = program.collectionName;
 
-const json = JSON.parse(
+const pricing = JSON.parse(
     fs.readFileSync(
-        `data/${_collectionName}.json`,
+        `templates/${_collectionName}-pricing.json`,
         {
             encoding: 'utf8'
         }
     )
 );
+
+const sorting = JSON.parse(
+    fs.readFileSync(
+        `templates/${_collectionName}-sorting.json`,
+        {
+            encoding: 'utf8'
+        }
+    )
+);
+
+console.log(pricing, 'pricing');
+console.log(sorting, 'sorting');
