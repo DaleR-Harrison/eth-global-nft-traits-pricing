@@ -17,9 +17,12 @@ program.parse(
 const _collectionName = program.opts().collectionName;
 const _collectionAddress = program.opts().collectionAddress;
 
+// use this dynamicaly to get the total
+// number of tokens in the collection
+const collectionSize = 10000;
 const collectionTokens = [];
 
-for (let tokenId = 0; tokenId <= 1; tokenId++) {
+for (let tokenId = 0; tokenId <= collectionSize; tokenId++) {
 
     console.log(tokenId, `${_collectionName}`);
 
