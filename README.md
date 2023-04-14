@@ -1,0 +1,1 @@
+# eth-global-nft-traits-pricing
