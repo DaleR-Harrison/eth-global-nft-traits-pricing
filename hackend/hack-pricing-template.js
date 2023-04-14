@@ -31,4 +31,19 @@ collectionTokens.map((token) => {
     });
 });
 
+const traitsForType = {};
+
+allTraitTypes.map((traitType) => {
+    traitsForType[traitType] = [];
+});
+
+collectionTokens.map(token => {
+    Object.entries(token.TokenTraits).map((tokenTrait) => {
+        traitsForType[tokenTrait[0]].push(
+            tokenTrait[1]
+        );
+    });
+});
+
 console.log(allTraitTypes, 'allTraitTypes');
+console.log(traitsForType, 'traitsForType');
