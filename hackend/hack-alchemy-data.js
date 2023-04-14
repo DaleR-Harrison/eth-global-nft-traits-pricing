@@ -60,7 +60,7 @@ const result = {
 }
 
 fs.writeFile(
-    `data/{_collectionName}.json`,
+    `data/${_collectionName}.json`,
     JSON.stringify(
         result,
         null,
