@@ -1,5 +1,5 @@
-import * as fs from 'fs';
-import { program } from 'commander';
+import * as fs from "fs";
+import { program } from "commander";
 import { createAlchemyWeb3 } from "@alch/alchemy-web3";
 import { Alchemy, Network } from "alchemy-sdk";
 
@@ -18,8 +18,8 @@ const alchemy = new Alchemy(
 );
 
 program
-    .requiredOption('-n, --collectionName <collectionName>')
-    .requiredOption('-a, --collectionAddress <collectionAddress>');
+    .requiredOption("-n, --collectionName <collectionName>")
+    .requiredOption("-a, --collectionAddress <collectionAddress>");
 
 program.parse(
     process.argv

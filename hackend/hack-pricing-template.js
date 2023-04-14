@@ -1,8 +1,8 @@
-import fs from 'fs';
-import { program } from 'commander';
+import fs from "fs";
+import { program } from "commander";
 
 program.requiredOption(
-    '-n, --collectionName <collectionName>'
+    "-n, --collectionName <collectionName>"
 );
 
 program.parse(
@@ -15,7 +15,7 @@ const json = JSON.parse(
     fs.readFileSync(
         `data/${collectionName}.json`,
         {
-            encoding: 'utf8'
+            encoding: "utf8"
         }
     )
 );
