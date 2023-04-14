@@ -80,6 +80,8 @@ collectionTokens.map((token) => {
     });
 });
 
+const generationTime = new Date().toISOString();
+
 fs.writeFile(
     `templates/${collectionName}-pricing.json`,
     JSON.stringify(
@@ -87,7 +89,7 @@ fs.writeFile(
             "CollectionName": collectionName,
             "CollectionAddress": CollectionAddress,
             "RelativePrices": priceEntry,
-            "GenerationTime": new Date().toISOString()
+            "GenerationTime": generationTime
         },
         null,
         4
@@ -105,7 +107,7 @@ fs.writeFile(
             "CollectionName": collectionName,
             "CollectionAddress": CollectionAddress,
             "TraitTypes": traitTokens,
-            "GenerationTime": new Date().toISOString()
+            "GenerationTime": generationTime
         },
         null,
         4
