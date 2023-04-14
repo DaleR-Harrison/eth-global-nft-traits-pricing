@@ -81,3 +81,16 @@ collectionTokens.map((token) => {
 
 console.log(priceEntry, 'priceEntry');
 console.log(traitTokens, 'traitTokens');
+
+fs.writeFile(
+    `templates/${_collectionName}-template.json`,
+    JSON.stringify(
+        priceEntry,
+        null,
+        4
+    ),
+    (error) => {
+    if (error) {
+        console.log(error);
+    }
+});
