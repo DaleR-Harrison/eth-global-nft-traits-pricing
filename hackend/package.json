@@ -16,6 +16,7 @@
         "hack-alchemy-data": "node hack-alchemy-data.js"
     },
     "dependencies": {
-        "@alch/alchemy-web3": "^1.4.6"
+        "@alch/alchemy-web3": "^1.4.6",
+        "alchemy-sdk": "^2.8.0"
     }
 }

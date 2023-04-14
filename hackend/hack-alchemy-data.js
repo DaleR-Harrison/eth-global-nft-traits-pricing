@@ -2,6 +2,18 @@ import * as fs from 'fs';
 import { program } from 'commander';
 import { createAlchemyWeb3 } from "@alch/alchemy-web3";
 
+// Imports the Alchemy SDK
+import { Alchemy, Network } from "alchemy-sdk";
+
+// Configures the Alchemy SDK
+const config = {
+    apiKey: "J3bTM7KLiYYwh8Ar_VBXuo-oLlGTx7od", // Replace with your API key
+    network: Network.ETH_MAINNET, // Replace with your network
+};
+
+// Creates an Alchemy object instance with the config to use for making requests
+const alchemy = new Alchemy(config);
+
 const web3 = createAlchemyWeb3(
     "https://eth-mainnet.g.alchemy.com/v2/J3bTM7KLiYYwh8Ar_VBXuo-oLlGTx7od",
 );
@@ -17,10 +29,12 @@ program.parse(
 const _collectionName = program.opts().collectionName;
 const _collectionAddress = program.opts().collectionAddress;
 
-// use this dynamicaly to get the total
-// number of tokens in the collection
-const collectionSize = 10000;
+const collectionData = await alchemy.nft.getContractMetadata(
+    _collectionAddress
+);
+
 const collectionTokens = [];
+const collectionSize = collectionData.totalSupply;
 
 for (let tokenId = 0; tokenId <= collectionSize; tokenId++) {
 
