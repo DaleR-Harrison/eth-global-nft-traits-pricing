@@ -12,6 +12,9 @@
     "devDependencies": {
         "commander": "^6.1.0"
     },
+    "scripts": {
+        "hack-alchemy-data": "node hack-alchemy-data.js"
+    },
     "dependencies": {
         "@alch/alchemy-web3": "^1.4.6"
     }
