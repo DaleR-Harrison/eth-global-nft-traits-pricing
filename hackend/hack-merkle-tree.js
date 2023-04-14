@@ -1,5 +1,6 @@
 import fs from "fs";
 import { program } from "commander";
+import { parseBalanceMap } from './src/parse-balance-map.js';
 
 program.requiredOption(
     "-n, --collectionName <collectionName>"
@@ -44,7 +45,7 @@ for (const traitType in prices) {
 }
 
 const allKeys = Object.keys(pricedNFTs);
-const mapped = allKeys.reduce((item, _data) => {
+const inputMap = allKeys.reduce((item, _data) => {
 
     const price = pricedNFTs[_data]["Price"];
     const tokenIds = pricedNFTs[_data]["Identifiers"];
@@ -67,4 +68,10 @@ const mapped = allKeys.reduce((item, _data) => {
 }, {});
 
 console.log(pricedNFTs, 'pricedNFTs');
-console.log(mapped, 'mapped');
+console.log(inputMap, 'inputMap');
+
+const result = parseBalanceMap(
+    inputMap
+);
+
+console.log(result, 'result');
