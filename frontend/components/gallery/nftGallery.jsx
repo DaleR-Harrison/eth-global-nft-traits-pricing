@@ -55,7 +55,12 @@ export default function NFTGallery({}) {
   return (
     <div className={styles.nft_gallery_page}>
       <div>
-        <div className={styles.fetch_selector_container}>
+        <div className={styles.gallery_header}>
+          <h1>Supported collections</h1>
+          <div className={styles.button_wrapper}>
+            <button type="button" className={styles.collection_button}>BoredApeYachtClub</button>
+            <button type="button" className={styles.collection_button}>Moonbirds</button>
+          </div>
         </div> 
       </div>
 
