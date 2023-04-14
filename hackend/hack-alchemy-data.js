@@ -1,3 +1,4 @@
+import * as fs from 'fs';
 import { program } from 'commander';
 import { createAlchemyWeb3 } from "@alch/alchemy-web3";
 
