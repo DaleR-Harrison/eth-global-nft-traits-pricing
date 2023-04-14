@@ -1,0 +1,47 @@
+{
+    "CollectionName": "MoonBirds",
+    "MerkleRoot": "0x3b50e3dd5b95dd880451f8e1141a3d2a2f2d725c77ffe46a15e532c67d4fee0b",
+    "PricingData": [
+        {
+            "index": 0,
+            "tokenId": "0",
+            "percent": 100,
+            "ceiling": 1000,
+            "proof": [
+                "0x615e0e1e2079e3cd50346b377170faa9c08ccb299de6e510e3be461da5f7a496",
+                "0x9f1299f9f664add39748bd05761f47268ccfb5b38386db4b8b7605cf7472e441"
+            ]
+        },
+        {
+            "index": 1,
+            "tokenId": "1",
+            "percent": 100,
+            "ceiling": 1000,
+            "proof": [
+                "0xcb192771f41658a7907b5cde5ea9f2442c28a71e33984c426216842e729858fe",
+                "0x9f1299f9f664add39748bd05761f47268ccfb5b38386db4b8b7605cf7472e441"
+            ]
+        },
+        {
+            "index": 2,
+            "tokenId": "2",
+            "percent": 100,
+            "ceiling": 1000,
+            "proof": [
+                "0xddb56edb6c097325ba9bdf803327488e890e88f4e8f70e9f5ee913c129319371",
+                "0xbf1d3ee724371341fdd6b4f9da4c913197de72f2a8ee88ba7160d85078656fb2"
+            ]
+        },
+        {
+            "index": 3,
+            "tokenId": "3",
+            "percent": 100,
+            "ceiling": 1000,
+            "proof": [
+                "0xe8090f462eea0d2244f47d00cf583f0d2f4f38ad171295002edc0e67da7791bf",
+                "0xbf1d3ee724371341fdd6b4f9da4c913197de72f2a8ee88ba7160d85078656fb2"
+            ]
+        }
+    ],
+    "GenerationTime": "2023-04-14T18:41:21.203Z"
+}
