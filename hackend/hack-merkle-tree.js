@@ -57,7 +57,10 @@ const mapped = allKeys.reduce((item, _data) => {
     ));
 
     tokenPrices.map((_element) => {
-        item[_element.tokenId] = "value";
+        item[_element.tokenId] = {
+            "percent": _element.price.FloorPercent,
+            "ceiling": _element.price.MaximumPrice
+        };
     });
 
     return item;
