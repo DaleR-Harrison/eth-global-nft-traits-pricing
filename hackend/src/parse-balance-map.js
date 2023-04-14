@@ -14,5 +14,25 @@ export function parseBalanceMap(_balanceMap) {
         treeElements
     );
 
-    console.log(tree, 'tree');
+    const res = [];
+
+    treeElements.map((treeElement, i) => {
+
+        const tokenId = treeElement.tokenId;
+
+        const item = _balanceMap[
+            tokenId
+        ];
+
+        const proof = tree.getProof(
+            i,
+            tokenId,
+            item.percent,
+            item.ceiling
+        );
+
+        console.log(proof);
+    });
+
+    console.log(res);
 }
