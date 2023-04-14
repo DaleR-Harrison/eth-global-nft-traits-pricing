@@ -1,4 +1,4 @@
-package com.bcom.backend;
+package com.hacknft.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
