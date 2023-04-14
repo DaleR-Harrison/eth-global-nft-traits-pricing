@@ -41,8 +41,8 @@ export function parseBalanceMap(_balanceMap, _collectionName) {
     });
 
     return {
-        collectionName: _collectionName,
-        merkleRoot: tree.getHexRoot(),
-        pricings: result,
+        "CollectionName": _collectionName,
+        "MerkleRoot": tree.getHexRoot(),
+        "PricingData": result
     }
 }
