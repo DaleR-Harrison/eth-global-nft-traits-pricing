@@ -11,16 +11,16 @@ program.parse(
 
 const _collectionName = program.collectionName;
 
-const pricing = JSON.parse(
+const pricingInfo = JSON.parse(
     fs.readFileSync(
         `templates/${_collectionName}-pricing.json`,
         {
-            encoding: 'utf8'
+            encoding: "utf8"
         }
     )
 );
 
-const sorting = JSON.parse(
+let traitInfo = JSON.parse(
     fs.readFileSync(
         `templates/${_collectionName}-sorting.json`,
         {
@@ -29,5 +29,19 @@ const sorting = JSON.parse(
     )
 );
 
-console.log(pricing, 'pricing');
-console.log(sorting, 'sorting');
+
+let pricedNFTs = {};
+
+const traits = traitInfo["TraitTypes"];
+const prices = pricingInfo["RelativePrices"];
+
+for (const traitType in prices) {
+    for (const trait in prices[traitType]) {
+        pricedNFTs[trait] = {
+            "Price": prices[traitType][trait],
+            "Identifiers": traits[traitType][trait]
+        }
+    }
+}
+
+console.log(pricedNFTs, 'pricedNFTs');
