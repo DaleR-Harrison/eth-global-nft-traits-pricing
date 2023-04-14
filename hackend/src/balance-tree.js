@@ -18,12 +18,19 @@ export default class BalanceTree {
     }
 
     static verifyProof(index, account, amount, proof, root) {
-        let pair = BalanceTree.toNode(index, account, amount)
+        let pair = BalanceTree.toNode(
+            index,
+            account,
+            amount
+        );
         for (const item of proof) {
-            pair = MerkleTree.combinedHash(pair, item)
+            pair = MerkleTree.combinedHash(
+                pair,
+                item
+            );
         }
 
-        return pair.equals(root)
+        return pair.equals(root);
     }
 
     // keccak256(abi.encode(index, account, amount))
@@ -31,8 +38,16 @@ export default class BalanceTree {
         return Buffer.from(
             utils
             .solidityKeccak256(
-                ["uint256", "address", "uint256"],
-                [index, account, amount]
+                [
+                    "uint256",
+                    "address",
+                    "uint256"
+                ],
+                [
+                    index,
+                    account,
+                    amount
+                ]
             )
             .substr(2),
             "hex"
@@ -44,6 +59,12 @@ export default class BalanceTree {
     }
 
     getProof(index, account, amount) {
-        return this.tree.getHexProof(BalanceTree.toNode(index, account, amount))
+        return this.tree.getHexProof(
+            BalanceTree.toNode(
+                index,
+                account,
+                amount
+            )
+        );
     }
 }
