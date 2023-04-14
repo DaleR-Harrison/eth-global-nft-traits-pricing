@@ -27,8 +27,6 @@ for (let tokenId = 0; tokenId <= 1; tokenId++) {
         tokenId: tokenId
     });
 
-    console.log(rawData, 'rawData');
-
     const initialToken = rawData["id"]["tokenId"];
     const rawAttribute = rawData["metadata"]["attributes"];
     const parsedTraits = {};
