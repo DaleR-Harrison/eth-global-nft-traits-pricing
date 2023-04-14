@@ -1,8 +1,8 @@
-import fs from 'fs';
-import { program } from 'commander';
+import fs from "fs";
+import { program } from "commander";
 
 program.requiredOption(
-    '-n, --collectionName <collectionName>'
+    "-n, --collectionName <collectionName>"
 );
 
 program.parse(
@@ -29,7 +29,6 @@ let traitInfo = JSON.parse(
     )
 );
 
-
 let pricedNFTs = {};
 
 const traits = traitInfo["TraitTypes"];
@@ -44,4 +43,25 @@ for (const traitType in prices) {
     }
 }
 
+const allKeys = Object.keys(pricedNFTs);
+const mapped = allKeys.reduce((item, data) => {
+
+    const price = pricedNFTs[data]["Price"];
+    const tokenIds = pricedNFTs[data]["Identifiers"];
+
+    const tokenPrices = tokenIds.map((tokenId) => (
+        {
+            tokenId: tokenId,
+            price: price
+        }
+    ));
+
+    tokenPrices.map((_element) => {
+        item[_element.tokenId] = "value";
+    });
+
+    return item;
+}, {});
+
 console.log(pricedNFTs, 'pricedNFTs');
+console.log(mapped, 'mapped');
