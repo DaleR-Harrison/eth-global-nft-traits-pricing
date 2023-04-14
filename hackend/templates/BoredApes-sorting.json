@@ -1,182 +1,186 @@
 {
-    "Earring": {
-        "Silver Hoop": [
-            "0"
-        ],
-        "Gold Stud": [
-            "8"
-        ],
-        "Silver Stud": [
-            "9"
-        ]
-    },
-    "Background": {
-        "Orange": [
-            "0",
-            "1"
-        ],
-        "Aquamarine": [
-            "2",
-            "8",
-            "10"
-        ],
-        "Purple": [
-            "3",
-            "9"
-        ],
-        "Blue": [
-            "4"
-        ],
-        "Army Green": [
-            "5"
-        ],
-        "Yellow": [
-            "6"
-        ],
-        "Gray": [
-            "7"
-        ]
-    },
-    "Fur": {
-        "Robot": [
-            "0",
-            "1",
-            "2"
-        ],
-        "Cheetah": [
-            "3"
-        ],
-        "Golden Brown": [
-            "4",
-            "7"
-        ],
-        "Brown": [
-            "5",
-            "9"
-        ],
-        "Cream": [
-            "6"
-        ],
-        "Zombie": [
-            "8"
-        ],
-        "Dmt": [
-            "10"
-        ]
-    },
-    "Clothes": {
-        "Striped Tee": [
-            "0"
-        ],
-        "Vietnam Jacket": [
-            "1"
-        ],
-        "Bone Necklace": [
-            "3"
-        ],
-        "Navy Striped Tee": [
-            "4",
-            "10"
-        ],
-        "Bayc T Red": [
-            "5"
-        ],
-        "Tweed Suit": [
-            "6"
-        ],
-        "Wool Turtleneck": [
-            "7"
-        ],
-        "Stunt Jacket": [
-            "9"
-        ]
-    },
-    "Mouth": {
-        "Discomfort": [
-            "0"
-        ],
-        "Grin": [
-            "1"
-        ],
-        "Bored Cigarette": [
-            "2"
-        ],
-        "Tongue Out": [
-            "3"
-        ],
-        "Phoneme L": [
-            "4"
-        ],
-        "Dumbfounded": [
-            "5"
-        ],
-        "Bored": [
-            "6",
-            "7",
-            "8",
-            "10"
-        ],
-        "Small Grin": [
-            "9"
-        ]
-    },
-    "Eyes": {
-        "X Eyes": [
-            "0",
-            "5"
-        ],
-        "Blue Beams": [
-            "1"
-        ],
-        "3d": [
-            "2"
-        ],
-        "Bored": [
-            "3"
-        ],
-        "Closed": [
-            "4"
-        ],
-        "Crazy": [
-            "6"
-        ],
-        "Angry": [
-            "7"
-        ],
-        "Robot": [
-            "8"
-        ],
-        "Sleepy": [
-            "9"
-        ],
-        "Eyepatch": [
-            "10"
-        ]
-    },
-    "Hat": {
-        "Sea Captain's Hat": [
-            "2"
-        ],
-        "Party Hat 2": [
-            "4"
-        ],
-        "Bayc Flipped Brim": [
-            "5"
-        ],
-        "S&m Hat": [
-            "6"
-        ],
-        "Stuntman Helmet": [
-            "7"
-        ],
-        "Beanie": [
-            "8"
-        ],
-        "Seaman's Hat": [
-            "9"
-        ],
-        "Bayc Hat Red": [
-            "10"
-        ]
+    "CollectionName": "BoredApes",
+    "CollectionAddress": "0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D",
+    "TraitTypes": {
+        "Earring": {
+            "Silver Hoop": [
+                "0"
+            ],
+            "Gold Stud": [
+                "8"
+            ],
+            "Silver Stud": [
+                "9"
+            ]
+        },
+        "Background": {
+            "Orange": [
+                "0",
+                "1"
+            ],
+            "Aquamarine": [
+                "2",
+                "8",
+                "10"
+            ],
+            "Purple": [
+                "3",
+                "9"
+            ],
+            "Blue": [
+                "4"
+            ],
+            "Army Green": [
+                "5"
+            ],
+            "Yellow": [
+                "6"
+            ],
+            "Gray": [
+                "7"
+            ]
+        },
+        "Fur": {
+            "Robot": [
+                "0",
+                "1",
+                "2"
+            ],
+            "Cheetah": [
+                "3"
+            ],
+            "Golden Brown": [
+                "4",
+                "7"
+            ],
+            "Brown": [
+                "5",
+                "9"
+            ],
+            "Cream": [
+                "6"
+            ],
+            "Zombie": [
+                "8"
+            ],
+            "Dmt": [
+                "10"
+            ]
+        },
+        "Clothes": {
+            "Striped Tee": [
+                "0"
+            ],
+            "Vietnam Jacket": [
+                "1"
+            ],
+            "Bone Necklace": [
+                "3"
+            ],
+            "Navy Striped Tee": [
+                "4",
+                "10"
+            ],
+            "Bayc T Red": [
+                "5"
+            ],
+            "Tweed Suit": [
+                "6"
+            ],
+            "Wool Turtleneck": [
+                "7"
+            ],
+            "Stunt Jacket": [
+                "9"
+            ]
+        },
+        "Mouth": {
+            "Discomfort": [
+                "0"
+            ],
+            "Grin": [
+                "1"
+            ],
+            "Bored Cigarette": [
+                "2"
+            ],
+            "Tongue Out": [
+                "3"
+            ],
+            "Phoneme L": [
+                "4"
+            ],
+            "Dumbfounded": [
+                "5"
+            ],
+            "Bored": [
+                "6",
+                "7",
+                "8",
+                "10"
+            ],
+            "Small Grin": [
+                "9"
+            ]
+        },
+        "Eyes": {
+            "X Eyes": [
+                "0",
+                "5"
+            ],
+            "Blue Beams": [
+                "1"
+            ],
+            "3d": [
+                "2"
+            ],
+            "Bored": [
+                "3"
+            ],
+            "Closed": [
+                "4"
+            ],
+            "Crazy": [
+                "6"
+            ],
+            "Angry": [
+                "7"
+            ],
+            "Robot": [
+                "8"
+            ],
+            "Sleepy": [
+                "9"
+            ],
+            "Eyepatch": [
+                "10"
+            ]
+        },
+        "Hat": {
+            "Sea Captain's Hat": [
+                "2"
+            ],
+            "Party Hat 2": [
+                "4"
+            ],
+            "Bayc Flipped Brim": [
+                "5"
+            ],
+            "S&m Hat": [
+                "6"
+            ],
+            "Stuntman Helmet": [
+                "7"
+            ],
+            "Beanie": [
+                "8"
+            ],
+            "Seaman's Hat": [
+                "9"
+            ],
+            "Bayc Hat Red": [
+                "10"
+            ]
+        }
     }
 }
