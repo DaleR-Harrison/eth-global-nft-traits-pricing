@@ -11,7 +11,9 @@
 ## 2. Create Pricing Input Template
 
 `yarn hack-pricing-template -n BoredApes`
+`yarn hack-pricing-template -n MoonBirds`
 
 ## 3. Create Merkle Tree
 
 `yarn hack-merkles-tree -n BoredApes`
+`yarn hack-merkles-tree -n MoonBirds`
