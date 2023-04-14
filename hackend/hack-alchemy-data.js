@@ -53,10 +53,16 @@ for (let tokenId = 0; tokenId <= 1; tokenId++) {
     );
 }
 
+const result = {
+    "CollectionName": _collectionName,
+    "CollectionAddress": _collectionAddress,
+    "CollectionTokens": collectionTokens
+}
+
 fs.writeFile(
     `data/{_collectionName}.json`,
     JSON.stringify(
-        collectionTokens,
+        result,
         null,
         4
     ),
