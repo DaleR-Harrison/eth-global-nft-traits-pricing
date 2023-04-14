@@ -54,7 +54,7 @@ for (let tokenId = 0; tokenId <= 1; tokenId++) {
 }
 
 fs.writeFile(
-    `data/collection.json`,
+    `data/{_collectionName}.json`,
     JSON.stringify(
         collectionTokens,
         null,
