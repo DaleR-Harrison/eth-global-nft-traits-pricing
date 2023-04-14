@@ -20,4 +20,15 @@ const json = JSON.parse(
     )
 );
 
+const allTraitTypes = [];
 const collectionTokens = json["CollectionTokens"];
+
+collectionTokens.map((token) => {
+    Object.keys(token.TokenTraits).map((traitType) => {
+        allTraitTypes.push(
+            traitType
+        );
+    });
+});
+
+console.log(allTraitTypes, 'allTraitTypes');
