@@ -1,22 +1,20 @@
 import * as fs from 'fs';
 import { program } from 'commander';
 import { createAlchemyWeb3 } from "@alch/alchemy-web3";
-
-// Imports the Alchemy SDK
 import { Alchemy, Network } from "alchemy-sdk";
 
-// Configures the Alchemy SDK
+const apiKey = "J3bTM7KLiYYwh8Ar_VBXuo-oLlGTx7od";
+const web3 = createAlchemyWeb3(
+    `https://eth-mainnet.g.alchemy.com/v2/${apiKey}`
+);
+
 const config = {
-    apiKey: "J3bTM7KLiYYwh8Ar_VBXuo-oLlGTx7od",
+    apiKey: apiKey,
     network: Network.ETH_MAINNET
 };
 
 const alchemy = new Alchemy(
     config
-);
-
-const web3 = createAlchemyWeb3(
-    "https://eth-mainnet.g.alchemy.com/v2/J3bTM7KLiYYwh8Ar_VBXuo-oLlGTx7od",
 );
 
 program
@@ -43,7 +41,7 @@ for (let tokenId = 0; tokenId <= collectionSize; tokenId++) {
 
     const rawData = await web3.alchemy.getNftMetadata({
         contractAddress: _collectionAddress,
-        tokenId: tokenId
+        tokenId: tokenId // @TODO: see if can be converted to BN
     });
 
     const initialToken = rawData["id"]["tokenId"];
