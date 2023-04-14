@@ -7,12 +7,13 @@ import { Alchemy, Network } from "alchemy-sdk";
 
 // Configures the Alchemy SDK
 const config = {
-    apiKey: "J3bTM7KLiYYwh8Ar_VBXuo-oLlGTx7od", // Replace with your API key
-    network: Network.ETH_MAINNET, // Replace with your network
+    apiKey: "J3bTM7KLiYYwh8Ar_VBXuo-oLlGTx7od",
+    network: Network.ETH_MAINNET
 };
 
-// Creates an Alchemy object instance with the config to use for making requests
-const alchemy = new Alchemy(config);
+const alchemy = new Alchemy(
+    config
+);
 
 const web3 = createAlchemyWeb3(
     "https://eth-mainnet.g.alchemy.com/v2/J3bTM7KLiYYwh8Ar_VBXuo-oLlGTx7od",
