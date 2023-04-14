@@ -44,14 +44,14 @@ for (const traitType in prices) {
 }
 
 const allKeys = Object.keys(pricedNFTs);
-const mapped = allKeys.reduce((item, data) => {
+const mapped = allKeys.reduce((item, _data) => {
 
-    const price = pricedNFTs[data]["Price"];
-    const tokenIds = pricedNFTs[data]["Identifiers"];
+    const price = pricedNFTs[_data]["Price"];
+    const tokenIds = pricedNFTs[_data]["Identifiers"];
 
-    const tokenPrices = tokenIds.map((tokenId) => (
+    const tokenPrices = tokenIds.map((_tokenId) => (
         {
-            tokenId: tokenId,
+            tokenId: _tokenId,
             price: price
         }
     ));
