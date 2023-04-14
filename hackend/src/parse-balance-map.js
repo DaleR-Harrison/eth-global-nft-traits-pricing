@@ -1,4 +1,4 @@
-export function parseBalanceMap(balances) {
+import BalanceTree from  "./balance-tree.js";
 
     const sortedAddresses = Object.keys(dataByAddress).sort()
 
