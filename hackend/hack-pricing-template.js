@@ -62,9 +62,17 @@ allTraitTypes.map((traitType) => {
 
     traitSet.map((trait) => {
         traitTokens[traitType][trait] = [];
-        priceEntry[traitType][trait] = {
-            "PricingPercent": "100"
-        };
+        priceEntry[traitType][trait] = "some-value"
+    });
+});
+
+collectionTokens.map((token) => {
+    Object.entries(token.TokenTraits).map((tokenTrait) => {
+        const traitType = tokenTrait[0];
+        const traitValue = tokenTrait[1];
+        traitTokens[traitType][traitValue].push(
+            token.TokenId
+        );
     });
 });
 
