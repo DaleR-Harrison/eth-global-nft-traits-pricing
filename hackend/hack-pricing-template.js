@@ -79,11 +79,8 @@ collectionTokens.map((token) => {
     });
 });
 
-console.log(priceEntry, 'priceEntry');
-console.log(traitTokens, 'traitTokens');
-
 fs.writeFile(
-    `templates/${_collectionName}-template.json`,
+    `templates/${_collectionName}-pricing.json`,
     JSON.stringify(
         priceEntry,
         null,
@@ -94,3 +91,19 @@ fs.writeFile(
         console.log(error);
     }
 });
+
+fs.writeFile(
+    `templates/${_collectionName}-sorting.json`,
+    JSON.stringify(
+        traitTokens,
+        null,
+        4
+    ),
+    (error) => {
+    if (error) {
+        console.log(error);
+    }
+});
+
+console.log(`Pricing template saved: templates/${_collectionName}-pricing.json`);
+console.log(`Sorting template saved: templates/${_collectionName}-sorting.json`);
