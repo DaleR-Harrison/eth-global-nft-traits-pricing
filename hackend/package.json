@@ -17,10 +17,11 @@
         "hack-alchemy-data": "node hack-alchemy-data.js",
         "hack-pricing-template": "node hack-pricing-template.js",
         "hack-merkles-tree": "node hack-merkle-tree.js"
-
     },
     "dependencies": {
         "@alch/alchemy-web3": "^1.4.6",
-        "alchemy-sdk": "^2.8.0"
+        "alchemy-sdk": "^2.8.0",
+        "ethereumjs-util": "^7.1.5",
+        "ethers": "^6.3.0"
     }
 }
