@@ -68,7 +68,8 @@ const inputMap = allKeys.reduce((item, _data) => {
 }, {});
 
 const result = parseBalanceMap(
-    inputMap
+    inputMap,
+    _collectionName
 );
 
 console.log(result, 'result');
