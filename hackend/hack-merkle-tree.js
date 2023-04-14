@@ -72,10 +72,10 @@ const result = parseBalanceMap(
     _collectionName
 );
 
-console.log(result, 'result');
+const filePath = `trees-output/${_collectionName}.json`;
 
 fs.writeFile(
-    `trees-output/${_collectionName}.json`,
+    filePath,
     JSON.stringify(
         result,
         null,
@@ -85,3 +85,6 @@ fs.writeFile(
         console.log(err);
     }
 );
+
+console.log(`Saved merkle tree data to: ${filePath}`);
+console.log(`New Merkle Root: ${result["MerkleRoot"]}`);
