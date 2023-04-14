@@ -43,6 +43,7 @@ export function parseBalanceMap(_balanceMap, _collectionName) {
     return {
         "CollectionName": _collectionName,
         "MerkleRoot": tree.getHexRoot(),
-        "PricingData": result
+        "PricingData": result,
+        "GenerationTime": new Date().toISOString()
     }
 }
