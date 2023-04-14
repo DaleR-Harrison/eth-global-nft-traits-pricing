@@ -1,0 +1,27 @@
+{
+    "CollectionName": "BoredApes",
+    "CollectionAddress": "0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D",
+    "CollectionTokens": [
+        {
+            "TokenId": "0",
+            "TokenTraits": {
+                "Earring": "Silver Hoop",
+                "Background": "Orange",
+                "Fur": "Robot",
+                "Clothes": "Striped Tee",
+                "Mouth": "Discomfort",
+                "Eyes": "X Eyes"
+            }
+        },
+        {
+            "TokenId": "1",
+            "TokenTraits": {
+                "Mouth": "Grin",
+                "Clothes": "Vietnam Jacket",
+                "Background": "Orange",
+                "Eyes": "Blue Beams",
+                "Fur": "Robot"
+            }
+        }
+    ]
+}
