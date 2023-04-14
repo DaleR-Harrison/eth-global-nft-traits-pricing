@@ -31,7 +31,13 @@ export function parseBalanceMap(_balanceMap) {
             item.ceiling
         );
 
-        console.log(proof);
+        res.push({
+            index: i,
+            tokenId: tokenId,
+            percent: item.percent,
+            ceiling: item.ceiling,
+            proof: proof
+        });
     });
 
     console.log(res);
