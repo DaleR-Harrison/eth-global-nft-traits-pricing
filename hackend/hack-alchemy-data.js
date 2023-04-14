@@ -52,3 +52,17 @@ for (let tokenId = 0; tokenId <= 1; tokenId++) {
         tokenData
     );
 }
+
+fs.writeFile(
+    `data/collection.json`,
+    JSON.stringify(
+        collectionTokens,
+        null,
+        4
+    ),
+    (error) => {
+    if (error) {
+        console.log(error);
+    }
+});
+
