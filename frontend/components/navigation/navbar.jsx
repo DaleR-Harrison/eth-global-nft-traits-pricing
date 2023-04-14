@@ -6,7 +6,9 @@ export default function Navbar() {
       <a href="/">
         <img className={styles.app_logo} src="/nft-traits-logo.png"></img>
       </a>
-      <ConnectButton></ConnectButton>
+      <div className={styles.connect_button}>
+      	<ConnectButton chainStatus='none' showBalance={false}></ConnectButton>
+	  </div>
     </nav>
   );
 }
