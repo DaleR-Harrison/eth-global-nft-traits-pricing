@@ -22,7 +22,105 @@
                 "Eyes": "Blue Beams",
                 "Fur": "Robot"
             }
+        },
+        {
+            "TokenId": "2",
+            "TokenTraits": {
+                "Eyes": "3d",
+                "Mouth": "Bored Cigarette",
+                "Fur": "Robot",
+                "Hat": "Sea Captain's Hat",
+                "Background": "Aquamarine"
+            }
+        },
+        {
+            "TokenId": "3",
+            "TokenTraits": {
+                "Background": "Purple",
+                "Eyes": "Bored",
+                "Mouth": "Tongue Out",
+                "Clothes": "Bone Necklace",
+                "Fur": "Cheetah"
+            }
+        },
+        {
+            "TokenId": "4",
+            "TokenTraits": {
+                "Clothes": "Navy Striped Tee",
+                "Mouth": "Phoneme L",
+                "Hat": "Party Hat 2",
+                "Fur": "Golden Brown",
+                "Eyes": "Closed",
+                "Background": "Blue"
+            }
+        },
+        {
+            "TokenId": "5",
+            "TokenTraits": {
+                "Hat": "Bayc Flipped Brim",
+                "Eyes": "X Eyes",
+                "Fur": "Brown",
+                "Background": "Army Green",
+                "Clothes": "Bayc T Red",
+                "Mouth": "Dumbfounded"
+            }
+        },
+        {
+            "TokenId": "6",
+            "TokenTraits": {
+                "Clothes": "Tweed Suit",
+                "Mouth": "Bored",
+                "Fur": "Cream",
+                "Eyes": "Crazy",
+                "Background": "Yellow",
+                "Hat": "S&m Hat"
+            }
+        },
+        {
+            "TokenId": "7",
+            "TokenTraits": {
+                "Background": "Gray",
+                "Hat": "Stuntman Helmet",
+                "Eyes": "Angry",
+                "Mouth": "Bored",
+                "Clothes": "Wool Turtleneck",
+                "Fur": "Golden Brown"
+            }
+        },
+        {
+            "TokenId": "8",
+            "TokenTraits": {
+                "Mouth": "Bored",
+                "Background": "Aquamarine",
+                "Hat": "Beanie",
+                "Earring": "Gold Stud",
+                "Eyes": "Robot",
+                "Fur": "Zombie"
+            }
+        },
+        {
+            "TokenId": "9",
+            "TokenTraits": {
+                "Earring": "Silver Stud",
+                "Eyes": "Sleepy",
+                "Mouth": "Small Grin",
+                "Fur": "Brown",
+                "Hat": "Seaman's Hat",
+                "Clothes": "Stunt Jacket",
+                "Background": "Purple"
+            }
+        },
+        {
+            "TokenId": "10",
+            "TokenTraits": {
+                "Clothes": "Navy Striped Tee",
+                "Background": "Aquamarine",
+                "Hat": "Bayc Hat Red",
+                "Fur": "Dmt",
+                "Eyes": "Eyepatch",
+                "Mouth": "Bored"
+            }
         }
     ],
-    "GenerationTime": "2023-04-14T11:46:42.387Z"
+    "GenerationTime": "2023-04-14T12:39:01.072Z"
 }
