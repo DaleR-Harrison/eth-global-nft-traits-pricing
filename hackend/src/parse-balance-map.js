@@ -40,5 +40,8 @@ export function parseBalanceMap(_balanceMap) {
         });
     });
 
-    return result;
+    return {
+        merkleRoot: tree.getHexRoot(),
+        pricings: result,
+    }
 }
