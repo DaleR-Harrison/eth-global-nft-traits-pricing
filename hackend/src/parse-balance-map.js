@@ -1,41 +1,40 @@
 export function parseBalanceMap(balances) {
 
+    const sortedAddresses = Object.keys(dataByAddress).sort()
 
-  const sortedAddresses = Object.keys(dataByAddress).sort()
+    // construct a tree
+    const tree = new BalanceTree(
+        sortedAddresses.map(address => ({
+            account: address,
+            amount: dataByAddress[address].amount
+        }))
+    )
 
-  // construct a tree
-  const tree = new BalanceTree(
-      sortedAddresses.map(address => ({
-          account: address,
-          amount: dataByAddress[address].amount
-      }))
-  )
+    // generate claims
+    const claims = sortedAddresses.reduce((memo, address, index) => {
+        const {
+            amount,
+            flags
+        } = dataByAddress[address]
+        memo[address] = {
+            index,
+            amount: amount.toHexString(),
+            proof: tree.getProof(index, address, amount),
+            ...(flags ? {
+                flags
+            } : {})
+        }
+        return memo
+    }, {})
 
-  // generate claims
-  const claims = sortedAddresses.reduce((memo, address, index) => {
-      const {
-          amount,
-          flags
-      } = dataByAddress[address]
-      memo[address] = {
-          index,
-          amount: amount.toHexString(),
-          proof: tree.getProof(index, address, amount),
-          ...(flags ? {
-              flags
-          } : {})
-      }
-      return memo
-  }, {})
+    const tokenTotal = sortedAddresses.reduce(
+        (memo, key) => memo.add(dataByAddress[key].amount),
+        BigNumber.from(0)
+    )
 
-  const tokenTotal = sortedAddresses.reduce(
-      (memo, key) => memo.add(dataByAddress[key].amount),
-      BigNumber.from(0)
-  )
-
-  return {
-      merkleRoot: tree.getHexRoot(),
-      tokenTotal: tokenTotal.toHexString(),
-      claims
-  }
+    return {
+        merkleRoot: tree.getHexRoot(),
+        tokenTotal: tokenTotal.toHexString(),
+        claims
+    }
 }
