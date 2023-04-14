@@ -14,7 +14,7 @@ export function parseBalanceMap(_balanceMap) {
         treeElements
     );
 
-    const res = [];
+    const result = [];
 
     treeElements.map((treeElement, i) => {
 
@@ -31,7 +31,7 @@ export function parseBalanceMap(_balanceMap) {
             item.ceiling
         );
 
-        res.push({
+        result.push({
             index: i,
             tokenId: tokenId,
             percent: item.percent,
@@ -40,5 +40,5 @@ export function parseBalanceMap(_balanceMap) {
         });
     });
 
-    console.log(res);
+    return result;
 }
