@@ -34,6 +34,8 @@ contract PricingOracle {
         chainLinkFeeds = IChainLinkFeeds(
             _chainLinkFeeds
         );
+
+        owner = msg.sender;
     }
 
     function setPriceFeed(
