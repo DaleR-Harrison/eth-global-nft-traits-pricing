@@ -4,6 +4,9 @@
         "@nomiclabs/hardhat-web3": "^2.0.0",
         "hardhat": "^2.13.1"
     },
+    "scripts": {
+        "local-chain": "npx hardhat node --port 9540"
+    },
     "devDependencies": {
         "@ethersproject/abi": "^5.4.7",
         "@ethersproject/providers": "^5.4.7",
