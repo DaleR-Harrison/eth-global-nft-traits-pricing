@@ -49,6 +49,8 @@ app.get('/getPricingData/:collectionName/:tokenId/:stringify?', (req, res) => {
             PricingData: pricingData
         }
 
+        res.setHeader('Access-Control-Allow-Origin', '*')
+
         if (stringify) {
             res.send(JSON.stringify(responseObject, null, 4))
         }
