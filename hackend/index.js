@@ -4,6 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path'
+import { exec, spawn } from 'child_process';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -49,10 +50,32 @@ app.get('/getPricingData/:collectionName/:tokenId/:stringify?', (req, res) => {
         }
 
         if (stringify) {
-            res.send(JSON.stringify(responseObject, null, 2))
+            res.send(JSON.stringify(responseObject, null, 4))
         }
-        res.json(responseObject);
+        else {
+            res.json(responseObject);
+        }
     });
+});
+
+app.post('/fetchAlchemyData/:collectionName/:collectionAddress', (req, res) => {
+    const { collectionName, collectionAddress } = req.params;
+
+    if (!collectionName || !collectionAddress) {
+        return res.status(400).json({ error: 'Invalid parameters' });
+    }
+
+    const command = 'yarn';
+    const args = ['hack-alchemy-data', '-n', collectionName, '-a', collectionAddress];
+
+    const child = spawn(command, args, {
+        detached: true,
+        stdio: 'ignore'
+    });
+
+    child.unref();
+
+    res.json({ message: 'Script started successfully'});
 });
 
 //Listen to port
