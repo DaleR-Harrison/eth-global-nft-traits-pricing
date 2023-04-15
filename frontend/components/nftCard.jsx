@@ -13,10 +13,11 @@ export default function NftCard({ nft, collectionName }) {
   const name = collectionName ?? nft.title;
 
   const displayTraits = () => {
-    const traits = [];
-    const tokenTraits = Object.entries(nft.TokenTraits);
 
-    tokenTraits.forEach(([name, value]) => {
+    const traits = [];
+    const tokenTraits = nft.TokenTraits && Object.entries(nft.TokenTraits);
+
+    tokenTraits && tokenTraits.forEach(([name, value]) => {
       traits.push(<span className={styles.traits}><b>{name}</b>: {value}</span>);
     })
     return traits;
@@ -41,19 +42,21 @@ export default function NftCard({ nft, collectionName }) {
     abi: PricingOracleAbi 
   }
 
+
+
   const result = useContractRead({
       ...contractConfig,
       functionName: "getTokenPrice",
       args: [
-        nftData.CollectionAddress,
-        nftData.PricingData.tokenId,
-        nftData.PricingData.index,
-        nftData.PricingData.percent,
-        nftData.PricingData.ceiling,
-        nftData.PricingData.proof
+        nftData && nftData.CollectionAddress,
+        nftData && nftData.PricingData.tokenId,
+        nftData && nftData.PricingData.index,
+        nftData && nftData.PricingData.percent,
+        nftData && nftData.PricingData.ceiling,
+        nftData && nftData.PricingData.proof
       ],
-      watch: true,
-      enabled: nftData.PricingData.proof,
+      watch: false,
+      enabled: nftData && nftData.PricingData.proof,
       onError: (err) => { console.error(err)}
     }); 
 

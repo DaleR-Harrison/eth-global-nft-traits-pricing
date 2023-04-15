@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import styles from "../../styles/NftGallery.module.css"
-import NftCard from "../nftCard"; 
+import NftCard from "../nftCard";
 import { fetchCollectionNft } from "../../helpers/fetchNft.js"
 
 export default function NFTGallery({setIsloading, collectionAddress}) {
@@ -23,7 +23,7 @@ export default function NFTGallery({setIsloading, collectionAddress}) {
           </div>
         ) : (
           <div className={styles.loading_box}>
-            <p>No NFTs found in this collection</p>
+            <p>No Data Found</p>
           </div>
         )}
     </div>
