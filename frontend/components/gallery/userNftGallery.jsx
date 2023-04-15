@@ -70,19 +70,6 @@ export default function UserNFTGallery({}) {
           </div>
         </div>
       )}
-
-      {pageKey && nfts?.length && (
-        <div>
-          <a
-            className={styles.button_black}
-            onClick={() => {
-              fetchNFTs(pageKey);
-            }}
-          >
-            Load more
-          </a>
-        </div>
-      )}
     </div>
   );
 }
