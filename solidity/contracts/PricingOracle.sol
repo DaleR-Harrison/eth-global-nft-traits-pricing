@@ -14,11 +14,28 @@ contract PricingOracle {
 
     IChainLinkFeeds public chainLinkFeeds;
 
+    uint256 public price;
+    address public owner;
+
+    mapping(address => bytes32) public merkleTrees;
+    mapping(address => IChainLinkFeeds) public priceFeeds;
+
     constructor(
         address _chainLinkFeeds
     ) {
         chainLinkFeeds = IChainLinkFeeds(
             _chainLinkFeeds
+        );
+    }
+
+    function setPriceFeed(
+        address _token,
+        address _priceFeed
+    )
+        external
+    {
+        priceFeeds[_token] = IChainLinkFeeds(
+            _priceFeed
         );
     }
 
