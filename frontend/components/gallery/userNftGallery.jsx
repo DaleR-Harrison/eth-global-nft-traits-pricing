@@ -16,6 +16,7 @@ export default function UserNFTGallery({setIsloading}) {
   }, [address]);
 
   return (
+    <>
     <div className={styles.nft_gallery}>
         {nfts?.length ? (
           <div className={styles.nfts_display}>
@@ -29,9 +30,9 @@ export default function UserNFTGallery({setIsloading}) {
           </div>
         ) : (
           <div className={styles.loading_box}>
-            <p>No Data Found</p>
           </div>
         )}
     </div>
+    </>
   );
 }
