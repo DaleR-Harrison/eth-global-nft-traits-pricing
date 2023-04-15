@@ -103,7 +103,7 @@ contract NFTDealer is Helper {
         bytes32[] memory _proof
     )
         external
-        returns (bool)
+        returns (uint256)
     {
         uint256 tokenPrice = pricingOracle.getTokenPrice(
             _collectionAddress,
@@ -140,7 +140,7 @@ contract NFTDealer is Helper {
             _borrowAmount
         );
 
-        return true;
+        return _borrowAmount;
     }
 
     function repayLoan(
@@ -192,6 +192,14 @@ contract NFTDealer is Helper {
         require(
             loan.status == LoanStatus.ACTIVE,
             "NFTDealer: INACTIVE_LOAN"
+        );
+
+        uint256 timePassed = block.timestamp
+            - loan.lastPayment;
+
+        require(
+            timePassed > paymentInterval,
+            "NFTDealer: TOO_EARLY"
         );
 
         _transferNFT(
