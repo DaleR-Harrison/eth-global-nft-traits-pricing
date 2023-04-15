@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useAccount } from "wagmi";
 
 import styles from "../styles/NftGallery.module.css";
@@ -7,22 +7,29 @@ import UserNFTGallery from "./gallery/userNftGallery";
 
 import { BORED_APES_CONTRACT } from "../pages/constants";
 import { MOON_BIRDS_CONTRACT } from "../pages/constants";
-
-import {
-    default as BoredApes
-} from "../../hackend/data/BoredApes.json";
-import {
-    default as MoonBirds
-} from "../../hackend/data/MoonBirds.json";
+import getCollectionData from "../pages/api/getCollectionData";
 
 export default function NftCollection() {
     const { isConnected, isConnecting } = useAccount();
     const [isLoading, setIsloading] = useState(false);
     const [collectionAddress, setCollectionAddress] = useState(BORED_APES_CONTRACT);
+    const [moonBirds, setMoonBirds] = useState();
+    const [boredApes, setBoredApes] = useState();
 
     const changeCollection = (e) => {
         setCollectionAddress(e.target.value);
     };
+
+    useEffect(() => {
+    const getCollections = async () => {
+      const mbRes = await getCollectionData(BORED_APES_CONTRACT);
+      const baRes = await getCollectionData(MOON_BIRDS_CONTRACT);
+      setMoonBirds(mbRes);
+      setBoredApes(baRes);
+    }
+
+    getCollections();
+  });
 
 return (
     <div className={styles.nft_gallery_page}>
@@ -30,8 +37,8 @@ return (
         <h1>Collections</h1>
         {(!isConnected && !isConnecting) && (
         <div className={styles.button_wrapper}>
-            <button value={BORED_APES_CONTRACT} className={styles.collection_button} onClick={(e) => changeCollection(e)}>{BoredApes.CollectionName}</button>
-            <button value={MOON_BIRDS_CONTRACT} className={styles.collection_button} onClick={(e) => changeCollection(e)}>{MoonBirds.CollectionName}</button>
+            <button value={BORED_APES_CONTRACT} className={styles.collection_button} onClick={(e) => changeCollection(e)}>{boredApes.CollectionName}</button>
+            <button value={MOON_BIRDS_CONTRACT} className={styles.collection_button} onClick={(e) => changeCollection(e)}>{moonBirds.CollectionName}</button>
         </div>
         )}
     </div> 
