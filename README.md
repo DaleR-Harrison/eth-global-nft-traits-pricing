@@ -13,17 +13,21 @@
 ## 2. Create Pricing Input Template
 
 `yarn hack-pricing-template -n BoredApes`
+
 `yarn hack-pricing-template -n MoonBirds`
+
 `yarn hack-pricing-template -n Doodles`
 
 ## 3. Create Merkle Tree
 
 `yarn hack-merkles-tree -n BoredApes`
+
 `yarn hack-merkles-tree -n MoonBirds`
+
 `yarn hack-merkles-tree -n Doodles`
 
 # Goerli Testnet: https://goerli.etherscan.io/address/0xFadc870ad12c88b621Bb906032Bef2eE2427c42a#readContract
 
 
-# Mainnet Oralce: https://etherscan.io/address/0x944455cab3af80bb1abded67ce573de27ddfdb1a#readContract
-# Mainnet Shop: https://etherscan.io/address/0xc4302A799D0b01e2b8CdE0FE3eae38869b6B92bB
+## Mainnet Oralce: https://etherscan.io/address/0x944455cab3af80bb1abded67ce573de27ddfdb1a#readContract
+## Mainnet Shop: https://etherscan.io/address/0xc4302A799D0b01e2b8CdE0FE3eae38869b6B92bB
