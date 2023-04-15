@@ -42,8 +42,6 @@ export default function NftCard({ nft, collectionName }) {
     abi: PricingOracleAbi 
   }
 
-
-
   const result = useContractRead({
       ...contractConfig,
       functionName: "getTokenPrice",
@@ -58,14 +56,14 @@ export default function NftCard({ nft, collectionName }) {
       watch: false,
       enabled: nftData && nftData.PricingData.proof,
       onError: (err) => { console.error(err)}
-    }); 
+    });
 
   console.log("data", result);
- 
+
   return (
     <>
       <div className={styles.card_container} onClick={() => openModal(true)}>
-        {/* <div className={styles.image_container}>
+        {<div className={styles.image_container}>
           {nft.format == "mp4" ? (
             <video src={nft.media} controls>
               Your browser does not support the video tag.
@@ -73,7 +71,7 @@ export default function NftCard({ nft, collectionName }) {
           ) : (
             <img src={nft.media}></img>
           )}
-        </div> */}
+        </div>}
         <div className={styles.info_container}>
           <div className={styles.title_container}>
             <h3>{name} #{nft.TokenId}</h3>
@@ -88,4 +86,3 @@ export default function NftCard({ nft, collectionName }) {
     </>
     );
   }
-  
