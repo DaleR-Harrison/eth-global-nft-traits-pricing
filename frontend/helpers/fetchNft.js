@@ -1,4 +1,4 @@
-import { BORED_APES_CONTRACT } from "../pages/constants";
+import { BORED_APES_CONTRACT, MOON_BIRDS_CONTRACT } from "../pages/constants";
 
 export async function fetchUserNft(address, setNfts) {
     const endpoint = "/api/getNftsForOwner";
@@ -23,11 +23,11 @@ export async function fetchUserNft(address, setNfts) {
 
 export function fetchCollectionNft(collectionAddress, setCollectionName, setNfts, boredApes, moonBirds) { 
 
-    if (collectionAddress === BORED_APES_CONTRACT) {
+    if (collectionAddress === BORED_APES_CONTRACT && boredApes) {
         setNfts(boredApes.CollectionTokens);
         setCollectionName(boredApes.CollectionName);
     }
-    else {
+    if (collectionAddress === MOON_BIRDS_CONTRACT && moonBirds) {
         setNfts(moonBirds.CollectionTokens);
         setCollectionName(moonBirds.CollectionName);
     }
