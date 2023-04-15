@@ -28,7 +28,7 @@ const { chains, provider } = configureChains(
 		arbitrum,
 		arbitrumGoerli,
 	],
-	[alchemyProvider({ apiKey: process.env.ALCHEMY_API_KEY }), publicProvider()]
+	[alchemyProvider({ apiKey: "eXIlr55_YfeFBlWHs4GVx2p-EW9I2Om3" }), publicProvider()]
 );
 
 const { connectors } = getDefaultWallets({
