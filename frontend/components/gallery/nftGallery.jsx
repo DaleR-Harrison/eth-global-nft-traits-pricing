@@ -15,17 +15,11 @@ export default function NFTGallery({setIsloading, collectionAddress, boredApes, 
 
   return (
     <div className={styles.nft_gallery}>
-        {nfts?.length ? (
-          <div className={styles.nfts_display}>
-          {nfts.map((nft) => {
-            return <NftCard key={nft.TokenId} nft={nft} collectionName={collectionName} collectionAddress={collectionAddress} />;
-          })}
-          </div>
-        ) : (
-          <div className={styles.loading_box}>
-            <p>No Data Found</p>
-          </div>
-        )}
+        <div className={styles.nfts_display}>
+        {nfts && nfts.map((nft) => {
+          return <NftCard key={nft.TokenId} nft={nft} collectionName={collectionName} collectionAddress={collectionAddress} />;
+        })}
+        </div>
     </div>
   );
 }
