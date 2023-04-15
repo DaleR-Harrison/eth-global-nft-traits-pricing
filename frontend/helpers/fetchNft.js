@@ -1,9 +1,4 @@
-import {
-    default as BoredApes
-} from "../../hackend/data/BoredApes.json";
-import {
-    default as MoonBirds
-} from "../../hackend/data/MoonBirds.json";
+import { BORED_APES_CONTRACT } from "../pages/constants";
 
 export async function fetchUserNft(address, setNfts) {
     const endpoint = "/api/getNftsForOwner";
@@ -27,7 +22,7 @@ export async function fetchUserNft(address, setNfts) {
 }
 
 export async function fetchCollectionNft(collectionAddress, setCollectionName, setNfts) {    
-    if (collectionAddress === BoredApes.CollectionAddress) {
+    if (collectionAddress === BORED_APES_CONTRACT) {
         setNfts(BoredApes.CollectionTokens);
         setCollectionName(BoredApes.CollectionName);
     }
