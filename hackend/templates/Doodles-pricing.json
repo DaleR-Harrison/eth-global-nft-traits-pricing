@@ -4,212 +4,232 @@
     "RelativePrices": {
         "face": {
             "mustache": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "holographic beard": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "designer glasses": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "happy": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "surprised": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "in love": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "blue check": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "chill cig": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             }
         },
         "hair": {
             "purple long": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "white bucket cap": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "poopie": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "holographic mohawk": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "green brushcut": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "purple cap": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "purple alfalfa": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "halo": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "blue messy": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "green mullet": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "pink toque": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
+            },
+            "holographic afro": {
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
+            },
+            "yellow bowlcut": {
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             }
         },
         "body": {
             "blue and yellow jacket": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "purple sweater with satchel": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "blue fleece": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "pink fleece": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "spotted hoodie": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "combo 2 puffer": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "combo 3 puffer": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "combo 1 puffer": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "white sweater": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "leopard hoodie": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "green blazer": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
+            },
+            "pink and white jacket": {
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             }
         },
         "background": {
             "green": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "grey": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "yellow": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "gradient 1": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "gradient 2": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "purple": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "iridescent": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "light blue": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "pink": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
+            },
+            "orange": {
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
+            },
+            "space": {
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             }
         },
         "head": {
             "tan": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "gradient 2": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "purple": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "pale": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "blue": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "yellow": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "green": {
-                "FloorPercent": "60",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             }
         },
         "piercing": {
             "airpod": {
-                "FloorPercent": "80",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "pearl": {
-                "FloorPercent": "80",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             },
             "hoop": {
-                "FloorPercent": "100",
-                "MaximumPrice": "3000000000000000000"
+                "FloorPercent": "20",
+                "MaximumPrice": "1000000000000000000"
             }
         }
     },
-    "GenerationTime": "2023-04-15T11:36:04.719Z"
+    "GenerationTime": "2023-04-15T19:03:00.627Z"
 }

@@ -125,7 +125,28 @@
                 "head": "gradient 2",
                 "piercing": "hoop"
             }
-        }
+        },
+
+        {
+            "TokenId": "2864",
+            "TokenTraits": {
+                "face": "surprised",
+                "hair": "holographic afro",
+                "body": "pink and white jacket",
+                "background": "orange",
+                "head": "tan"
+            }
+        },
+        {
+            "TokenId": "7702",
+            "TokenTraits": {
+                "face": "happy",
+                "hair": "yellow bowlcut",
+                "body": "blue and yellow jacket",
+                "background": "space",
+                "head": "green"
+            }
+        }                        
     ],
     "GenerationTime": "2023-04-15T06:39:52.176Z"
 }
