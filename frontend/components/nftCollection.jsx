@@ -12,7 +12,7 @@ import getCollectionData from "../pages/api/getCollectionData";
 export default function NftCollection() {
     const { isConnected, isConnecting, account } = useAccount();
     const [isLoading, setIsloading] = useState(false);
-    const [collectionAddress, setCollectionAddress] = useState(BORED_APES_CONTRACT);
+    const [collectionAddress, setCollectionAddress] = useState();
     const [moonBirds, setMoonBirds] = useState({});
     const [boredApes, setBoredApes] = useState({});
     const [doodles, setDoodles] = useState({});
