@@ -1,148 +1,174 @@
 {
     "CollectionName": "Doodles",
     "CollectionAddress": "0x8a90CAb2b38dba80c64b7734e58Ee1dB38B8992e",
-    "MerkleRoot": "0x340b392b5addf09e8db819d14d1cb99f552f825f1119224b7f265abe9aa70e87",
+    "MerkleRoot": "0xa1f9b3b1c969d0e05060a5821bc7b931445a5e7a3a5e26986d9e72e71b5b300f",
     "PricingData": [
         {
             "index": 0,
             "tokenId": "0",
-            "percent": "60",
-            "ceiling": "3000000000000000000",
+            "percent": "20",
+            "ceiling": "1000000000000000000",
             "proof": [
-                "0x70c846c5ee7dc3af4f7f154fe27b1ff6a7376d75b484fd73a59509ec03c8d669",
-                "0xbea7bc0898b170090df6bbfa68c5a9ffa6d285f35a7b4971764eb4b8e758524c",
-                "0x842bf7f852e28c8aed2f5fd7668d3c2558f263ff49d4011a6d836461e0ae3014"
+                "0xbb7e57b09896efd7cb52c14feb9296a848b67980634db2d1814841958ce4e9eb",
+                "0x8bb085eda67dfa3299a9ca2a6ddcbe4b061aa0fc97f352ef48a36a9728f79380",
+                "0xfac209df5c4168415efd8eeed1afac180709b8def1c3c53b0dfdde6d35048626",
+                "0xda1a415a96d792d099c7a2fe2cc96f7d4dc6ee201040180a40e34024a8564d50"
             ]
         },
         {
             "index": 1,
             "tokenId": "1",
-            "percent": "60",
-            "ceiling": "3000000000000000000",
+            "percent": "20",
+            "ceiling": "1000000000000000000",
             "proof": [
-                "0x6b83e21575a5d63195275dc1c37c35e1306059f4ea1585855e6b34fae93cd613",
-                "0x033ac5b7e13913c416681a901950c127c3cd5bf7c5a99e10dc389b65b1c0917a",
-                "0xfbb52b316c65e38086e56bcf10218d7e8ab58ac4e36c5f21cfd7e6a23809ac60",
-                "0xec654c04500cfda6a659aa78c7c571cbf80dfa51644d6c1826549907ddf64950"
+                "0x2c7d7342ecfdc4c2c58550d0223b38625c1eddec63e9c17285e6a0e500d6d131",
+                "0x49bc54b6b7e105bb32ed079f467ae5f1dcee7db4d6fe6e998c77dc31701b8665",
+                "0x6494cc1364e6ddf83cbc70cded8db78f7f69b6e36a602acb3e3c00ad850bec33",
+                "0xc934686243191331bde7b5744ca29b8524cdc87906f855084963e292f7601595"
             ]
         },
         {
             "index": 2,
             "tokenId": "2",
-            "percent": "60",
-            "ceiling": "3000000000000000000",
+            "percent": "20",
+            "ceiling": "1000000000000000000",
             "proof": [
-                "0xc3540e6de99008d874b6b318471246d99c485d1df64d72c6fcd4ce8d9718d378",
-                "0xd9682f31aae185ccb3e6cc5cbe84ec8a245ddb636ff10b1a6f1d2bef34ddc035",
-                "0x842bf7f852e28c8aed2f5fd7668d3c2558f263ff49d4011a6d836461e0ae3014"
+                "0x6212c4f0302f2a4d3254b001a6e354bb2eb470954eb2fe8bbcc011fb1436e1ee",
+                "0xb42c49480bad395411c6adb6ae3c4be885597e9e56e1bb308775d5bd12769a31",
+                "0x6494cc1364e6ddf83cbc70cded8db78f7f69b6e36a602acb3e3c00ad850bec33",
+                "0xc934686243191331bde7b5744ca29b8524cdc87906f855084963e292f7601595"
             ]
         },
         {
             "index": 3,
             "tokenId": "3",
-            "percent": "60",
-            "ceiling": "3000000000000000000",
+            "percent": "20",
+            "ceiling": "1000000000000000000",
             "proof": [
-                "0xd954de3d8e49ff2be1ce9e342faae7941b468b73ddfc27fe08c9fb0b72c541ba",
-                "0xd9682f31aae185ccb3e6cc5cbe84ec8a245ddb636ff10b1a6f1d2bef34ddc035",
-                "0x842bf7f852e28c8aed2f5fd7668d3c2558f263ff49d4011a6d836461e0ae3014"
+                "0x7bdccf32a7f390b663921e0c5a4fa6a172e8eea7f97c6d05e75b1eea2bf5c5b3",
+                "0x08dc26cc0101861d9a5c8f4e11f4e9bd658bc63520046d6ce891aafc8f0a8599",
+                "0xd6c493a952ba6a5e2037c9ff4cddce745faeaed0ad0b9c913ce8450b28161614",
+                "0xc934686243191331bde7b5744ca29b8524cdc87906f855084963e292f7601595"
             ]
         },
         {
             "index": 4,
             "tokenId": "4",
-            "percent": "60",
-            "ceiling": "3000000000000000000",
+            "percent": "20",
+            "ceiling": "1000000000000000000",
             "proof": [
-                "0x5e503d89400a339d451df4d9feca50b073f95f835105b276b9a5438cc9bbe271",
-                "0x033ac5b7e13913c416681a901950c127c3cd5bf7c5a99e10dc389b65b1c0917a",
-                "0xfbb52b316c65e38086e56bcf10218d7e8ab58ac4e36c5f21cfd7e6a23809ac60",
-                "0xec654c04500cfda6a659aa78c7c571cbf80dfa51644d6c1826549907ddf64950"
+                "0x7e61cf15381f49ed0880906315abffe3701741b8f5c4a24afc7cebfa7bce957a",
+                "0xbe240cc3e6ead1104951438b35b9abdceafd686131b74f02159c30770e5f3b89",
+                "0xd6c493a952ba6a5e2037c9ff4cddce745faeaed0ad0b9c913ce8450b28161614",
+                "0xc934686243191331bde7b5744ca29b8524cdc87906f855084963e292f7601595"
             ]
         },
         {
             "index": 5,
             "tokenId": "5",
-            "percent": "60",
-            "ceiling": "3000000000000000000",
+            "percent": "20",
+            "ceiling": "1000000000000000000",
             "proof": [
-                "0x8555c7ed2648b02b12be2ce946c1d9386ccdba7454309bc82018856ebe070bee",
-                "0xbea7bc0898b170090df6bbfa68c5a9ffa6d285f35a7b4971764eb4b8e758524c",
-                "0x842bf7f852e28c8aed2f5fd7668d3c2558f263ff49d4011a6d836461e0ae3014"
+                "0xb0a67cf8f62d920d973d7da87dbca70c07b58f044ea6f25706bdda20b630f609",
+                "0x8bb085eda67dfa3299a9ca2a6ddcbe4b061aa0fc97f352ef48a36a9728f79380",
+                "0xfac209df5c4168415efd8eeed1afac180709b8def1c3c53b0dfdde6d35048626",
+                "0xda1a415a96d792d099c7a2fe2cc96f7d4dc6ee201040180a40e34024a8564d50"
             ]
         },
         {
             "index": 6,
             "tokenId": "6",
-            "percent": "80",
-            "ceiling": "3000000000000000000",
+            "percent": "20",
+            "ceiling": "1000000000000000000",
             "proof": [
-                "0x4e7261a0f2af741cc0fb8a67e9891048fcef6431fc78feab021a2bab6d0514c7",
-                "0xa797f4041465fc0fe9288bc5a8602bf7f2652aa0160c26c5f27d46865ae8d4a5",
-                "0x03262d65c28b6b9e847008cb79c7e931ed9645071ba2004c87f14a9c1c8c60d7",
-                "0xec654c04500cfda6a659aa78c7c571cbf80dfa51644d6c1826549907ddf64950"
+                "0x438e84eccdc5ac5b7b64d29cd3cd7d4b98bbd905e664b719db16d8f36c69b38a",
+                "0x49bc54b6b7e105bb32ed079f467ae5f1dcee7db4d6fe6e998c77dc31701b8665",
+                "0x6494cc1364e6ddf83cbc70cded8db78f7f69b6e36a602acb3e3c00ad850bec33",
+                "0xc934686243191331bde7b5744ca29b8524cdc87906f855084963e292f7601595"
             ]
         },
         {
             "index": 7,
             "tokenId": "7",
-            "percent": "60",
-            "ceiling": "3000000000000000000",
+            "percent": "20",
+            "ceiling": "1000000000000000000",
             "proof": [
-                "0x506fa4d081d9aa2356dd1870e103e627907e380bcd5a796ef8dfea8e3c5d448d",
-                "0xfd98a787dd7e189dc7df372ad83e90b700c31cb2f4639e1299bf0e02c71aebd4",
-                "0xfbb52b316c65e38086e56bcf10218d7e8ab58ac4e36c5f21cfd7e6a23809ac60",
-                "0xec654c04500cfda6a659aa78c7c571cbf80dfa51644d6c1826549907ddf64950"
+                "0xae2c8618ae8ea6574c9c226c58c2108962ce595d328e107a5a5d29344273953e",
+                "0x984470919d3646a94e809bc12bd720a84ee570948d197f1e863459870d10aec8",
+                "0xfac209df5c4168415efd8eeed1afac180709b8def1c3c53b0dfdde6d35048626",
+                "0xda1a415a96d792d099c7a2fe2cc96f7d4dc6ee201040180a40e34024a8564d50"
             ]
         },
         {
             "index": 8,
             "tokenId": "8",
-            "percent": "80",
-            "ceiling": "3000000000000000000",
+            "percent": "20",
+            "ceiling": "1000000000000000000",
             "proof": [
-                "0x46655ad44ff9c460c4d01a0236285043c77fd004b96b965262f843e56d4d1084",
-                "0x20cbc7e4c5f884bd5e0d29f6dfc4d3520d7d7eef58b63f7e859ad56f1364685e",
-                "0x03262d65c28b6b9e847008cb79c7e931ed9645071ba2004c87f14a9c1c8c60d7",
-                "0xec654c04500cfda6a659aa78c7c571cbf80dfa51644d6c1826549907ddf64950"
+                "0x8785e3bba6beac2652ace6b58a395481ca1c225ae031eb11a0c774d2692a9257",
+                "0xbe240cc3e6ead1104951438b35b9abdceafd686131b74f02159c30770e5f3b89",
+                "0xd6c493a952ba6a5e2037c9ff4cddce745faeaed0ad0b9c913ce8450b28161614",
+                "0xc934686243191331bde7b5744ca29b8524cdc87906f855084963e292f7601595"
             ]
         },
         {
             "index": 9,
             "tokenId": "9",
-            "percent": "60",
-            "ceiling": "3000000000000000000",
+            "percent": "20",
+            "ceiling": "1000000000000000000",
             "proof": [
-                "0x142d4acb582574a2d3ab5c65cb7234611dac44e11e8fca5a1ccf1c77a3963111",
-                "0x20cbc7e4c5f884bd5e0d29f6dfc4d3520d7d7eef58b63f7e859ad56f1364685e",
-                "0x03262d65c28b6b9e847008cb79c7e931ed9645071ba2004c87f14a9c1c8c60d7",
-                "0xec654c04500cfda6a659aa78c7c571cbf80dfa51644d6c1826549907ddf64950"
+                "0x96e99103b32d21ba9b043d76933919ab847f95970d516799bb79fa58429a561b",
+                "0x984470919d3646a94e809bc12bd720a84ee570948d197f1e863459870d10aec8",
+                "0xfac209df5c4168415efd8eeed1afac180709b8def1c3c53b0dfdde6d35048626",
+                "0xda1a415a96d792d099c7a2fe2cc96f7d4dc6ee201040180a40e34024a8564d50"
             ]
         },
         {
             "index": 10,
             "tokenId": "10",
-            "percent": "80",
-            "ceiling": "3000000000000000000",
+            "percent": "20",
+            "ceiling": "1000000000000000000",
             "proof": [
-                "0x532a9ea7ffeed793bec65339f026b213a375f24eaf70e600edd5e90e0c478894",
-                "0xfd98a787dd7e189dc7df372ad83e90b700c31cb2f4639e1299bf0e02c71aebd4",
-                "0xfbb52b316c65e38086e56bcf10218d7e8ab58ac4e36c5f21cfd7e6a23809ac60",
-                "0xec654c04500cfda6a659aa78c7c571cbf80dfa51644d6c1826549907ddf64950"
+                "0xd22235a6c3655caaa3bfa4b6b8c4aa59f2276e9ca4ea8955d170092a00ca2c96",
+                "0x10651c2e1a1b5be4739ec065af6b559c88af47c2831982c9f5807e8e3ea08612",
+                "0xda1a415a96d792d099c7a2fe2cc96f7d4dc6ee201040180a40e34024a8564d50"
             ]
         },
         {
             "index": 11,
             "tokenId": "1829",
-            "percent": "100",
-            "ceiling": "3000000000000000000",
+            "percent": "20",
+            "ceiling": "1000000000000000000",
             "proof": [
-                "0x46796e276af97bb9ed36600c134d4b129b72c2b8e946b6e221229295609e10e0",
-                "0xa797f4041465fc0fe9288bc5a8602bf7f2652aa0160c26c5f27d46865ae8d4a5",
-                "0x03262d65c28b6b9e847008cb79c7e931ed9645071ba2004c87f14a9c1c8c60d7",
-                "0xec654c04500cfda6a659aa78c7c571cbf80dfa51644d6c1826549907ddf64950"
+                "0x7c60e79860291fe17fc4da10405fa2db5d8998408e527ccfecca7076886e5bc8",
+                "0x08dc26cc0101861d9a5c8f4e11f4e9bd658bc63520046d6ce891aafc8f0a8599",
+                "0xd6c493a952ba6a5e2037c9ff4cddce745faeaed0ad0b9c913ce8450b28161614",
+                "0xc934686243191331bde7b5744ca29b8524cdc87906f855084963e292f7601595"
+            ]
+        },
+        {
+            "index": 12,
+            "tokenId": "2864",
+            "percent": "20",
+            "ceiling": "1000000000000000000",
+            "proof": [
+                "0x764bcf797e6212332bf938f5459cd0972b6891c3cb92c8dd771139834cc0f1eb",
+                "0xb42c49480bad395411c6adb6ae3c4be885597e9e56e1bb308775d5bd12769a31",
+                "0x6494cc1364e6ddf83cbc70cded8db78f7f69b6e36a602acb3e3c00ad850bec33",
+                "0xc934686243191331bde7b5744ca29b8524cdc87906f855084963e292f7601595"
+            ]
+        },
+        {
+            "index": 13,
+            "tokenId": "7702",
+            "percent": "20",
+            "ceiling": "1000000000000000000",
+            "proof": [
+                "0xfb0c33f17f3ecff719069f33ab3cd4ab58fe687cf708bf220ea06bc7a51e1138",
+                "0x10651c2e1a1b5be4739ec065af6b559c88af47c2831982c9f5807e8e3ea08612",
+                "0xda1a415a96d792d099c7a2fe2cc96f7d4dc6ee201040180a40e34024a8564d50"
             ]
         }
     ],
-    "GenerationTime": "2023-04-15T11:37:37.712Z"
+    "GenerationTime": "2023-04-15T19:03:32.420Z"
 }
