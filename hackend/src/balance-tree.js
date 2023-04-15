@@ -51,8 +51,8 @@ export default class BalanceTree {
                 [
                     index,
                     tokenId,
-                    percent,
-                    ceiling,
+                    percent.toString(),
+                    ceiling.toString(),
                 ]
             )
             .substr(2),
