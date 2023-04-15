@@ -65,7 +65,7 @@ allTraitTypes.map((traitType) => {
         traitTokens[traitType][trait] = [];
         priceEntry[traitType][trait] = {
             "FloorPercent": 100,
-            "MaximumPrice": 1000
+            "MaximumPrice": 1000000000000000000
         }
     });
 });
