@@ -1,27 +1,28 @@
-import fs from 'fs';
-import { program } from 'commander';
+import fs from "fs";
+import { program } from "commander";
 
 program.requiredOption(
-    '-n, --collectionName <collectionName>'
+    "-n, --collectionName <collectionName>"
 );
 
 program.parse(
     process.argv
 );
 
-const _collectionName = program.collectionName;
+const collectionName = program.collectionName;
 
 const json = JSON.parse(
     fs.readFileSync(
-        `data/${_collectionName}.json`,
+        `data/${collectionName}.json`,
         {
-            encoding: 'utf8'
+            encoding: "utf8"
         }
     )
 );
 
 const allTraitTypes = [];
 const collectionTokens = json["CollectionTokens"];
+const CollectionAddress = json["CollectionAddress"];
 
 collectionTokens.map((token) => {
     Object.keys(token.TokenTraits).map((traitType) => {
@@ -79,10 +80,17 @@ collectionTokens.map((token) => {
     });
 });
 
+const generationTime = new Date().toISOString();
+
 fs.writeFile(
-    `templates/${_collectionName}-pricing.json`,
+    `templates/${collectionName}-pricing.json`,
     JSON.stringify(
-        priceEntry,
+        {
+            "CollectionName": collectionName,
+            "CollectionAddress": CollectionAddress,
+            "RelativePrices": priceEntry,
+            "GenerationTime": generationTime
+        },
         null,
         4
     ),
@@ -93,9 +101,14 @@ fs.writeFile(
 });
 
 fs.writeFile(
-    `templates/${_collectionName}-sorting.json`,
+    `templates/${collectionName}-sorting.json`,
     JSON.stringify(
-        traitTokens,
+        {
+            "CollectionName": collectionName,
+            "CollectionAddress": CollectionAddress,
+            "TraitTypes": traitTokens,
+            "GenerationTime": generationTime
+        },
         null,
         4
     ),
@@ -105,5 +118,5 @@ fs.writeFile(
     }
 });
 
-console.log(`Pricing template saved: templates/${_collectionName}-pricing.json`);
-console.log(`Sorting template saved: templates/${_collectionName}-sorting.json`);
+console.log(`Pricing template saved: templates/${collectionName}-pricing.json`);
+console.log(`Sorting template saved: templates/${collectionName}-sorting.json`);

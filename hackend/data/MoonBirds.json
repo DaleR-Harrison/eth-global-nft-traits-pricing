@@ -1,0 +1,51 @@
+{
+    "CollectionName": "MoonBirds",
+    "CollectionAddress": "0x23581767a106ae21c074b2276D25e5C3e136a68b",
+    "CollectionTokens": [
+        {
+            "TokenId": "0",
+            "TokenTraits": {
+                "Eyes": "Angry",
+                "Outerwear": "Hoodie Down",
+                "Body": "Tabby",
+                "Feathers": "Gray",
+                "Background": "Green",
+                "Beak": "Small"
+            }
+        },
+        {
+            "TokenId": "1",
+            "TokenTraits": {
+                "Eyes": "Rainbow",
+                "Outerwear": "Jean Jacket",
+                "Body": "Tabby",
+                "Feathers": "Red",
+                "Background": "Pink",
+                "Beak": "Short"
+            }
+        },
+        {
+            "TokenId": "2",
+            "TokenTraits": {
+                "Eyes": "Side-eye",
+                "Headwear": "Skully",
+                "Body": "Stark",
+                "Feathers": "Blue",
+                "Background": "Purple",
+                "Beak": "Small"
+            }
+        },
+        {
+            "TokenId": "3",
+            "TokenTraits": {
+                "Eyes": "Angry",
+                "Eyewear": "Eyepatch",
+                "Body": "Professor",
+                "Feathers": "White",
+                "Background": "Yellow",
+                "Beak": "Long"
+            }
+        }
+    ],
+    "GenerationTime": "2023-04-14T18:41:07.299Z"
+}

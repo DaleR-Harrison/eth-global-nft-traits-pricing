@@ -1,0 +1,107 @@
+{
+    "CollectionName": "MoonBirds",
+    "CollectionAddress": "0x23581767a106ae21c074b2276D25e5C3e136a68b",
+    "RelativePrices": {
+        "Eyes": {
+            "Angry": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "Rainbow": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "Side-eye": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            }
+        },
+        "Outerwear": {
+            "Hoodie Down": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "Jean Jacket": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            }
+        },
+        "Body": {
+            "Tabby": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "Stark": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "Professor": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            }
+        },
+        "Feathers": {
+            "Gray": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "Red": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "Blue": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "White": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            }
+        },
+        "Background": {
+            "Green": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "Pink": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "Purple": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "Yellow": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            }
+        },
+        "Beak": {
+            "Small": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "Short": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "Long": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            }
+        },
+        "Headwear": {
+            "Skully": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            }
+        },
+        "Eyewear": {
+            "Eyepatch": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            }
+        }
+    },
+    "GenerationTime": "2023-04-14T18:41:15.969Z"
+}
