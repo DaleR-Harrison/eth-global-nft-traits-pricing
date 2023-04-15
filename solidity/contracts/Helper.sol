@@ -4,6 +4,13 @@ pragma solidity ^0.8.19;
 
 contract Helper {
 
+    event ERC721Received(
+        address operator,
+        address from,
+        uint256 tokenId,
+        bytes data
+    );
+
     function _transferNFT(
         address _from,
         address _to,
@@ -52,5 +59,24 @@ contract Helper {
             success,
             string(resultData)
         );
+    }
+
+    function onERC721Received(
+        address _operator,
+        address _from,
+        uint256 _tokenId,
+        bytes calldata _data
+    )
+        external
+        returns (bytes4)
+    {
+        emit ERC721Received(
+            _operator,
+            _from,
+            _tokenId,
+            _data
+        );
+
+        return this.onERC721Received.selector;
     }
 }
