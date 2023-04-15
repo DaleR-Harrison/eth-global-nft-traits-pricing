@@ -1,8 +1,5 @@
 import { useState } from "react";
-import { useAccount, useContract } from "wagmi";
-
-import { PRICING_ORACLE_CONTRACT } from "../pages/constants";
-import { default as PricingOracleAbi } from "../PricingOracleABI.json";
+import { useAccount } from "wagmi";
 
 import styles from "../styles/NftGallery.module.css";
 import NFTGallery from "./gallery/nftGallery";
@@ -27,11 +24,6 @@ export default function NftCollection() {
         setCollectionAddress(e.target.value);
     };
 
-    const contract = useContract({
-        addressOrName: PRICING_ORACLE_CONTRACT,
-        abi: PricingOracleAbi,
-      })    
-
 return (
     <div className={styles.nft_gallery_page}>
         <div className={styles.gallery_header}>
@@ -53,7 +45,7 @@ return (
             <p>Loading...</p>
             </div>
         ) : (
-            <>{isConnected ? <UserNFTGallery setIsloading={setIsloading} contract={contract} /> : <NFTGallery setIsloading={setIsloading} collectionAddress={collectionAddress} contract={contract} />}</>
+            <>{isConnected ? <UserNFTGallery setIsloading={setIsloading} /> : <NFTGallery setIsloading={setIsloading} collectionAddress={collectionAddress} />}</>
         )}
     </div>
     );
