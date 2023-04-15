@@ -25,4 +25,47 @@ interface IPricingOracle {
 
 contract NFTDealer {
 
+    address public owner;
+    IPricingOracle public pricingOracle;
+
+    modifier onlyShopOwner() {
+        require(
+            msg.sender == owner,
+            "NFTDealer: NOT_OWNER"
+        );
+        _;
+    }
+
+    event Received(
+        address,
+        uint256
+    );
+
+    receive()
+        external
+        payable
+    {
+        emit Received(
+            msg.sender,
+            msg.value
+        );
+    }
+
+    constructor(
+        IPricingOracle _pricingOracle
+    ) {
+        owner = msg.sender;
+        pricingOracle = _pricingOracle;
+    }
+
+    function withdrawFunds(
+        uint256 _amount
+    )
+        external
+        onlyShopOwner
+    {
+        payable(msg.sender).transfer(
+            _amount
+        );
+    }
 }
