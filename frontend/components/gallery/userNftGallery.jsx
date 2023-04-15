@@ -10,7 +10,8 @@ export default function UserNFTGallery(setIsloading) {
   const { address } = useAccount();
 
   useEffect(() => {
-    fetchUserNft(address, setIsloading, setNfts);
+    fetchUserNft(address, setNfts);
+    setIsloading(false);
   }, [address]);
 
   return (

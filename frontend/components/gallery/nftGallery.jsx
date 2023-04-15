@@ -9,7 +9,8 @@ export default function NFTGallery(setIsloading, collectionAddress) {
   const [collectionName, setCollectionName] = useState("BoredApes");
 
   useEffect(() => {
-    fetchCollectionNft(collectionAddress, setCollectionName, setIsloading, setNfts);
+    fetchCollectionNft(collectionAddress, setCollectionName, setNfts);
+    setIsloading(false);
   }, [collectionAddress]);
 
   return (
