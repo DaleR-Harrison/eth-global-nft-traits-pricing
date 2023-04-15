@@ -168,7 +168,8 @@ export default function NftCard({ nft, collectionName, collectionAddress }) {
       <div className={styles.card_container} onClick={() => write?.()}>
         {<div className={styles.image_container}>
           {nft.media ? 
-            <img src={nft.media}></img> : <img src={`https://live---metadata-5covpqijaa-uc.a.run.app/images/${tokenId}`}></img>
+            <img src={nft.media}></img> : 
+            <>{name === "MoonBirds" ? <img src={`https://live---metadata-5covpqijaa-uc.a.run.app/images/${tokenId}`}></img> : <img src={`/${name}-${tokenId}.png`}></img>}</>
           }
         </div>}
         <div className={styles.info_container}>
