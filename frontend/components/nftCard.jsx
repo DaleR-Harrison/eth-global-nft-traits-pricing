@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react";
-import styles from "../styles/NftGallery.module.css"
+import React, { useState } from "react";
+import styles from "../styles/NftGallery.module.css";
+import NftModal from "./modal/nftModal";
 
 export default function NftCard({ nft, name }) {
+  const [opened, openModal] = useState(false);
 
   const displayTraits = () => {
     const traits = [];
@@ -14,7 +16,8 @@ export default function NftCard({ nft, name }) {
   }
  
   return (
-      <div className={styles.card_container}>
+    <>
+      <div className={styles.card_container} onClick={() => openModal(true)}>
         {/* <div className={styles.image_container}>
           {nft.format == "mp4" ? (
             <video src={nft.media} controls>
@@ -34,6 +37,8 @@ export default function NftCard({ nft, name }) {
           </div>
         </div>
       </div>
+      {opened && <NftModal openModal={openModal} />}
+    </>
     );
   }
   

@@ -80,6 +80,7 @@
   border-radius: 12px;
   padding: 8px;
   border: 1px solid #cfd9f0;
+  cursor: pointer;
 }
 
 .image_container {
