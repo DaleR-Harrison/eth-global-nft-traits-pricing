@@ -59,6 +59,46 @@ contract PricingOracle {
         return priceFeeds[_collectionAddress].latestAnswer();
     }
 
+    function getTokenPrice(
+        address _collectionAddress,
+        uint256 _tokenId,
+        uint256 _merkleIndex,
+        uint256 _floorPercent,
+        uint256 _maximumPrice,
+        bytes32[] memory _proof
+    )
+        external
+        view
+        returns (uint256)
+    {
+        bytes32 leaf = keccak256(
+            abi.encodePacked(
+                _merkleIndex,
+                _tokenId,
+                _floorPercent,
+                _maximumPrice
+            )
+        );
+
+        require(
+            _getRootHash(
+                leaf,
+                _proof
+            ) == merkleTrees[_collectionAddress],
+            "PricingOracle: INVALID_PROOF"
+        );
+
+        uint256 tokenPrice = getFloorPrice(
+            _collectionAddress
+        ) * _floorPercent;
+
+        if (tokenPrice > _maximumPrice) {
+            tokenPrice = _maximumPrice;
+        }
+
+        return tokenPrice;
+    }
+
     function _getRootHash(
         bytes32 _leaf,
         bytes32[] memory _proof
@@ -93,6 +133,7 @@ contract PricingOracle {
 
         return computedHash;
     }
+
     function getLatestAnswer()
         external
         view
