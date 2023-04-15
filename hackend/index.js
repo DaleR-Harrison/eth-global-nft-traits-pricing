@@ -13,8 +13,9 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/getPricingData/:collectionName/:tokenId', (req, res) => {
+app.get('/getPricingData/:collectionName/:tokenId/:stringify?', (req, res) => {
     const { collectionName, tokenId } = req.params;
+    const stringify =req.params.stringify === 'true';
 
     if (!collectionName || !tokenId) {
         return res.status(400).json({ error: 'Invalid parameters' });
@@ -40,6 +41,9 @@ app.get('/getPricingData/:collectionName/:tokenId', (req, res) => {
             return res.status(404).json({ error: 'Token info for specified token ID was not found'});
         }
 
+        if (stringify) {
+            res.send(JSON.stringify(pricingData, null, 2))
+        }
         res.json(pricingData);
     });
 });
