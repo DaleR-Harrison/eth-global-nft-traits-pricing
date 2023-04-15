@@ -16,7 +16,7 @@ import {
 } from "../../hackend/data/MoonBirds.json";
 
 export default function NftCollection() {
-    const { isConnected } = useAccount();
+    const { isConnected, isConnecting } = useAccount();
     const [isLoading, setIsloading] = useState(false);
     const [collectionAddress, setCollectionAddress] = useState(BORED_APES_CONTRACT);
 
@@ -27,16 +27,12 @@ export default function NftCollection() {
 return (
     <div className={styles.nft_gallery_page}>
         <div className={styles.gallery_header}>
-
-        {isConnected ? (
-        <h1>User's collection</h1> ) : ( 
-        <>
-            <h1>Supported collections</h1>
-            <div className={styles.button_wrapper}>
-                <button value={BORED_APES_CONTRACT} className={styles.collection_button} onClick={(e) => changeCollection(e)}>{BoredApes.CollectionName}</button>
-                <button value={MOON_BIRDS_CONTRACT} className={styles.collection_button} onClick={(e) => changeCollection(e)}>{MoonBirds.CollectionName}</button>
-            </div>
-        </>
+        <h1>Collections</h1>
+        {(!isConnected && !isConnecting) && (
+        <div className={styles.button_wrapper}>
+            <button value={BORED_APES_CONTRACT} className={styles.collection_button} onClick={(e) => changeCollection(e)}>{BoredApes.CollectionName}</button>
+            <button value={MOON_BIRDS_CONTRACT} className={styles.collection_button} onClick={(e) => changeCollection(e)}>{MoonBirds.CollectionName}</button>
+        </div>
         )}
     </div> 
 
