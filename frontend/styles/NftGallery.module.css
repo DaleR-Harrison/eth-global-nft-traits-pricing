@@ -217,3 +217,27 @@
   cursor: pointer;
   font-size: 14px;
 }
+
+.borrow_button {
+  background-image: linear-gradient(
+    to right,
+    #108ff0 0%,
+    #414bbe 51%,
+    #71138e 100%
+  ) !important;
+  border-radius: 50px !important;
+  margin: 8px 0;
+  padding: 8px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  width: 100%;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 12px;
+}

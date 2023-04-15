@@ -184,7 +184,7 @@ export default function NftCard({ nft, collectionName, collectionAddress }) {
           {
             result && (
               <>
-                <span className={styles.traits}><b>Borrow Now: {price && parseFloat(price).toFixed(3)} ETH (0.34% APY)</b></span>
+                <div className={styles.borrow_button}>Borrow Now: {price && parseFloat(price).toFixed(3)} ETH (0.34% APY)</div>
               </>
             )
           }
