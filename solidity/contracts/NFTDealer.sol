@@ -2,6 +2,8 @@
 
 pragma solidity ^0.8.19;
 
+import "./Helper.sol";
+
 interface IPricingOracle {
 
     function getFloorPrice(
@@ -24,7 +26,7 @@ interface IPricingOracle {
         returns (uint256);
 }
 
-contract NFTDealer {
+contract NFTDealer is Helper {
 
     address public owner;
     IPricingOracle public pricingOracle;
@@ -162,56 +164,6 @@ contract NFTDealer {
             loan.borrowAddress,
             loan.collectionAddress,
             loan.tokenId
-        );
-    }
-
-    function _transferNFT(
-        address _from,
-        address _to,
-        address _tokenAddress,
-        uint256 _tokenId
-    )
-        internal
-    {
-        bytes memory data = abi.encodeWithSignature(
-            "safeTransferFrom(address,address,uint256)",
-            _from,
-            _to,
-            _tokenId
-        );
-
-        (bool success,) = address(_tokenAddress).call(
-            data
-        );
-
-        require(
-            success == true,
-            "Helper: TRANSFER_FAILED"
-        );
-    }
-
-    function _transferFromNFT(
-        address _from,
-        address _to,
-        address _collectionAddress,
-        uint256 _tokenId
-    )
-        internal
-    {
-        bytes memory data = abi.encodeWithSignature(
-            "safeTransferFrom(address,address,uint256)",
-            _from,
-            _to,
-            _tokenId
-        );
-
-        (bool success, bytes memory resultData) = address(_collectionAddress).call(
-            data
-        );
-
-        require(
-            success,
-            string(resultData)
         );
     }
 }
