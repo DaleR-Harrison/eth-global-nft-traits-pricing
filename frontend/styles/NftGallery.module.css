@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 3rem;
+  row-gap: 1rem;
 }
 
 .nft_gallery {
@@ -76,7 +76,7 @@
   background-color: #fff;
   width: 100%;
   max-width: 288px;
-  height: 490px;
+  height: 500px;
   border-radius: 12px;
   padding: 8px;
   border: 1px solid #cfd9f0;
@@ -208,7 +208,7 @@
   transition: 0.5s;
   background-size: 200% auto;
   color: white;
-  box-shadow: 0 0 20px #eee;
+  box-shadow: 0 2px 1px #71138e;
   border-radius: 10px;
   display: block;
   border: none;
