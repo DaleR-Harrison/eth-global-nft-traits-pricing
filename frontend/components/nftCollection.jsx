@@ -34,14 +34,14 @@ export default function NftCollection() {
 return (
     <div className={styles.nft_gallery_page}>
         <div className={styles.gallery_header}>
-        <h1>Collections</h1>
+        <h1>Supported Tokens</h1>
         {(!isConnected && !isConnecting) && (
         <div className={styles.button_wrapper}>
             <button value={BORED_APES_CONTRACT} className={styles.collection_button} onClick={(e) => changeCollection(e)}>{boredApes.CollectionName}</button>
             <button value={MOON_BIRDS_CONTRACT} className={styles.collection_button} onClick={(e) => changeCollection(e)}>{moonBirds.CollectionName}</button>
         </div>
         )}
-    </div> 
+    </div>
 
         {isLoading ? (
             <div className={styles.loading_box}>
