@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { useContractRead, useContractWrite, usePrepareContractWrite } from "wagmi";
+import { useAccount, useContractRead, useContractWrite, usePrepareContractWrite } from "wagmi";
 
 import getPricingData from "../pages/api/getPricingData";
 import { PRICING_ORACLE_CONTRACT } from "../helpers/constants";
@@ -14,6 +14,8 @@ import styles from "../styles/NftGallery.module.css";
 import { ethers } from "ethers";
 
 export default function NftCard({ nft, collectionName, collectionAddress }) {
+  const { isConnected } = useAccount();
+
   const [opened, openModal] = useState(false);
   const [nftData, setNftData] = useState({PricingData: {}});
   const name = collectionName ?? nft.title;
@@ -150,7 +152,12 @@ export default function NftCard({ nft, collectionName, collectionAddress }) {
   const { write } = useContractWrite(config);
 
   const handleBorrow = () => {
-    // openModal(true);
+    if (isConnected) {
+      write?.();
+    }
+    else {
+      openModal(true)
+    };
   }
 
   // console.log(price && parseFloat(price).toFixed(3), 'price');
@@ -165,7 +172,7 @@ export default function NftCard({ nft, collectionName, collectionAddress }) {
 
   return (
     <>
-      <div className={styles.card_container} onClick={() => write?.()}>
+      <div className={styles.card_container} onClick={handleBorrow}>
         {<div className={styles.image_container}>
           {nft.media ? 
             <img src={nft.media}></img> : 
