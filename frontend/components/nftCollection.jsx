@@ -5,8 +5,8 @@ import styles from "../styles/NftGallery.module.css";
 import NFTGallery from "./gallery/nftGallery";
 import UserNFTGallery from "./gallery/userNftGallery";
 
-import { BORED_APES_CONTRACT } from "../pages/constants";
-import { MOON_BIRDS_CONTRACT } from "../pages/constants";
+import { BORED_APES_CONTRACT } from "../helpers/constants";
+import { MOON_BIRDS_CONTRACT } from "../helpers/constants";
 import getCollectionData from "../pages/api/getCollectionData";
 
 export default function NftCollection() {

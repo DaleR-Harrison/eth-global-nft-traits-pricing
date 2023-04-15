@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useContractRead } from "wagmi";
 
 import getPricingData from "../pages/api/getPricingData";
-import { PRICING_ORACLE_CONTRACT } from "../pages/constants";
+import { PRICING_ORACLE_CONTRACT } from "../helpers/constants";
 import { default as PricingOracleAbi } from "../PricingOracleABI.json";
 import NftModal from "../components/modal/nftModal";
 

@@ -3,7 +3,7 @@ import { useAccount } from "wagmi";
 import styles from "../../styles/NftGallery.module.css";
 import NftCard from "../nftCard";
 import { fetchUserNft } from "../../helpers/fetchNft.js";
-import { SUPPORTED_COLLECTIONS } from "../../pages/constants";
+import { SUPPORTED_COLLECTIONS } from "../../helpers/constants";
 
 export default function UserNFTGallery({setIsloading}) {
 

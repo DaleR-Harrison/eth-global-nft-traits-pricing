@@ -1,4 +1,4 @@
-import { BORED_APES_CONTRACT, MOON_BIRDS_CONTRACT } from "../pages/constants";
+import { BORED_APES_CONTRACT, MOON_BIRDS_CONTRACT } from "./constants";
 
 export async function fetchUserNft(address, setNfts) {
     const endpoint = "/api/getNftsForOwner";
