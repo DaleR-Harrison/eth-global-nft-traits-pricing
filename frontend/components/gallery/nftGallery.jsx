@@ -3,13 +3,15 @@ import { useEffect, useState } from "react";
 import styles from "../../styles/NftGallery.module.css"
 import NftCard from "../nftCard"; 
 import { fetchCollectionNft } from "../../helpers/fetchNft.js"
+import getNftPrice from "../../helpers/getNftPrice";
 
-export default function NFTGallery(setIsloading, collectionAddress) {
+export default function NFTGallery(setIsloading, collectionAddress, contract) {
   const [nfts, setNfts] = useState();
   const [collectionName, setCollectionName] = useState("BoredApes");
 
   useEffect(() => {
-    fetchCollectionNft(collectionAddress, setCollectionName, setIsloading, setNfts);
+    fetchCollectionNft(collectionAddress, setCollectionName, setNfts);
+    setIsloading(false);
   }, [collectionAddress]);
 
   return (
@@ -17,7 +19,7 @@ export default function NFTGallery(setIsloading, collectionAddress) {
       <div className={styles.nfts_display}>
         {nfts?.length ? (
           nfts.map((nft) => {
-            return <NftCard key={nft.TokenId} nft={nft} name={collectionName}/>;
+            return <NftCard key={nft.TokenId} nft={nft} name={collectionName} price={getNftPrice(contract, collectionName, nft.TokenId)} />;
           })
         ) : (
           <div className={styles.loading_box}>

@@ -5,7 +5,7 @@ import {
     default as MoonBirds
 } from "../../hackend/data/MoonBirds.json";
 
-export async function fetchUserNft(address, setIsloading, setNfts) {
+export async function fetchUserNft(address, setNfts) {
     const endpoint = "/api/getNftsForOwner";
 
     try {
@@ -22,13 +22,11 @@ export async function fetchUserNft(address, setIsloading, setNfts) {
         setNfts(res.nfts);
 
     } catch (e) {
-    console.log(e);
+        console.log(e);
     }
-
-    setIsloading(false);
 }
 
-export async function fetchCollectionNft(collectionAddress, setCollectionName, setIsloading, setNfts) {    
+export async function fetchCollectionNft(collectionAddress, setCollectionName, setNfts) {    
     if (collectionAddress === BoredApes.CollectionAddress) {
         setNfts(BoredApes.CollectionTokens);
         setCollectionName(BoredApes.CollectionName);
@@ -37,6 +35,4 @@ export async function fetchCollectionNft(collectionAddress, setCollectionName, s
         setNfts(MoonBirds.CollectionTokens);
         setCollectionName(MoonBirds.CollectionName);
     }
-
-    setIsloading(false);    
 }

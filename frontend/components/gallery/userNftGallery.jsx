@@ -4,13 +4,15 @@ import { useAccount } from "wagmi";
 import styles from "../../styles/NftGallery.module.css";
 import NftCard from "../nftCard"; 
 import { fetchUserNft } from "../../helpers/fetchNft.js";
+import getNftPrice from "../../helpers/getNftPrice";
 
-export default function UserNFTGallery(setIsloading) {
+export default function UserNFTGallery(setIsloading, contract) {
   const [nfts, setNfts] = useState();
   const { address } = useAccount();
 
   useEffect(() => {
-    fetchUserNft(address, setIsloading, setNfts);
+    fetchUserNft(address, setNfts);
+    setIsloading(false);
   }, [address]);
 
   return (
@@ -18,7 +20,7 @@ export default function UserNFTGallery(setIsloading) {
       <div className={styles.nfts_display}>
         {nfts?.length ? (
           nfts.map((nft) => {
-            return <NftCard key={nft.tokenId} nft={nft} />;
+            return <NftCard key={nft.tokenId} nft={nft} price={getNftPrice(contract, collectionName, nft.TokenId)}/>;
           })
         ) : (
           <div className={styles.loading_box}>

@@ -119,9 +119,9 @@ contract NFTDealer is Helper {
         }
 
         _transferFromNFT(
-            _collectionAddress,
             msg.sender,
             address(this),
+            _collectionAddress,
             _tokenId
         );
 
