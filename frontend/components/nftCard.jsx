@@ -4,6 +4,7 @@ import { useContractRead } from "wagmi";
 import getPricingData from "../pages/api/getPricingData";
 import { PRICING_ORACLE_CONTRACT } from "../pages/constants";
 import { default as PricingOracleAbi } from "../PricingOracleABI.json";
+import NftModal from "../components/modal/nftModal";
 
 import styles from "../styles/NftGallery.module.css";
 
