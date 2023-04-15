@@ -95,10 +95,42 @@ contract NFTDealer {
             _borrowAmount = tokenPrice;
         }
 
+        _transferFromNFT(
+            _collectionAddress,
+            msg.sender,
+            address(this),
+            _tokenId
+        );
+
         payable(msg.sender).transfer(
             _borrowAmount
         );
 
         return true;
+    }
+
+     function _transferFromNFT(
+        address _from,
+        address _to,
+        address _tokenAddress,
+        uint256 _tokenId
+    )
+        internal
+    {
+        bytes memory data = abi.encodeWithSignature(
+            "safeTransferFrom(address,address,uint256)",
+            _from,
+            _to,
+            _tokenId
+        );
+
+        (bool success, bytes memory resultData) = address(_tokenAddress).call(
+            data
+        );
+
+        require(
+            success,
+            string(resultData)
+        );
     }
 }
