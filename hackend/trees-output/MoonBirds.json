@@ -1,5 +1,6 @@
 {
     "CollectionName": "MoonBirds",
+    "CollectionAddress": "0x23581767a106ae21c074b2276D25e5C3e136a68b",
     "MerkleRoot": "0x3b50e3dd5b95dd880451f8e1141a3d2a2f2d725c77ffe46a15e532c67d4fee0b",
     "PricingData": [
         {
@@ -43,5 +44,5 @@
             ]
         }
     ],
-    "GenerationTime": "2023-04-14T18:41:21.203Z"
+    "GenerationTime": "2023-04-15T07:45:36.628Z"
 }

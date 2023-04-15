@@ -1,5 +1,6 @@
 {
     "CollectionName": "Doodles",
+    "CollectionAddress": "0x8a90CAb2b38dba80c64b7734e58Ee1dB38B8992e",
     "MerkleRoot": "0xaa1689e26a2b2b80bfaa6fb9ce5c1fdc66db370636b76d468841fb432fe2b4ee",
     "PricingData": [
         {
@@ -131,5 +132,5 @@
             ]
         }
     ],
-    "GenerationTime": "2023-04-15T07:06:04.784Z"
+    "GenerationTime": "2023-04-15T07:45:27.502Z"
 }
