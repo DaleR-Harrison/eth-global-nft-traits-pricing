@@ -41,10 +41,17 @@ app.get('/getPricingData/:collectionName/:tokenId/:stringify?', (req, res) => {
             return res.status(404).json({ error: 'Token info for specified token ID was not found'});
         }
 
-        if (stringify) {
-            res.send(JSON.stringify(pricingData, null, 2))
+        const responseObject = {
+            CollectionName: collectionData.CollectionName,
+            CollectionAddress: collectionData.CollectionAddress,
+            MerkleRoot: collectionData.MerkleRoot,
+            PricingData: pricingData
         }
-        res.json(pricingData);
+
+        if (stringify) {
+            res.send(JSON.stringify(responseObject, null, 2))
+        }
+        res.json(responseObject);
     });
 });
 
