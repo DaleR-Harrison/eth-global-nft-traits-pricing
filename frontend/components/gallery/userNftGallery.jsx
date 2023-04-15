@@ -16,17 +16,17 @@ export default function UserNFTGallery({setIsloading}) {
 
   return (
     <div className={styles.nft_gallery}>
-      <div className={styles.nfts_display}>
         {nfts?.length ? (
-          nfts.map((nft) => {
-            return <NftCard key={nft.tokenId} nft={nft} />;
-          })
+          <div className={styles.nfts_display}>
+          {nfts.map((nft) => {
+            return <NftCard key={nft.TokenId} nft={nft} collectionName={collectionName} />;
+          })}
+          </div>
         ) : (
           <div className={styles.loading_box}>
             <p>No NFTs found for this address</p>
           </div>
         )}
-      </div>
     </div>
   );
 }
