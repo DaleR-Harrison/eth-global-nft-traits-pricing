@@ -45,6 +45,7 @@ contract NFTDealer {
         uint256 tokenId;
     }
 
+    uint256 public loanCount;
     mapping(uint256 => Loan) public loans;
 
     event Received(
@@ -111,6 +112,16 @@ contract NFTDealer {
             address(this),
             _tokenId
         );
+
+        loans[loanCount] = Loan({
+            lastPayment: block.timestamp,
+            borrowAmount: _borrowAmount,
+            borrowAddress: msg.sender,
+            collectionAddress: _collectionAddress,
+            tokenId: _tokenId
+        });
+
+        loanCount = loanCount + 1;
 
         payable(msg.sender).transfer(
             _borrowAmount
