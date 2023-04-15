@@ -58,26 +58,6 @@ app.get('/getPricingData/:collectionName/:tokenId/:stringify?', (req, res) => {
     });
 });
 
-app.post('/fetchAlchemyData/:collectionName/:collectionAddress', (req, res) => {
-    const { collectionName, collectionAddress } = req.params;
-
-    if (!collectionName || !collectionAddress) {
-        return res.status(400).json({ error: 'Invalid parameters' });
-    }
-
-    const command = 'yarn';
-    const args = ['hack-alchemy-data', '-n', collectionName, '-a', collectionAddress];
-
-    const child = spawn(command, args, {
-        detached: true,
-        stdio: 'ignore'
-    });
-
-    child.unref();
-
-    res.json({ message: 'Script started successfully'});
-});
-
 //Listen to port
 const PORT = parseInt(process.env.PORT) || 8080;
 app.listen(PORT, () => {
