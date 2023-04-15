@@ -27,7 +27,7 @@ export default function NftCard({ nft, collectionName }) {
   useEffect(() => {
 
     const getNftPricing = async () => {
-      const res = await getPricingData(name, nft.TokenId);
+      const res = await getPricingData(name, nft.TokenId || nft.tokenId);
       console.log(res, 'res');
       setNftData(res);
     }
@@ -84,6 +84,13 @@ export default function NftCard({ nft, collectionName }) {
           <hr className={styles.separator} />
           <div className={styles.description_container}>
           {displayTraits()}
+          {
+            result && (
+              <>
+                <span className={styles.traits}><b>Borrow Now: {nftData.PricingData.ceiling}</b></span>
+              </>
+            )
+          }
           </div>
         </div>
       </div>
