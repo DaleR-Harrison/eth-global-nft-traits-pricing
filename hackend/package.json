@@ -17,7 +17,16 @@
         "start": "node index.js",
         "hack-alchemy-data": "node hack-alchemy-data.js",
         "hack-pricing-template": "node hack-pricing-template.js",
-        "hack-merkles-tree": "node hack-merkle-tree.js"
+        "hack-merkles-tree": "node hack-merkle-tree.js",
+        "get-bored-apes-data": "yarn hack-alchemy-data -n BoredApes -a 0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D",
+        "make-bored-apes-template": "yarn hack-pricing-template -n BoredApes",
+        "write-bored-apes-tree": "yarn hack-merkles-tree -n BoredApes",
+        "get-moon-birds-data": "yarn hack-alchemy-data -n MoonBirds -a 0x23581767a106ae21c074b2276D25e5C3e136a68b",
+        "make-moon-birds-template": "yarn hack-pricing-template -n MoonBirds",
+        "write-moon-birds-tree": "yarn hack-merkles-tree -n MoonBirds",
+        "get-doodles-data": "yarn hack-alchemy-data -n Doodles -a 0x8a90CAb2b38dba80c64b7734e58Ee1dB38B8992e",
+        "make-doodles-template": "yarn hack-pricing-template -n Doodles",
+        "write-doodles-tree": "yarn hack-merkles-tree -n Doodles"
     },
     "dependencies": {
         "@alch/alchemy-web3": "^1.4.6",
