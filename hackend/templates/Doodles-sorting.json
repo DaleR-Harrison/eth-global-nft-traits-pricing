@@ -1,0 +1,169 @@
+{
+    "CollectionName": "Doodles",
+    "CollectionAddress": "0x8a90CAb2b38dba80c64b7734e58Ee1dB38B8992e",
+    "TraitTypes": {
+        "face": {
+            "mustache": [
+                "0"
+            ],
+            "holographic beard": [
+                "1"
+            ],
+            "designer glasses": [
+                "2",
+                "3",
+                "5",
+                "6"
+            ],
+            "happy": [
+                "4"
+            ],
+            "surprised": [
+                "7"
+            ],
+            "in love": [
+                "8"
+            ],
+            "blue check": [
+                "9"
+            ],
+            "chill cig": [
+                "10"
+            ]
+        },
+        "hair": {
+            "purple long": [
+                "0",
+                "4"
+            ],
+            "white bucket cap": [
+                "1"
+            ],
+            "poopie": [
+                "2"
+            ],
+            "holographic mohawk": [
+                "3"
+            ],
+            "green brushcut": [
+                "5"
+            ],
+            "purple cap": [
+                "6"
+            ],
+            "purple alfalfa": [
+                "7"
+            ],
+            "halo": [
+                "8"
+            ],
+            "blue messy": [
+                "9"
+            ],
+            "green mullet": [
+                "10"
+            ]
+        },
+        "body": {
+            "blue and yellow jacket": [
+                "0"
+            ],
+            "purple sweater with satchel": [
+                "1"
+            ],
+            "blue fleece": [
+                "2",
+                "6"
+            ],
+            "pink fleece": [
+                "3"
+            ],
+            "spotted hoodie": [
+                "4"
+            ],
+            "combo 2 puffer": [
+                "5"
+            ],
+            "combo 3 puffer": [
+                "7"
+            ],
+            "combo 1 puffer": [
+                "8"
+            ],
+            "white sweater": [
+                "9"
+            ],
+            "leopard hoodie": [
+                "10"
+            ]
+        },
+        "background": {
+            "green": [
+                "0",
+                "5"
+            ],
+            "grey": [
+                "1"
+            ],
+            "yellow": [
+                "2"
+            ],
+            "gradient 1": [
+                "3",
+                "6"
+            ],
+            "gradient 2": [
+                "4"
+            ],
+            "purple": [
+                "7"
+            ],
+            "iridescent": [
+                "8"
+            ],
+            "light blue": [
+                "9"
+            ],
+            "pink": [
+                "10"
+            ]
+        },
+        "head": {
+            "tan": [
+                "0"
+            ],
+            "gradient 2": [
+                "1",
+                "6",
+                "7"
+            ],
+            "purple": [
+                "2",
+                "4",
+                "9"
+            ],
+            "pale": [
+                "3"
+            ],
+            "blue": [
+                "5"
+            ],
+            "yellow": [
+                "8"
+            ],
+            "green": [
+                "10"
+            ]
+        },
+        "piercing": {
+            "airpod": [
+                "6"
+            ],
+            "pearl": [
+                "8",
+                "10"
+            ]
+        }
+    },
+    "GenerationTime": "2023-04-15T07:06:01.707Z"
+}

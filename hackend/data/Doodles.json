@@ -1,0 +1,120 @@
+{
+    "CollectionName": "Doodles",
+    "CollectionAddress": "0x8a90CAb2b38dba80c64b7734e58Ee1dB38B8992e",
+    "CollectionTokens": [
+        {
+            "TokenId": "0",
+            "TokenTraits": {
+                "face": "mustache",
+                "hair": "purple long",
+                "body": "blue and yellow jacket",
+                "background": "green",
+                "head": "tan"
+            }
+        },
+        {
+            "TokenId": "1",
+            "TokenTraits": {
+                "face": "holographic beard",
+                "hair": "white bucket cap",
+                "body": "purple sweater with satchel",
+                "background": "grey",
+                "head": "gradient 2"
+            }
+        },
+        {
+            "TokenId": "2",
+            "TokenTraits": {
+                "face": "designer glasses",
+                "hair": "poopie",
+                "body": "blue fleece",
+                "background": "yellow",
+                "head": "purple"
+            }
+        },
+        {
+            "TokenId": "3",
+            "TokenTraits": {
+                "face": "designer glasses",
+                "hair": "holographic mohawk",
+                "body": "pink fleece",
+                "background": "gradient 1",
+                "head": "pale"
+            }
+        },
+        {
+            "TokenId": "4",
+            "TokenTraits": {
+                "face": "happy",
+                "hair": "purple long",
+                "body": "spotted hoodie",
+                "background": "gradient 2",
+                "head": "purple"
+            }
+        },
+        {
+            "TokenId": "5",
+            "TokenTraits": {
+                "face": "designer glasses",
+                "hair": "green brushcut",
+                "body": "combo 2 puffer",
+                "background": "green",
+                "head": "blue"
+            }
+        },
+        {
+            "TokenId": "6",
+            "TokenTraits": {
+                "face": "designer glasses",
+                "hair": "purple cap",
+                "body": "blue fleece",
+                "background": "gradient 1",
+                "head": "gradient 2",
+                "piercing": "airpod"
+            }
+        },
+        {
+            "TokenId": "7",
+            "TokenTraits": {
+                "face": "surprised",
+                "hair": "purple alfalfa",
+                "body": "combo 3 puffer",
+                "background": "purple",
+                "head": "gradient 2"
+            }
+        },
+        {
+            "TokenId": "8",
+            "TokenTraits": {
+                "face": "in love",
+                "hair": "halo",
+                "body": "combo 1 puffer",
+                "background": "iridescent",
+                "head": "yellow",
+                "piercing": "pearl"
+            }
+        },
+        {
+            "TokenId": "9",
+            "TokenTraits": {
+                "face": "blue check",
+                "hair": "blue messy",
+                "body": "white sweater",
+                "background": "light blue",
+                "head": "purple"
+            }
+        },
+        {
+            "TokenId": "10",
+            "TokenTraits": {
+                "face": "chill cig",
+                "hair": "green mullet",
+                "body": "leopard hoodie",
+                "background": "pink",
+                "head": "green",
+                "piercing": "pearl"
+            }
+        }
+    ],
+    "GenerationTime": "2023-04-15T06:39:52.176Z"
+}

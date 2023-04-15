@@ -1,0 +1,203 @@
+{
+    "CollectionName": "Doodles",
+    "CollectionAddress": "0x8a90CAb2b38dba80c64b7734e58Ee1dB38B8992e",
+    "RelativePrices": {
+        "face": {
+            "mustache": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "holographic beard": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "designer glasses": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "happy": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "surprised": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "in love": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "blue check": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "chill cig": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            }
+        },
+        "hair": {
+            "purple long": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "white bucket cap": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "poopie": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "holographic mohawk": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "green brushcut": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "purple cap": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "purple alfalfa": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "halo": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "blue messy": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "green mullet": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            }
+        },
+        "body": {
+            "blue and yellow jacket": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "purple sweater with satchel": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "blue fleece": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "pink fleece": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "spotted hoodie": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "combo 2 puffer": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "combo 3 puffer": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "combo 1 puffer": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "white sweater": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "leopard hoodie": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            }
+        },
+        "background": {
+            "green": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "grey": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "yellow": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "gradient 1": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "gradient 2": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "purple": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "iridescent": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "light blue": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "pink": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            }
+        },
+        "head": {
+            "tan": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "gradient 2": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "purple": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "pale": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "blue": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "yellow": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "green": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            }
+        },
+        "piercing": {
+            "airpod": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            },
+            "pearl": {
+                "FloorPercent": 100,
+                "MaximumPrice": 1000
+            }
+        }
+    },
+    "GenerationTime": "2023-04-15T07:06:01.707Z"
+}
