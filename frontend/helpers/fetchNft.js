@@ -1,9 +1,9 @@
 import {
     default as BoredApes
-} from "../../../hackend/data/BoredApes.json";
+} from "../../hackend/data/BoredApes.json";
 import {
     default as MoonBirds
-} from "../../../hackend/data/MoonBirds.json";
+} from "../../hackend/data/MoonBirds.json";
 
 export async function fetchUserNft(address, setIsloading, setNfts) {
     const endpoint = "/api/getNftsForOwner";

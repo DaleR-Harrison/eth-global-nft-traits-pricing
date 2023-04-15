@@ -22,5 +22,7 @@
 `yarn hack-merkles-tree -n MoonBirds`
 `yarn hack-merkles-tree -n Doodles`
 
-
 # Goerli Testnet: https://goerli.etherscan.io/address/0xFadc870ad12c88b621Bb906032Bef2eE2427c42a#readContract
+
+
+# Mainnet Oralce: https://etherscan.io/address/0x944455cab3af80bb1abded67ce573de27ddfdb1a#readContract
