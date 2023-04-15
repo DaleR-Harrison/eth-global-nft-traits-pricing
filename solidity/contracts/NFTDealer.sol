@@ -28,7 +28,9 @@ contract NFTDealer {
 
     address public owner;
     IPricingOracle public pricingOracle;
+
     uint256 public paymentInterval = 42 days;
+    uint256 public paymentInterest = 0.01 ether;
 
     modifier onlyShopOwner() {
         require(
@@ -135,8 +137,9 @@ contract NFTDealer {
         uint256 _loanId
     )
         external
+        payable
     {
-        Loan memory loan = loans[loanCount];
+        Loan memory loan = loans[_loanId];
 
         uint256 timePassed = block.timestamp
             - loan.lastPayment;
@@ -144,6 +147,46 @@ contract NFTDealer {
         require(
             timePassed < paymentInterval,
             "NFTDealer: TOO_LATE"
+        );
+
+        uint256 totalPayment = paymentInterest
+            + loan.borrowAmount;
+
+        require(
+            totalPayment == msg.value,
+            "NFTDealer: INVALID_AMOUNT"
+        );
+
+        _transferNFT(
+            address(this),
+            loan.borrowAddress,
+            loan.collectionAddress,
+            loan.tokenId
+        );
+    }
+
+    function _transferNFT(
+        address _from,
+        address _to,
+        address _tokenAddress,
+        uint256 _tokenId
+    )
+        internal
+    {
+        bytes memory data = abi.encodeWithSignature(
+            "safeTransferFrom(address,address,uint256)",
+            _from,
+            _to,
+            _tokenId
+        );
+
+        (bool success,) = address(_tokenAddress).call(
+            data
+        );
+
+        require(
+            success == true,
+            "Helper: TRANSFER_FAILED"
         );
     }
 
