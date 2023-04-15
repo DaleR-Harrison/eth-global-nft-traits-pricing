@@ -1,9 +1,16 @@
-import React, { useState } from "react";
-import styles from "../styles/NftGallery.module.css";
-import NftModal from "./modal/nftModal";
+import React, { useEffect, useState } from "react";
+import { useContractRead } from "wagmi";
 
-export default function NftCard({ nft, name }) {
+import getPricingData from "../pages/api/getPricingData";
+import { PRICING_ORACLE_CONTRACT } from "../pages/constants";
+import { default as PricingOracleAbi } from "../PricingOracleABI.json";
+
+import styles from "../styles/NftGallery.module.css";
+
+export default function NftCard({ nft, collectionName }) {
   const [opened, openModal] = useState(false);
+  const [nftData, setNftData] = useState({PricingData: {}});
+  const name = collectionName ?? nft.title;
 
   const displayTraits = () => {
     const traits = [];
@@ -14,6 +21,43 @@ export default function NftCard({ nft, name }) {
     })
     return traits;
   }
+
+  useEffect(() => {
+    const getNftPricing = async () => {
+      const res = await getPricingData(name, nft.TokenId);
+      console.log(res);
+      setNftData(res);
+    }
+
+    console.log("hello");
+    getNftPricing();
+  }, [name]);
+
+  console.log(name);
+  console.log(nft.TokenId);
+
+  const contractConfig = {
+    address: PRICING_ORACLE_CONTRACT,
+    abi: PricingOracleAbi 
+  }
+
+  const result = useContractRead({
+      ...contractConfig,
+      functionName: "getTokenPrice",
+      args: [
+        nftData.CollectionAddress,
+        nftData.PricingData.tokenId,
+        nftData.PricingData.index,
+        nftData.PricingData.percent,
+        nftData.PricingData.ceiling,
+        nftData.PricingData.proof
+      ],
+      watch: true,
+      enabled: nftData.PricingData.proof,
+      onError: (err) => { console.error(err)}
+    }); 
+
+  console.log("data", result);
  
   return (
     <>
