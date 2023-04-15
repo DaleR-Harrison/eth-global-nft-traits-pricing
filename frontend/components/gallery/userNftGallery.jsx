@@ -3,6 +3,7 @@ import { useAccount } from "wagmi";
 
 import styles from "../../styles/NftGallery.module.css"
 import NftCard from "../nftCard"; 
+import { fetchUserNft } from "../helpers/fetchNft.js"
 
 export default function UserNFTGallery({}) {
   const [nfts, setNfts] = useState();
@@ -10,40 +11,9 @@ export default function UserNFTGallery({}) {
   const [isLoading, setIsloading] = useState(false);
   const { address } = useAccount();
 
-  const fetchNFTs = async (pagekey) => {
-    if (!pageKey) setIsloading(true);
-    const endpoint = "/api/getNftsForOwner";
-    try {
-      const res = await fetch(endpoint, {
-        method: "POST",
-        body: JSON.stringify({
-          address: address,
-          pageKey: pagekey ? pagekey : null,
-          chain: "ETH_MAINNET",
-          excludeFilter: false,
-        }),
-      }).then((res) => res.json());
-      if (nfts?.length && pageKey) {
-        setNfts((prevState) => [...prevState, ...res.nfts]);
-      } else {
-        setNfts();
-        setNfts(res.nfts);
-      }
-      if (res.pageKey) {
-        setPageKey(res.pageKey);
-      } else {
-        setPageKey();
-      }
-    } catch (e) {
-      console.log(e);
-    }
-
-    setIsloading(false);
-  };
-
   useEffect(() => {
-    fetchNFTs();
-  }, []);
+    fetchUserNft(address, setIsloading, setNfts);
+  }, [address]);
 
   return (
     <div className={styles.nft_gallery_page}>
