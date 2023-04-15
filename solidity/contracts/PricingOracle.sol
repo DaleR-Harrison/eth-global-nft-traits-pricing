@@ -14,7 +14,7 @@ contract PricingOracle {
 
     address public oracleDataSupplier;
 
-    mapping(address => bytes32) public merkleTrees;
+    mapping(address => bytes32) public merkleRoots;
     mapping(address => IChainLinkFeeds) public priceFeeds;
 
     modifier onlyDataSupplier() {
@@ -27,9 +27,11 @@ contract PricingOracle {
 
     constructor(
         address _collectionAddress,
+        bytes32 _collectionMerkleRoot,
         IChainLinkFeeds _chainLinkFeed
     ) {
         priceFeeds[_collectionAddress] = _chainLinkFeed;
+        merkleRoots[_collectionAddress] = _collectionMerkleRoot;
         oracleDataSupplier = msg.sender;
     }
 
@@ -42,6 +44,17 @@ contract PricingOracle {
     {
         priceFeeds[_collectionAddress] = _chainLinkFeed;
     }
+
+    function setMerkleRoot(
+        address _collectionAddress,
+        bytes32 _collectionMerkleRoot
+    )
+        external
+        onlyDataSupplier
+    {
+        merkleRoots[_collectionAddress] = _collectionMerkleRoot;
+    }
+
 
     function getFloorPrice(
         address _collectionAddress
@@ -78,7 +91,7 @@ contract PricingOracle {
             _getRootHash(
                 leaf,
                 _proof
-            ) == merkleTrees[_collectionAddress],
+            ) == merkleRoots[_collectionAddress],
             "PricingOracle: INVALID_PROOF"
         );
 
