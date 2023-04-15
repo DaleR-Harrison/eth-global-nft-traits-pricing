@@ -91,7 +91,13 @@ contract NFTDealer {
             _proof
         );
 
+        if (_borrowAmount > tokenPrice) {
+            _borrowAmount = tokenPrice;
+        }
 
+        payable(msg.sender).transfer(
+            _borrowAmount
+        );
 
         return true;
     }
