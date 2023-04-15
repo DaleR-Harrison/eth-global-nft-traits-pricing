@@ -7,6 +7,7 @@ import { default as PricingOracleAbi } from "../PricingOracleABI.json";
 import NftModal from "../components/modal/nftModal";
 
 import styles from "../styles/NftGallery.module.css";
+import { ethers } from "ethers";
 
 export default function NftCard({ nft, collectionName }) {
   const [opened, openModal] = useState(false);
@@ -25,7 +26,6 @@ export default function NftCard({ nft, collectionName }) {
   }
 
   useEffect(() => {
-
     const getNftPricing = async () => {
       const res = await getPricingData(name, nft.TokenId || nft.tokenId);
       console.log(res, 'res');
@@ -43,7 +43,7 @@ export default function NftCard({ nft, collectionName }) {
 
   const contractConfig = {
     address: PRICING_ORACLE_CONTRACT,
-    abi: PricingOracleAbi 
+    abi: PricingOracleAbi
   }
 
   const result = useContractRead({
@@ -62,8 +62,15 @@ export default function NftCard({ nft, collectionName }) {
       onError: (err) => { console.error(err)}
     });
 
-  // console.log("data", result);
-  console.log("nftData", nftData);
+    // console.log(result, 'result');
+    // console.log(result.data.toString(), "RES");
+    // console.log("nftData", nftData);
+
+  const price = result && result.data && ethers.utils.formatEther(
+    result.data.toString()
+  );
+
+  // console.log(price && parseFloat(price).toFixed(3), 'price');
 
   return (
     <>
@@ -87,7 +94,7 @@ export default function NftCard({ nft, collectionName }) {
           {
             result && (
               <>
-                <span className={styles.traits}><b>Borrow Now: {nftData.PricingData.ceiling}</b></span>
+                <span className={styles.traits}><b>Borrow Now: {price && parseFloat(price).toFixed(3)} ETH (0.34% APY)</b></span>
               </>
             )
           }
