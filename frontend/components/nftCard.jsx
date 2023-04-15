@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useContractRead } from "wagmi";
+
+import { useContractRead, useContractWrite, usePrepareContractWrite } from "wagmi";
 
 import getPricingData from "../pages/api/getPricingData";
 import { PRICING_ORACLE_CONTRACT } from "../helpers/constants";
+import { SHOP_CONTRACT } from "../helpers/constants";
 import { default as PricingOracleAbi } from "../PricingOracleABI.json";
+import { default as NFTDealerABI } from "../NFTDealerABI.json";
 import NftModal from "../components/modal/nftModal";
 
 import styles from "../styles/NftGallery.module.css";
@@ -46,6 +49,11 @@ export default function NftCard({ nft, collectionName }) {
     abi: PricingOracleAbi
   }
 
+  const contractConfigShop = {
+    address: SHOP_CONTRACT,
+    abi: NFTDealerABI
+  }
+
   const result = useContractRead({
       ...contractConfig,
       functionName: "getTokenPrice",
@@ -70,11 +78,84 @@ export default function NftCard({ nft, collectionName }) {
     result.data.toString()
   );
 
+  const { config, error } = usePrepareContractWrite({
+    address: SHOP_CONTRACT,
+    abi: [
+      {
+        name: 'borrowETH',
+        type: 'function',
+        stateMutability: 'nonpayable',
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_borrowAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "_collectionAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_tokenId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_merkleIndex",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_floorPercent",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_maximumPrice",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bytes32[]",
+            "name": "_proof",
+            "type": "bytes32[]"
+          }
+        ],
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+      },
+    ],
+    functionName: 'borrowETH',
+    args: [
+      nftData && "5000000000000000",// result && result.data,
+      nftData && nftData.CollectionAddress,
+      nftData && nftData.PricingData.tokenId,
+      nftData && nftData.PricingData.index,
+      nftData && nftData.PricingData.percent,
+      nftData && nftData.PricingData.ceiling,
+      nftData && nftData.PricingData.proof
+    ],
+  })
+
+  console.log(config, 'config');
+  console.log(error, 'error');
+  const { write } = useContractWrite(config);
+
+  const handleBorrow = () => {
+    // openModal(true);
+  }
+
   // console.log(price && parseFloat(price).toFixed(3), 'price');
 
   return (
     <>
-      <div className={styles.card_container} onClick={() => openModal(true)}>
+      <div className={styles.card_container} onClick={() => write?.()}>
         {<div className={styles.image_container}>
           {nft.format == "mp4" ? (
             <video src={nft.media} controls>
