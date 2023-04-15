@@ -10,13 +10,13 @@ import getCollectionData from "../../pages/api/getCollectionData";
 export default function NFTGallery({setIsloading, collectionAddress}) {
   const [nfts, setNfts] = useState();
   const [collectionName, setCollectionName] = useState("BoredApes");
-  const [moonBirds, setMoonBirds] = useState();
-  const [boredApes, setBoredApes] = useState();
+  const [moonBirds, setMoonBirds] = useState({});
+  const [boredApes, setBoredApes] = useState({});
 
   useEffect(() => {
     const getCollections = async () => {
-      const mbRes = await getCollectionData(BORED_APES_CONTRACT);
-      const baRes = await getCollectionData(MOON_BIRDS_CONTRACT);
+      const baRes = await getCollectionData(BORED_APES_CONTRACT);
+      const mbRes = await getCollectionData(MOON_BIRDS_CONTRACT);
       setMoonBirds(mbRes);
       setBoredApes(baRes);
     }

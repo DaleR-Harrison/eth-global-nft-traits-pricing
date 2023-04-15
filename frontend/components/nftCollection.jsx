@@ -13,8 +13,8 @@ export default function NftCollection() {
     const { isConnected, isConnecting } = useAccount();
     const [isLoading, setIsloading] = useState(false);
     const [collectionAddress, setCollectionAddress] = useState(BORED_APES_CONTRACT);
-    const [moonBirds, setMoonBirds] = useState();
-    const [boredApes, setBoredApes] = useState();
+    const [moonBirds, setMoonBirds] = useState({});
+    const [boredApes, setBoredApes] = useState({});
 
     const changeCollection = (e) => {
         setCollectionAddress(e.target.value);
@@ -22,8 +22,8 @@ export default function NftCollection() {
 
     useEffect(() => {
     const getCollections = async () => {
-      const mbRes = await getCollectionData(BORED_APES_CONTRACT);
-      const baRes = await getCollectionData(MOON_BIRDS_CONTRACT);
+      const baRes = await getCollectionData(BORED_APES_CONTRACT);
+      const mbRes = await getCollectionData(MOON_BIRDS_CONTRACT);
       setMoonBirds(mbRes);
       setBoredApes(baRes);
     }
