@@ -135,7 +135,7 @@ export default function NftCard({ nft, collectionName, collectionAddress }) {
     ],
     functionName: 'borrowETH',
     args: [
-      nftData && "5000000000000000",// result && result.data,
+      nftData && result && result.data && result.data.toString(),
       nftData && nftData.CollectionAddress,
       nftData && nftData.PricingData.tokenId,
       nftData && nftData.PricingData.index,
