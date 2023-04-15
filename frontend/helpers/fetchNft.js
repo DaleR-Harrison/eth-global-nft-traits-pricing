@@ -1,3 +1,4 @@
+import getNftMetadata from "../pages/api/getNftMetadata";
 import { BORED_APES_CONTRACT, MOON_BIRDS_CONTRACT } from "./constants";
 
 export async function fetchUserNft(address, setNfts) {
@@ -30,5 +31,15 @@ export function fetchCollectionNft(collectionAddress, setCollectionName, setNfts
     if (collectionAddress === MOON_BIRDS_CONTRACT && moonBirds) {
         setNfts(moonBirds.CollectionTokens);
         setCollectionName(moonBirds.CollectionName);
+    }
+}
+
+export async function fetchNftMetadata(address, tokenId) {
+    try {
+        const res = await getNftMetadata(address, tokenId);
+        return res.data;
+    }
+    catch (e) {
+        console.warn(e);
     }
 }

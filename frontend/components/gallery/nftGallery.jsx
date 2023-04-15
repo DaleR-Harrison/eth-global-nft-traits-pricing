@@ -18,7 +18,7 @@ export default function NFTGallery({setIsloading, collectionAddress, boredApes, 
         {nfts?.length ? (
           <div className={styles.nfts_display}>
           {nfts.map((nft) => {
-            return <NftCard key={nft.TokenId} nft={nft} collectionName={collectionName} />;
+            return <NftCard key={nft.TokenId} nft={nft} collectionName={collectionName} collectionAddress={collectionAddress} />;
           })}
           </div>
         ) : (

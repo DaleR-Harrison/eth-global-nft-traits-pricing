@@ -8,11 +8,12 @@ import { SHOP_CONTRACT } from "../helpers/constants";
 import { default as PricingOracleAbi } from "../PricingOracleABI.json";
 import { default as NFTDealerABI } from "../NFTDealerABI.json";
 import NftModal from "../components/modal/nftModal";
+import { fetchNftMetadata } from "../helpers/fetchNft";
 
 import styles from "../styles/NftGallery.module.css";
 import { ethers } from "ethers";
 
-export default function NftCard({ nft, collectionName }) {
+export default function NftCard({ nft, collectionName, collectionAddress }) {
   const [opened, openModal] = useState(false);
   const [nftData, setNftData] = useState({PricingData: {}});
   const name = collectionName ?? nft.title;
@@ -152,6 +153,14 @@ export default function NftCard({ nft, collectionName }) {
   }
 
   // console.log(price && parseFloat(price).toFixed(3), 'price');
+
+  useEffect(() => {
+    const getNftMd = async () => {
+      const res = await fetchNftMetadata(collectionAddress, nft.TokenId || nft.tokenId);
+      console.log("nftmd", res);
+    }
+    getNftMd();
+  },[])
 
   return (
     <>
