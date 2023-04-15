@@ -28,7 +28,7 @@ interface IPricingOracle {
 
 contract NFTDealer is Helper {
 
-    address public owner;
+    address public shopOwner;
     IPricingOracle public pricingOracle;
 
     uint256 public paymentInterval = 42 days;
@@ -36,13 +36,20 @@ contract NFTDealer is Helper {
 
     modifier onlyShopOwner() {
         require(
-            msg.sender == owner,
-            "NFTDealer: NOT_OWNER"
+            msg.sender == shopOwner,
+            "NFTDealer: NOT_SHOP_OWNER"
         );
         _;
     }
 
+    enum LoanStatus {
+        ACTIVE,
+        PAID,
+        LIQUIDATED
+    }
+
     struct Loan {
+        LoanStatus status;
         uint256 lastPayment;
         uint256 borrowAmount;
         address borrowAddress;
@@ -71,7 +78,7 @@ contract NFTDealer is Helper {
     constructor(
         IPricingOracle _pricingOracle
     ) {
-        owner = msg.sender;
+        shopOwner = msg.sender;
         pricingOracle = _pricingOracle;
     }
 
@@ -119,6 +126,7 @@ contract NFTDealer is Helper {
         );
 
         loans[loanCount] = Loan({
+            status: LoanStatus.ACTIVE,
             lastPayment: block.timestamp,
             borrowAmount: _borrowAmount,
             borrowAddress: msg.sender,
@@ -143,6 +151,11 @@ contract NFTDealer is Helper {
     {
         Loan memory loan = loans[_loanId];
 
+        require(
+            loan.status == LoanStatus.ACTIVE,
+            "NFTDealer: INACTIVE_LOAN"
+        );
+
         uint256 timePassed = block.timestamp
             - loan.lastPayment;
 
@@ -165,5 +178,29 @@ contract NFTDealer is Helper {
             loan.collectionAddress,
             loan.tokenId
         );
+
+        loans[_loanId].status = LoanStatus.PAID;
+    }
+
+    function liquidateLoan(
+        uint256 _loanId
+    )
+        external
+    {
+        Loan memory loan = loans[_loanId];
+
+        require(
+            loan.status == LoanStatus.ACTIVE,
+            "NFTDealer: INACTIVE_LOAN"
+        );
+
+        _transferNFT(
+            address(this),
+            shopOwner,
+            loan.collectionAddress,
+            loan.tokenId
+        );
+
+        loans[_loanId].status = LoanStatus.LIQUIDATED;
     }
 }
