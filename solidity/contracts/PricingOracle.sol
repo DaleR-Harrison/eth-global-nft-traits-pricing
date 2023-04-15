@@ -34,15 +34,13 @@ contract PricingOracle {
     }
 
     function setPriceFeed(
-        address _token,
-        address _priceFeed
+        address _collectionAddress,
+        IChainLinkFeeds _chainLinkFeed
     )
         external
         onlyDataSupplier
     {
-        priceFeeds[_token] = IChainLinkFeeds(
-            _priceFeed
-        );
+        priceFeeds[_collectionAddress] = _chainLinkFeed;
     }
 
     function getFloorPrice(
