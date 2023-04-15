@@ -28,6 +28,7 @@ contract NFTDealer {
 
     address public owner;
     IPricingOracle public pricingOracle;
+    uint256 public paymentInterval = 42 days;
 
     modifier onlyShopOwner() {
         require(
@@ -128,6 +129,22 @@ contract NFTDealer {
         );
 
         return true;
+    }
+
+    function repayLoan(
+        uint256 _loanId
+    )
+        external
+    {
+        Loan memory loan = loans[loanCount];
+
+        uint256 timePassed = block.timestamp
+            - loan.lastPayment;
+
+        require(
+            timePassed < paymentInterval,
+            "NFTDealer: TOO_LATE"
+        );
     }
 
     function _transferFromNFT(
