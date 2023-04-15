@@ -12,8 +12,6 @@ interface IChainLinkFeeds {
 
 contract PricingOracle {
 
-    IChainLinkFeeds public chainLinkFeeds;
-
     address public oracleDataSupplier;
 
     mapping(address => bytes32) public merkleTrees;
