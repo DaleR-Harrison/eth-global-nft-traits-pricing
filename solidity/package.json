@@ -6,7 +6,8 @@
     },
     "scripts": {
         "local-chain": "npx hardhat node --port 9540",
-        "forks-chain": "npx hardhat node --fork https://polished-blue-dew.discover.quiknode.pro/d22bdce5e04c6bbac3e581357048a89edfbeb770/ --fork-block-number 16827927 --port 9540"
+        "forks-chain": "npx hardhat node --fork https://polished-blue-dew.discover.quiknode.pro/d22bdce5e04c6bbac3e581357048a89edfbeb770/ --fork-block-number 16827927 --port 9540",
+        "tests": "npx hardhat test"
     },
     "devDependencies": {
         "@ethersproject/abi": "^5.4.7",
