@@ -3,6 +3,7 @@ import { useAccount } from "wagmi";
 
 import styles from "../../styles/NftGallery.module.css"
 import NftCard from "../nftCard"; 
+import { BORED_APES_CONTRACT, MOON_BIRDS_CONTRACT } from "../../pages/constants.ts"
 
 import {
   default as BoredApes
@@ -14,7 +15,7 @@ import {
 export default function NFTGallery({}) {
   const [nfts, setNfts] = useState();
   const [isLoading, setIsloading] = useState(false);
-  const [collectionAddress, setCollectionAddress] = useState("0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D");
+  const [collectionAddress, setCollectionAddress] = useState(BORED_APES_CONTRACT);
   const [collectionName, setCollectionName] = useState("BoredApes");
 
   const changeCollection = (e) => {
@@ -43,8 +44,8 @@ export default function NFTGallery({}) {
         <div className={styles.gallery_header}>
           <h1>Supported collections</h1>
           <div className={styles.button_wrapper}>
-            <button value="0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D" className={styles.collection_button} onClick={(e) => changeCollection(e)}>{BoredApes.CollectionName}</button>
-            <button value="0x23581767a106ae21c074b2276D25e5C3e136a68b" className={styles.collection_button} onClick={(e) => changeCollection(e)}>{MoonBirds.CollectionName}</button>
+            <button value={BORED_APES_CONTRACT} className={styles.collection_button} onClick={(e) => changeCollection(e)}>{BoredApes.CollectionName}</button>
+            <button value={MOON_BIRDS_CONTRACT} className={styles.collection_button} onClick={(e) => changeCollection(e)}>{MoonBirds.CollectionName}</button>
           </div>
         </div> 
       </div>
