@@ -68,19 +68,6 @@ export default function NFTGallery({}) {
           </div>
         </div>
       )}
-
-      {nfts?.length && (
-        <div>
-          <a
-            className={styles.button_black}
-            onClick={() => {
-              fetchNFTs();
-            }}
-          >
-            Load more
-          </a>
-        </div>
-      )}
     </div>
   );
 }
