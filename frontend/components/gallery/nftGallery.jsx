@@ -4,12 +4,12 @@ import styles from "../../styles/NftGallery.module.css"
 import NftCard from "../nftCard";
 import { fetchCollectionNft } from "../../helpers/fetchNft.js"
 
-export default function NFTGallery({setIsloading, collectionAddress, boredApes, moonBirds}) {
+export default function NFTGallery({setIsloading, collectionAddress, boredApes, moonBirds, doodles}) {
   const [nfts, setNfts] = useState();
   const [collectionName, setCollectionName] = useState("BoredApes");
 
   useEffect(() => {
-    fetchCollectionNft(collectionAddress, setCollectionName, setNfts, boredApes, moonBirds);
+    fetchCollectionNft(collectionAddress, setCollectionName, setNfts, boredApes, moonBirds, doodles);
     setIsloading(false);
   }, [collectionAddress]);
 

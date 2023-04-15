@@ -5,7 +5,7 @@ import styles from "../styles/NftGallery.module.css";
 import NFTGallery from "./gallery/nftGallery";
 import UserNFTGallery from "./gallery/userNftGallery";
 
-import { BORED_APES_CONTRACT } from "../helpers/constants";
+import { BORED_APES_CONTRACT, DOODLES_CONTRACT } from "../helpers/constants";
 import { MOON_BIRDS_CONTRACT } from "../helpers/constants";
 import getCollectionData from "../pages/api/getCollectionData";
 
@@ -15,6 +15,7 @@ export default function NftCollection() {
     const [collectionAddress, setCollectionAddress] = useState(BORED_APES_CONTRACT);
     const [moonBirds, setMoonBirds] = useState({});
     const [boredApes, setBoredApes] = useState({});
+    const [doodles, setDoodles] = useState({});
 
     const changeCollection = (e) => {
         setCollectionAddress(e.target.value);
@@ -24,8 +25,10 @@ export default function NftCollection() {
     const getCollections = async () => {
       const baRes = await getCollectionData(BORED_APES_CONTRACT);
       const mbRes = await getCollectionData(MOON_BIRDS_CONTRACT);
+      const dRes = await getCollectionData(DOODLES_CONTRACT);
       setMoonBirds(mbRes);
       setBoredApes(baRes);
+      setDoodles(dRes);
     }
 
     getCollections();
@@ -39,6 +42,7 @@ return (
         <div className={styles.button_wrapper}>
             <button value={BORED_APES_CONTRACT} className={styles.collection_button} onClick={(e) => changeCollection(e)}>{boredApes.CollectionName}</button>
             <button value={MOON_BIRDS_CONTRACT} className={styles.collection_button} onClick={(e) => changeCollection(e)}>{moonBirds.CollectionName}</button>
+            <button value={DOODLES_CONTRACT} className={styles.collection_button} onClick={(e) => changeCollection(e)}>{doodles.CollectionName}</button>
         </div>
         )}
     </div>
@@ -48,7 +52,7 @@ return (
             <p>Loading...</p>
             </div>
         ) : (
-            <>{isConnected ? <UserNFTGallery setIsloading={setIsloading} /> : <NFTGallery setIsloading={setIsloading} collectionAddress={collectionAddress} boredApes={boredApes} moonBirds={moonBirds} />}</>
+            <>{isConnected ? <UserNFTGallery setIsloading={setIsloading} /> : <NFTGallery setIsloading={setIsloading} collectionAddress={collectionAddress} boredApes={boredApes} moonBirds={moonBirds} doodles={doodles} />}</>
         )}
     </div>
     );
