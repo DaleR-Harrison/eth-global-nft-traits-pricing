@@ -2,10 +2,13 @@ import { useEffect, useState } from "react";
 import { useAccount } from "wagmi";
 
 import styles from "../../styles/NftGallery.module.css";
-import NftCard from "../nftCard"; 
+import NftCard from "../nftCard";
 import { fetchUserNft } from "../../helpers/fetchNft.js";
 
+import { SUPPORTED_COLLECTIONS } from "../../pages/constants";
+
 export default function UserNFTGallery({setIsloading}) {
+
   const [nfts, setNfts] = useState();
   const { address } = useAccount();
 
@@ -19,12 +22,16 @@ export default function UserNFTGallery({setIsloading}) {
         {nfts?.length ? (
           <div className={styles.nfts_display}>
           {nfts.map((nft) => {
-            return <NftCard key={nft.TokenId} nft={nft} collectionName={collectionName} />;
+            if (SUPPORTED_COLLECTIONS.includes(nft.contract) == false) {
+              return null;
+            }
+            console.log(nft, 'nft');
+            return <NftCard key={nft.TokenId} nft={nft} collectionName={nft.collectionName} />;
           })}
           </div>
         ) : (
           <div className={styles.loading_box}>
-            <p>No NFTs found for this address</p>
+            <p>No Data Found</p>
           </div>
         )}
     </div>
