@@ -4,52 +4,38 @@ import { useAccount } from "wagmi";
 import styles from "../../styles/NftGallery.module.css"
 import NftCard from "../nftCard"; 
 
+import {
+  default as BoredApes
+} from "../../../hackend/data/BoredApes.json";
+import {
+  default as MoonBirds
+} from "../../../hackend/data/MoonBirds.json";
+
 export default function NFTGallery({}) {
   const [nfts, setNfts] = useState();
-  const [pageKey, setPageKey] = useState();
   const [isLoading, setIsloading] = useState(false);
-  const [collectionAddress, setCollectionAddress] = useState("0x8a90CAb2b38dba80c64b7734e58Ee1dB38B8992e");
+  const [collectionAddress, setCollectionAddress] = useState("0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D");
+  const [collectionName, setCollectionName] = useState("BoredApes");
 
   const changeCollection = (e) => {
-    setNfts();
-    setPageKey();
     setCollectionAddress(e.target.value);
   };
 
-  const fetchNFTs = async (pagekey) => {
-    if (!pageKey) setIsloading(true);
-    const endpoint = "/api/getNftsForCollection";
-    try {
-      const res = await fetch(endpoint, {
-        method: "POST",
-        body: JSON.stringify({
-          address: collectionAddress,
-          pageKey: pagekey ? pagekey : null,
-          chain: "ETH_MAINNET",
-          excludeFilter: false,
-        }),
-      }).then((res) => res.json());
-      if (nfts?.length && pageKey) {
-        setNfts((prevState) => [...prevState, ...res.nfts]);
-      } else {
-        setNfts();
-        setNfts(res.nfts);
-      }
-      if (res.pageKey) {
-        setPageKey(res.pageKey);
-      } else {
-        setPageKey();
-      }
-    } catch (e) {
-      console.log(e);
+  const fetchNFTs = async () => {
+    if (collectionAddress === BoredApes.CollectionAddress) {
+      setNfts(BoredApes.CollectionTokens);
+      setCollectionName(BoredApes.CollectionName);
     }
-
+    else {
+      setNfts(MoonBirds.CollectionTokens);
+      setCollectionName(MoonBirds.CollectionName);
+    }
     setIsloading(false);
   };
 
   useEffect(() => {
     fetchNFTs();
-  }, []);
+  }, [collectionAddress]);
 
   return (
     <div className={styles.nft_gallery_page}>
@@ -72,7 +58,7 @@ export default function NFTGallery({}) {
           <div className={styles.nfts_display}>
             {nfts?.length ? (
               nfts.map((nft) => {
-                return <NftCard key={nft.tokenId} nft={nft} />;
+                return <NftCard key={nft.TokenId} nft={nft} name={collectionName}/>;
               })
             ) : (
               <div className={styles.loading_box}>
@@ -83,12 +69,12 @@ export default function NFTGallery({}) {
         </div>
       )}
 
-      {pageKey && nfts?.length && (
+      {nfts?.length && (
         <div>
           <a
             className={styles.button_black}
             onClick={() => {
-              fetchNFTs(pageKey);
+              fetchNFTs();
             }}
           >
             Load more

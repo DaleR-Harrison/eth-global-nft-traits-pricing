@@ -80,6 +80,7 @@
   border-radius: 12px;
   padding: 8px;
   border: 1px solid #cfd9f0;
+  cursor: pointer;
 }
 
 .image_container {
@@ -154,14 +155,14 @@
 
 .description_container {
   margin-top: 0.5em;
-  display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 90%;
   font-size: 14px;
   color: #4e4e4e;
+}
+
+.traits {
+  margin-right: 8px;
 }
 
 @media screen and (max-width: 560px) {
