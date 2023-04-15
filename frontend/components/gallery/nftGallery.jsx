@@ -4,6 +4,9 @@ import styles from "../../styles/NftGallery.module.css"
 import NftCard from "../nftCard";
 import { fetchCollectionNft } from "../../helpers/fetchNft.js"
 
+import { BORED_APES_CONTRACT, MOON_BIRDS_CONTRACT } from "../../pages/constants";
+import getCollectionData from "../../pages/api/getCollectionData";
+
 export default function NFTGallery({setIsloading, collectionAddress}) {
   const [nfts, setNfts] = useState();
   const [collectionName, setCollectionName] = useState("BoredApes");
