@@ -14,6 +14,7 @@ interface IPricingOracle {
     function getTokenPrice(
         address _collectionAddress,
         uint256 _tokenId,
+        uint256 _merkleIndex,
         uint256 _floorPercent,
         uint256 _maximumPrice,
         bytes32[] memory _proof
@@ -67,5 +68,31 @@ contract NFTDealer {
         payable(msg.sender).transfer(
             _amount
         );
+    }
+
+    function borrowETH(
+        uint256 _borrowAmount,
+        address _collectionAddress,
+        uint256 _tokenId,
+        uint256 _merkleIndex,
+        uint256 _floorPercent,
+        uint256 _maximumPrice,
+        bytes32[] memory _proof
+    )
+        external
+        returns (bool)
+    {
+        uint256 tokenPrice = pricingOracle.getTokenPrice(
+            _collectionAddress,
+            _tokenId,
+            _merkleIndex,
+            _floorPercent,
+            _maximumPrice,
+            _proof
+        );
+
+
+
+        return true;
     }
 }
