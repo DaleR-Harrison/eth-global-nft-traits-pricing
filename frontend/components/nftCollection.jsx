@@ -48,7 +48,7 @@ return (
             <p>Loading...</p>
             </div>
         ) : (
-            <>{isConnected ? <UserNFTGallery setIsloading={setIsloading} /> : <NFTGallery setIsloading={setIsloading} collectionAddress={collectionAddress} />}</>
+            <>{isConnected ? <UserNFTGallery setIsloading={setIsloading} /> : <NFTGallery setIsloading={setIsloading} collectionAddress={collectionAddress} boredApes={boredApes} moonBirds={moonBirds} />}</>
         )}
     </div>
     );
