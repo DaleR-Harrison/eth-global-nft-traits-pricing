@@ -25,14 +25,17 @@ export default function NftCard({ nft, collectionName }) {
   }
 
   useEffect(() => {
+
     const getNftPricing = async () => {
       const res = await getPricingData(name, nft.TokenId);
-      console.log(res);
+      console.log(res, 'res');
       setNftData(res);
     }
 
     console.log("hello");
-    getNftPricing();
+    if (nftData && nftData.PricingData.proof == undefined) {
+      getNftPricing();
+    }
   }, [name]);
 
   console.log(name);
@@ -59,7 +62,8 @@ export default function NftCard({ nft, collectionName }) {
       onError: (err) => { console.error(err)}
     });
 
-  console.log("data", result);
+  // console.log("data", result);
+  console.log("nftData", nftData);
 
   return (
     <>

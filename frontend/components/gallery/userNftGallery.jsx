@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import { useAccount } from "wagmi";
-
 import styles from "../../styles/NftGallery.module.css";
 import NftCard from "../nftCard";
 import { fetchUserNft } from "../../helpers/fetchNft.js";
-
 import { SUPPORTED_COLLECTIONS } from "../../pages/constants";
 
 export default function UserNFTGallery({setIsloading}) {
@@ -25,7 +23,7 @@ export default function UserNFTGallery({setIsloading}) {
             if (SUPPORTED_COLLECTIONS.includes(nft.contract) == false) {
               return null;
             }
-            console.log(nft, 'nft');
+            // console.log(nft, 'nft');
             return <NftCard key={nft.TokenId} nft={nft} collectionName={nft.collectionName} />;
           })}
           </div>

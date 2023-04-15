@@ -10,7 +10,7 @@ import { MOON_BIRDS_CONTRACT } from "../pages/constants";
 import getCollectionData from "../pages/api/getCollectionData";
 
 export default function NftCollection() {
-    const { isConnected, isConnecting } = useAccount();
+    const { isConnected, isConnecting, account } = useAccount();
     const [isLoading, setIsloading] = useState(false);
     const [collectionAddress, setCollectionAddress] = useState(BORED_APES_CONTRACT);
     const [moonBirds, setMoonBirds] = useState({});
@@ -29,7 +29,7 @@ export default function NftCollection() {
     }
 
     getCollections();
-  });
+  }, []);
 
 return (
     <div className={styles.nft_gallery_page}>
