@@ -4,7 +4,8 @@
     "TraitTypes": {
         "face": {
             "mustache": [
-                "0"
+                "0",
+                "1829"
             ],
             "holographic beard": [
                 "1"
@@ -62,6 +63,9 @@
             ],
             "green mullet": [
                 "10"
+            ],
+            "pink toque": [
+                "1829"
             ]
         },
         "body": {
@@ -95,6 +99,9 @@
             ],
             "leopard hoodie": [
                 "10"
+            ],
+            "green blazer": [
+                "1829"
             ]
         },
         "background": {
@@ -119,7 +126,8 @@
                 "7"
             ],
             "iridescent": [
-                "8"
+                "8",
+                "1829"
             ],
             "light blue": [
                 "9"
@@ -135,7 +143,8 @@
             "gradient 2": [
                 "1",
                 "6",
-                "7"
+                "7",
+                "1829"
             ],
             "purple": [
                 "2",
@@ -162,8 +171,11 @@
             "pearl": [
                 "8",
                 "10"
+            ],
+            "hoop": [
+                "1829"
             ]
         }
     },
-    "GenerationTime": "2023-04-15T08:43:21.192Z"
+    "GenerationTime": "2023-04-15T11:36:04.719Z"
 }

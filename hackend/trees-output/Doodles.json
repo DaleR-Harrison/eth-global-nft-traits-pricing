@@ -1,7 +1,7 @@
 {
     "CollectionName": "Doodles",
     "CollectionAddress": "0x8a90CAb2b38dba80c64b7734e58Ee1dB38B8992e",
-    "MerkleRoot": "0x684283e30477c4ac5893adafde3f4ab72a05ec7ccee04776bb1de0ce05aa8037",
+    "MerkleRoot": "0x340b392b5addf09e8db819d14d1cb99f552f825f1119224b7f265abe9aa70e87",
     "PricingData": [
         {
             "index": 0,
@@ -9,9 +9,9 @@
             "percent": "60",
             "ceiling": "3000000000000000000",
             "proof": [
-                "0xc3540e6de99008d874b6b318471246d99c485d1df64d72c6fcd4ce8d9718d378",
-                "0xd954de3d8e49ff2be1ce9e342faae7941b468b73ddfc27fe08c9fb0b72c541ba",
-                "0xe6992f8f28ea416247ce7abce4c0833f117eac418fb2ecb87c3a0ccff665e1db"
+                "0x70c846c5ee7dc3af4f7f154fe27b1ff6a7376d75b484fd73a59509ec03c8d669",
+                "0xbea7bc0898b170090df6bbfa68c5a9ffa6d285f35a7b4971764eb4b8e758524c",
+                "0x842bf7f852e28c8aed2f5fd7668d3c2558f263ff49d4011a6d836461e0ae3014"
             ]
         },
         {
@@ -20,10 +20,10 @@
             "percent": "60",
             "ceiling": "3000000000000000000",
             "proof": [
-                "0x532a9ea7ffeed793bec65339f026b213a375f24eaf70e600edd5e90e0c478894",
-                "0x9dcbdceb406864330dd6a6841101f637b0e773ce270069b3586dac5181e3ed1a",
-                "0x7e7785ee3ee5d1b9cec0d837b43dd806ba8b002a7af9450839ca35963185f2ca",
-                "0x83db4d3579aa872024911b66ba37c9f718afafde85cb41315c1acc267f545973"
+                "0x6b83e21575a5d63195275dc1c37c35e1306059f4ea1585855e6b34fae93cd613",
+                "0x033ac5b7e13913c416681a901950c127c3cd5bf7c5a99e10dc389b65b1c0917a",
+                "0xfbb52b316c65e38086e56bcf10218d7e8ab58ac4e36c5f21cfd7e6a23809ac60",
+                "0xec654c04500cfda6a659aa78c7c571cbf80dfa51644d6c1826549907ddf64950"
             ]
         },
         {
@@ -32,8 +32,9 @@
             "percent": "60",
             "ceiling": "3000000000000000000",
             "proof": [
-                "0x45887af428ad676d97b4d35f50705b19affcbe426797542b683359fc6c7c9d9c",
-                "0xe6992f8f28ea416247ce7abce4c0833f117eac418fb2ecb87c3a0ccff665e1db"
+                "0xc3540e6de99008d874b6b318471246d99c485d1df64d72c6fcd4ce8d9718d378",
+                "0xd9682f31aae185ccb3e6cc5cbe84ec8a245ddb636ff10b1a6f1d2bef34ddc035",
+                "0x842bf7f852e28c8aed2f5fd7668d3c2558f263ff49d4011a6d836461e0ae3014"
             ]
         },
         {
@@ -42,9 +43,9 @@
             "percent": "60",
             "ceiling": "3000000000000000000",
             "proof": [
-                "0x8555c7ed2648b02b12be2ce946c1d9386ccdba7454309bc82018856ebe070bee",
                 "0xd954de3d8e49ff2be1ce9e342faae7941b468b73ddfc27fe08c9fb0b72c541ba",
-                "0xe6992f8f28ea416247ce7abce4c0833f117eac418fb2ecb87c3a0ccff665e1db"
+                "0xd9682f31aae185ccb3e6cc5cbe84ec8a245ddb636ff10b1a6f1d2bef34ddc035",
+                "0x842bf7f852e28c8aed2f5fd7668d3c2558f263ff49d4011a6d836461e0ae3014"
             ]
         },
         {
@@ -53,10 +54,10 @@
             "percent": "60",
             "ceiling": "3000000000000000000",
             "proof": [
-                "0x70c846c5ee7dc3af4f7f154fe27b1ff6a7376d75b484fd73a59509ec03c8d669",
-                "0xa9467ae9c27b079e741ac586ddecb404edbb1944b4e0cf03c97ecf04fb1956a0",
-                "0x7e7785ee3ee5d1b9cec0d837b43dd806ba8b002a7af9450839ca35963185f2ca",
-                "0x83db4d3579aa872024911b66ba37c9f718afafde85cb41315c1acc267f545973"
+                "0x5e503d89400a339d451df4d9feca50b073f95f835105b276b9a5438cc9bbe271",
+                "0x033ac5b7e13913c416681a901950c127c3cd5bf7c5a99e10dc389b65b1c0917a",
+                "0xfbb52b316c65e38086e56bcf10218d7e8ab58ac4e36c5f21cfd7e6a23809ac60",
+                "0xec654c04500cfda6a659aa78c7c571cbf80dfa51644d6c1826549907ddf64950"
             ]
         },
         {
@@ -65,10 +66,9 @@
             "percent": "60",
             "ceiling": "3000000000000000000",
             "proof": [
-                "0x6b83e21575a5d63195275dc1c37c35e1306059f4ea1585855e6b34fae93cd613",
-                "0xa9467ae9c27b079e741ac586ddecb404edbb1944b4e0cf03c97ecf04fb1956a0",
-                "0x7e7785ee3ee5d1b9cec0d837b43dd806ba8b002a7af9450839ca35963185f2ca",
-                "0x83db4d3579aa872024911b66ba37c9f718afafde85cb41315c1acc267f545973"
+                "0x8555c7ed2648b02b12be2ce946c1d9386ccdba7454309bc82018856ebe070bee",
+                "0xbea7bc0898b170090df6bbfa68c5a9ffa6d285f35a7b4971764eb4b8e758524c",
+                "0x842bf7f852e28c8aed2f5fd7668d3c2558f263ff49d4011a6d836461e0ae3014"
             ]
         },
         {
@@ -77,10 +77,10 @@
             "percent": "80",
             "ceiling": "3000000000000000000",
             "proof": [
-                "0x506fa4d081d9aa2356dd1870e103e627907e380bcd5a796ef8dfea8e3c5d448d",
+                "0x4e7261a0f2af741cc0fb8a67e9891048fcef6431fc78feab021a2bab6d0514c7",
                 "0xa797f4041465fc0fe9288bc5a8602bf7f2652aa0160c26c5f27d46865ae8d4a5",
-                "0x8e32557ac7c8a9815515d4606c5d9162a8f0ac71ff4618897baf2b512180c851",
-                "0x83db4d3579aa872024911b66ba37c9f718afafde85cb41315c1acc267f545973"
+                "0x03262d65c28b6b9e847008cb79c7e931ed9645071ba2004c87f14a9c1c8c60d7",
+                "0xec654c04500cfda6a659aa78c7c571cbf80dfa51644d6c1826549907ddf64950"
             ]
         },
         {
@@ -89,10 +89,10 @@
             "percent": "60",
             "ceiling": "3000000000000000000",
             "proof": [
-                "0x5e503d89400a339d451df4d9feca50b073f95f835105b276b9a5438cc9bbe271",
-                "0x9dcbdceb406864330dd6a6841101f637b0e773ce270069b3586dac5181e3ed1a",
-                "0x7e7785ee3ee5d1b9cec0d837b43dd806ba8b002a7af9450839ca35963185f2ca",
-                "0x83db4d3579aa872024911b66ba37c9f718afafde85cb41315c1acc267f545973"
+                "0x506fa4d081d9aa2356dd1870e103e627907e380bcd5a796ef8dfea8e3c5d448d",
+                "0xfd98a787dd7e189dc7df372ad83e90b700c31cb2f4639e1299bf0e02c71aebd4",
+                "0xfbb52b316c65e38086e56bcf10218d7e8ab58ac4e36c5f21cfd7e6a23809ac60",
+                "0xec654c04500cfda6a659aa78c7c571cbf80dfa51644d6c1826549907ddf64950"
             ]
         },
         {
@@ -102,9 +102,9 @@
             "ceiling": "3000000000000000000",
             "proof": [
                 "0x46655ad44ff9c460c4d01a0236285043c77fd004b96b965262f843e56d4d1084",
-                "0x1900ac055c08c89a43415e3d758178f744c7db1480c0064252ec0fb859810fcd",
-                "0x8e32557ac7c8a9815515d4606c5d9162a8f0ac71ff4618897baf2b512180c851",
-                "0x83db4d3579aa872024911b66ba37c9f718afafde85cb41315c1acc267f545973"
+                "0x20cbc7e4c5f884bd5e0d29f6dfc4d3520d7d7eef58b63f7e859ad56f1364685e",
+                "0x03262d65c28b6b9e847008cb79c7e931ed9645071ba2004c87f14a9c1c8c60d7",
+                "0xec654c04500cfda6a659aa78c7c571cbf80dfa51644d6c1826549907ddf64950"
             ]
         },
         {
@@ -114,9 +114,9 @@
             "ceiling": "3000000000000000000",
             "proof": [
                 "0x142d4acb582574a2d3ab5c65cb7234611dac44e11e8fca5a1ccf1c77a3963111",
-                "0x1900ac055c08c89a43415e3d758178f744c7db1480c0064252ec0fb859810fcd",
-                "0x8e32557ac7c8a9815515d4606c5d9162a8f0ac71ff4618897baf2b512180c851",
-                "0x83db4d3579aa872024911b66ba37c9f718afafde85cb41315c1acc267f545973"
+                "0x20cbc7e4c5f884bd5e0d29f6dfc4d3520d7d7eef58b63f7e859ad56f1364685e",
+                "0x03262d65c28b6b9e847008cb79c7e931ed9645071ba2004c87f14a9c1c8c60d7",
+                "0xec654c04500cfda6a659aa78c7c571cbf80dfa51644d6c1826549907ddf64950"
             ]
         },
         {
@@ -125,12 +125,24 @@
             "percent": "80",
             "ceiling": "3000000000000000000",
             "proof": [
+                "0x532a9ea7ffeed793bec65339f026b213a375f24eaf70e600edd5e90e0c478894",
+                "0xfd98a787dd7e189dc7df372ad83e90b700c31cb2f4639e1299bf0e02c71aebd4",
+                "0xfbb52b316c65e38086e56bcf10218d7e8ab58ac4e36c5f21cfd7e6a23809ac60",
+                "0xec654c04500cfda6a659aa78c7c571cbf80dfa51644d6c1826549907ddf64950"
+            ]
+        },
+        {
+            "index": 11,
+            "tokenId": "1829",
+            "percent": "100",
+            "ceiling": "3000000000000000000",
+            "proof": [
                 "0x46796e276af97bb9ed36600c134d4b129b72c2b8e946b6e221229295609e10e0",
                 "0xa797f4041465fc0fe9288bc5a8602bf7f2652aa0160c26c5f27d46865ae8d4a5",
-                "0x8e32557ac7c8a9815515d4606c5d9162a8f0ac71ff4618897baf2b512180c851",
-                "0x83db4d3579aa872024911b66ba37c9f718afafde85cb41315c1acc267f545973"
+                "0x03262d65c28b6b9e847008cb79c7e931ed9645071ba2004c87f14a9c1c8c60d7",
+                "0xec654c04500cfda6a659aa78c7c571cbf80dfa51644d6c1826549907ddf64950"
             ]
         }
     ],
-    "GenerationTime": "2023-04-15T08:50:16.126Z"
+    "GenerationTime": "2023-04-15T11:37:37.712Z"
 }

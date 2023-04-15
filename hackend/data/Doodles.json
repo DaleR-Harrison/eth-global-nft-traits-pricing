@@ -114,6 +114,17 @@
                 "head": "green",
                 "piercing": "pearl"
             }
+        },
+        {
+            "TokenId": "1829",
+            "TokenTraits": {
+                "face": "mustache",
+                "hair": "pink toque",
+                "body": "green blazer",
+                "background": "iridescent",
+                "head": "gradient 2",
+                "piercing": "hoop"
+            }
         }
     ],
     "GenerationTime": "2023-04-15T06:39:52.176Z"

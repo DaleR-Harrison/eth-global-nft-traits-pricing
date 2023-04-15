@@ -76,6 +76,10 @@
             "green mullet": {
                 "FloorPercent": "60",
                 "MaximumPrice": "3000000000000000000"
+            },
+            "pink toque": {
+                "FloorPercent": "60",
+                "MaximumPrice": "3000000000000000000"
             }
         },
         "body": {
@@ -116,6 +120,10 @@
                 "MaximumPrice": "3000000000000000000"
             },
             "leopard hoodie": {
+                "FloorPercent": "60",
+                "MaximumPrice": "3000000000000000000"
+            },
+            "green blazer": {
                 "FloorPercent": "60",
                 "MaximumPrice": "3000000000000000000"
             }
@@ -196,8 +204,12 @@
             "pearl": {
                 "FloorPercent": "80",
                 "MaximumPrice": "3000000000000000000"
+            },
+            "hoop": {
+                "FloorPercent": "100",
+                "MaximumPrice": "3000000000000000000"
             }
         }
     },
-    "GenerationTime": "2023-04-15T08:43:21.192Z"
+    "GenerationTime": "2023-04-15T11:36:04.719Z"
 }
