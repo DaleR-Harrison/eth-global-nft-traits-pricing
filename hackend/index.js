@@ -59,23 +59,36 @@ app.get('/getPricingData/:collectionName/:tokenId/:stringify?', (req, res) => {
     });
 });
 
-app.get('/getCollectionData/:collectionName', (req, res) => {
-    const { collectionName } = req.params;
+app.get('/getCollectionData/:collectionAddress', (req, res) => {
+    const { collectionAddress } = req.params;
   
     const dataFolderPath = path.join(__dirname, 'data');
-    const jsonFilePath = path.join(dataFolderPath, `${collectionName}.json`);
-  
-    fs.readFile(jsonFilePath, 'utf8', (err, data) => {
-      if (err) {
-        console.error(`Error reading file: ${jsonFilePath}`);
-        res.status(404).json({ message: 'Collection not found' });
-        return;
-      }
-  
-      res.setHeader('Access-Control-Allow-Origin', '*')
-      res.json(JSON.parse(data));
+    
+    fs.readdir(dataFolderPath, 'utf8', (err, files) => {
+        if (err) {
+            console.error(`Error reading directory: ${dataFolderPath}`);
+            res.status(500).json({ message: 'Internal server error' });
+            return;
+        }
+        
+        const allCollectionData = files.map((fileName) => {
+            const filePath = path.join(dataFolderPath, fileName);
+            const fileContent = fs.readFileSync(filePath, 'utf8');
+            return JSON.parse(fileContent);
+        });
+        
+        const matchingCollection = allCollectionData.find((data) => data.CollectionAddress === collectionAddress);
+        
+        if (!matchingCollection) {
+            res.status(404).json({ message: 'Collection not found' });
+            return;
+        }
+        
+        res.setHeader('Access-Control-Allow-Origin', '*');
+    
+        res.json(matchingCollection);
     });
-  });
+});
 
 //Listen to port
 const PORT = parseInt(process.env.PORT) || 8080;
