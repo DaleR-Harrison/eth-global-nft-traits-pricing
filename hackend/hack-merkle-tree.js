@@ -1,6 +1,7 @@
 import fs from "fs";
 import { program } from "commander";
 import { parseBalanceMap } from './src/parse-balance-map.js';
+import { create as createIPFS } from "ipfs";
 
 program.requiredOption(
     "-n, --collectionName <collectionName>"
@@ -77,6 +78,8 @@ const result = parseBalanceMap(
 
 const filePath = `trees-output/${_collectionName}.json`;
 
+const ipfsNode = await createIPFS();
+
 fs.writeFile(
     filePath,
     JSON.stringify(
@@ -84,10 +87,19 @@ fs.writeFile(
         null,
         4
     ),
-    (err) => {
-        console.log(err);
+    async (err) => {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log(`Saved merkle tree data to: ${filePath}`);
+            console.log(`New Merkle Root: ${result["MerkleRoot"]}`);
+
+            // Add the file to IPFS
+            const fileContent = fs.readFileSync(filePath);
+            const fileAdded = await ipfsNode.add({ path: filePath, content: fileContent });
+            const fileCID = fileAdded.cid.toString();
+
+            console.log(`File added to IPFS with CID: ${fileCID}`);
+        }
     }
 );
-
-console.log(`Saved merkle tree data to: ${filePath}`);
-console.log(`New Merkle Root: ${result["MerkleRoot"]}`);
