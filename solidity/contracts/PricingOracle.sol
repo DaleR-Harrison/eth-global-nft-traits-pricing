@@ -20,6 +20,14 @@ contract PricingOracle {
     mapping(address => bytes32) public merkleTrees;
     mapping(address => IChainLinkFeeds) public priceFeeds;
 
+    modifier onlyOwner() {
+        require(
+            msg.sender == owner,
+            "PricingOracle: NOT_OWNER"
+        );
+        _;
+    }
+
     constructor(
         address _chainLinkFeeds
     ) {
