@@ -51,3 +51,9 @@
 	justify-content: center;
 	align-items: center;
 }
+
+.layout {
+ background-image: url("/bg.png"); /* https://ethglobal.com/images/projects-blur.png */
+ width: 100vw;
+ height: 100vh;
+}
