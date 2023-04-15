@@ -21,13 +21,14 @@ export async function fetchUserNft(address, setNfts) {
     }
 }
 
-export async function fetchCollectionNft(collectionAddress, setCollectionName, setNfts) {    
+export function fetchCollectionNft(collectionAddress, setCollectionName, setNfts, boredApes, moonBirds) { 
+
     if (collectionAddress === BORED_APES_CONTRACT) {
-        setNfts(BoredApes.CollectionTokens);
-        setCollectionName(BoredApes.CollectionName);
+        setNfts(boredApes.CollectionTokens);
+        setCollectionName(boredApes.CollectionName);
     }
     else {
-        setNfts(MoonBirds.CollectionTokens);
-        setCollectionName(MoonBirds.CollectionName);
+        setNfts(moonBirds.CollectionTokens);
+        setCollectionName(moonBirds.CollectionName);
     }
 }

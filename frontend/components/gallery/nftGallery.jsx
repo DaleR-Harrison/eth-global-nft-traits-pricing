@@ -7,9 +7,22 @@ import { fetchCollectionNft } from "../../helpers/fetchNft.js"
 export default function NFTGallery({setIsloading, collectionAddress}) {
   const [nfts, setNfts] = useState();
   const [collectionName, setCollectionName] = useState("BoredApes");
+  const [moonBirds, setMoonBirds] = useState();
+  const [boredApes, setBoredApes] = useState();
 
   useEffect(() => {
-    fetchCollectionNft(collectionAddress, setCollectionName, setNfts);
+    const getCollections = async () => {
+      const mbRes = await getCollectionData(BORED_APES_CONTRACT);
+      const baRes = await getCollectionData(MOON_BIRDS_CONTRACT);
+      setMoonBirds(mbRes);
+      setBoredApes(baRes);
+    }
+
+    getCollections();
+  });
+
+  useEffect(() => {
+    fetchCollectionNft(collectionAddress, setCollectionName, setNfts, boredApes, moonBirds);
     setIsloading(false);
   }, [collectionAddress]);
 
