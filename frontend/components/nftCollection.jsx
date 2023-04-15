@@ -22,8 +22,8 @@ export default function NftCollection() {
 
     useEffect(() => {
     const getCollections = async () => {
-      const mbRes = await getCollectionData(BORED_APES_CONTRACT);
-      const baRes = await getCollectionData(MOON_BIRDS_CONTRACT);
+      const baRes = await getCollectionData(BORED_APES_CONTRACT);
+      const mbRes = await getCollectionData(MOON_BIRDS_CONTRACT);
       setMoonBirds(mbRes);
       setBoredApes(baRes);
     }
