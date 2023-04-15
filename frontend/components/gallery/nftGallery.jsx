@@ -10,8 +10,8 @@ import getCollectionData from "../../pages/api/getCollectionData";
 export default function NFTGallery({setIsloading, collectionAddress}) {
   const [nfts, setNfts] = useState();
   const [collectionName, setCollectionName] = useState("BoredApes");
-  const [moonBirds, setMoonBirds] = useState();
-  const [boredApes, setBoredApes] = useState();
+  const [moonBirds, setMoonBirds] = useState({});
+  const [boredApes, setBoredApes] = useState({});
 
   useEffect(() => {
     const getCollections = async () => {
