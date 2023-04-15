@@ -3,19 +3,14 @@ import styles from "../../styles/NftModal.module.css";
 export default function NftModal({openModal}) {
 
 return (
-    <div className={styles.darkBG}>
-      <div className={styles.centered}>
-        <div className={styles.modal}>
-          <div className={styles.modalHeader}>
-            <h5 className={styles.heading}></h5>
-          </div>
+    <div className={styles.modalWrapper}>
+      <div className={styles.modal}>
           <button className={styles.closeBtn} onClick={() => openModal(false)}>
-            close
+            <img src="/close.png" height="20" width="20" />
           </button>
-          <div className={styles.modalContent}>
+          <div className={styles.content}>
           </div>
         </div>
-    </div>
     </div>
     )
 }
