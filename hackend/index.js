@@ -60,8 +60,26 @@ app.get('/getPricingData/:collectionName/:tokenId/:stringify?', (req, res) => {
     });
 });
 
+app.get('/getCollectionData/:collectionName', (req, res) => {
+    const { collectionName } = req.params;
+  
+    const dataFolderPath = path.join(__dirname, 'data');
+    const jsonFilePath = path.join(dataFolderPath, `${collectionName}.json`);
+  
+    fs.readFile(jsonFilePath, 'utf8', (err, data) => {
+      if (err) {
+        console.error(`Error reading file: ${jsonFilePath}`);
+        res.status(404).json({ message: 'Collection not found' });
+        return;
+      }
+  
+      res.setHeader('Access-Control-Allow-Origin', '*')
+      res.json(JSON.parse(data));
+    });
+  });
+
 //Listen to port
 const PORT = parseInt(process.env.PORT) || 8080;
 app.listen(PORT, () => {
-    console.log('Server listening on port ${PORT}')
+    console.log(`Server listening on port ${PORT}`)
 });
