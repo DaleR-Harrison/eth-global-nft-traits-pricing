@@ -74,7 +74,7 @@ export default function NftCard({ nft, collectionName }) {
         </div>}
         <div className={styles.info_container}>
           <div className={styles.title_container}>
-            <h3>{name} #{nft.TokenId}</h3>
+            <h3>{name} #{nft.TokenId || nft.tokenId}</h3>
           </div>
           <hr className={styles.separator} />
           <div className={styles.description_container}>

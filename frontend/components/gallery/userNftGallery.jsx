@@ -25,7 +25,8 @@ export default function UserNFTGallery({setIsloading}) {
             if (SUPPORTED_COLLECTIONS.includes(nft.contract) == false) {
               return null;
             }
-            return <NftCard key={nft.TokenId} nft={nft} collectionName={"collectionName"} />;
+            console.log(nft, 'nft');
+            return <NftCard key={nft.TokenId} nft={nft} collectionName={nft.collectionName} />;
           })}
           </div>
         ) : (
