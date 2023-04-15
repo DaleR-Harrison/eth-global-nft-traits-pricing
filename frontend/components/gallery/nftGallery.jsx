@@ -4,6 +4,7 @@ import { useAccount } from "wagmi";
 import styles from "../../styles/NftGallery.module.css"
 import NftCard from "../nftCard"; 
 import { BORED_APES_CONTRACT, MOON_BIRDS_CONTRACT } from "../../pages/constants.ts"
+import { fetchCollectionNft } from "../helpers/fetchNft.js"
 
 import {
   default as BoredApes
@@ -22,20 +23,8 @@ export default function NFTGallery({}) {
     setCollectionAddress(e.target.value);
   };
 
-  const fetchNFTs = async () => {
-    if (collectionAddress === BoredApes.CollectionAddress) {
-      setNfts(BoredApes.CollectionTokens);
-      setCollectionName(BoredApes.CollectionName);
-    }
-    else {
-      setNfts(MoonBirds.CollectionTokens);
-      setCollectionName(MoonBirds.CollectionName);
-    }
-    setIsloading(false);
-  };
-
   useEffect(() => {
-    fetchNFTs();
+    fetchCollectionNft(collectionAddress, setCollectionName, setIsloading, setNfts);
   }, [collectionAddress]);
 
   return (
