@@ -8,23 +8,22 @@ export default function NFTGallery({}) {
   const [nfts, setNfts] = useState();
   const [pageKey, setPageKey] = useState();
   const [isLoading, setIsloading] = useState(false);
-  // const { address, isConnected } = useAccount();
-  const address = "0xdb5485C85Bd95f38f9def0cA85499eF67dC581c0";
+  const [collectionAddress, setCollectionAddress] = useState("0x8a90CAb2b38dba80c64b7734e58Ee1dB38B8992e");
 
   const changeCollection = (e) => {
-    setNfts()
-    setPageKey()
-    setWalletOrCollectionAddress(address);
+    setNfts();
+    setPageKey();
+    setCollectionAddress(e.target.value);
   };
 
   const fetchNFTs = async (pagekey) => {
     if (!pageKey) setIsloading(true);
-    const endpoint = "/api/getNftsForOwner";
+    const endpoint = "/api/getNftsForCollection";
     try {
       const res = await fetch(endpoint, {
         method: "POST",
         body: JSON.stringify({
-          address: address,
+          address: collectionAddress,
           pageKey: pagekey ? pagekey : null,
           chain: "ETH_MAINNET",
           excludeFilter: false,
@@ -58,8 +57,8 @@ export default function NFTGallery({}) {
         <div className={styles.gallery_header}>
           <h1>Supported collections</h1>
           <div className={styles.button_wrapper}>
-            <button type="button" className={styles.collection_button}>BoredApeYachtClub</button>
-            <button type="button" className={styles.collection_button}>Moonbirds</button>
+            <button value="0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D" className={styles.collection_button} onClick={(e) => changeCollection(e)}>BoredApeYachtClub</button>
+            <button value="0x23581767a106ae21c074b2276D25e5C3e136a68b" className={styles.collection_button} onClick={(e) => changeCollection(e)}>Moonbirds</button>
           </div>
         </div> 
       </div>
@@ -77,7 +76,7 @@ export default function NFTGallery({}) {
               })
             ) : (
               <div className={styles.loading_box}>
-                <p>No NFTs found for the selected address</p>
+                <p>No NFTs found in this collection</p>
               </div>
             )}
           </div>
