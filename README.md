@@ -17,3 +17,6 @@
 
 `yarn hack-merkles-tree -n BoredApes`
 `yarn hack-merkles-tree -n MoonBirds`
+
+
+# Goerli Testnet: https://goerli.etherscan.io/address/0xFadc870ad12c88b621Bb906032Bef2eE2427c42a#readContract
