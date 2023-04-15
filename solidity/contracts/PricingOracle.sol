@@ -28,12 +28,10 @@ contract PricingOracle {
     }
 
     constructor(
-        address _chainLinkFeeds
+        address _collectionAddress,
+        IChainLinkFeeds _chainLinkFeed
     ) {
-        chainLinkFeeds = IChainLinkFeeds(
-            _chainLinkFeeds
-        );
-
+        priceFeeds[_collectionAddress] = _chainLinkFeed;
         oracleDataSupplier = msg.sender;
     }
 
@@ -132,13 +130,5 @@ contract PricingOracle {
         }
 
         return computedHash;
-    }
-
-    function getLatestAnswer()
-        external
-        view
-        returns (uint256)
-    {
-        return chainLinkFeeds.latestAnswer();
     }
 }
