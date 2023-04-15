@@ -4,7 +4,7 @@ import styles from "../../styles/NftGallery.module.css"
 import NftCard from "../nftCard"; 
 import { fetchCollectionNft } from "../../helpers/fetchNft.js"
 
-export default function NFTGallery(setIsloading, collectionAddress, contract) {
+export default function NFTGallery({setIsloading, collectionAddress}) {
   const [nfts, setNfts] = useState();
   const [collectionName, setCollectionName] = useState("BoredApes");
 

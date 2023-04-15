@@ -5,7 +5,7 @@ import styles from "../../styles/NftGallery.module.css";
 import NftCard from "../nftCard"; 
 import { fetchUserNft } from "../../helpers/fetchNft.js";
 
-export default function UserNFTGallery(setIsloading, contract) {
+export default function UserNFTGallery({setIsloading}) {
   const [nfts, setNfts] = useState();
   const { address } = useAccount();
 
