@@ -43,8 +43,8 @@ export default function NFTGallery({}) {
         <div className={styles.gallery_header}>
           <h1>Supported collections</h1>
           <div className={styles.button_wrapper}>
-            <button value="0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D" className={styles.collection_button} onClick={(e) => changeCollection(e)}>BoredApeYachtClub</button>
-            <button value="0x23581767a106ae21c074b2276D25e5C3e136a68b" className={styles.collection_button} onClick={(e) => changeCollection(e)}>Moonbirds</button>
+            <button value="0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D" className={styles.collection_button} onClick={(e) => changeCollection(e)}>{BoredApes.CollectionName}</button>
+            <button value="0x23581767a106ae21c074b2276D25e5C3e136a68b" className={styles.collection_button} onClick={(e) => changeCollection(e)}>{MoonBirds.CollectionName}</button>
           </div>
         </div> 
       </div>
