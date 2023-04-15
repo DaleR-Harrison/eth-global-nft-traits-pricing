@@ -1,6 +1,10 @@
 import BalanceTree from  "./balance-tree.js";
 
-export function parseBalanceMap(_balanceMap, _collectionName) {
+export function parseBalanceMap(
+    _balanceMap,
+    _collectionName,
+    _collectionAddress
+) {
 
     const allKeys = Object.keys(_balanceMap);
     const treeElements = allKeys.map((tokenId) => ({
@@ -42,6 +46,7 @@ export function parseBalanceMap(_balanceMap, _collectionName) {
 
     return {
         "CollectionName": _collectionName,
+        "CollectionAddress": _collectionAddress,
         "MerkleRoot": tree.getHexRoot(),
         "PricingData": result,
         "GenerationTime": new Date().toISOString()

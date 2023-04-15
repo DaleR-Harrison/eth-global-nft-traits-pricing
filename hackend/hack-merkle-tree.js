@@ -21,6 +21,8 @@ const pricingInfo = JSON.parse(
     )
 );
 
+const _collectionAddress = pricingInfo["CollectionAddress"];
+
 let traitInfo = JSON.parse(
     fs.readFileSync(
         `templates/${_collectionName}-sorting.json`,
@@ -69,7 +71,8 @@ const inputMap = allKeys.reduce((item, _data) => {
 
 const result = parseBalanceMap(
     inputMap,
-    _collectionName
+    _collectionName,
+    _collectionAddress
 );
 
 const filePath = `trees-output/${_collectionName}.json`;
