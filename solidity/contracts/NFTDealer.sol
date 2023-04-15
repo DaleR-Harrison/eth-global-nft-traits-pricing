@@ -37,6 +37,16 @@ contract NFTDealer {
         _;
     }
 
+    struct Loan {
+        uint256 lastPayment;
+        uint256 borrowAmount;
+        address borrowAddress;
+        address collectionAddress;
+        uint256 tokenId;
+    }
+
+    mapping(uint256 => Loan) public loans;
+
     event Received(
         address,
         uint256
@@ -109,10 +119,10 @@ contract NFTDealer {
         return true;
     }
 
-     function _transferFromNFT(
+    function _transferFromNFT(
         address _from,
         address _to,
-        address _tokenAddress,
+        address _collectionAddress,
         uint256 _tokenId
     )
         internal
@@ -124,7 +134,7 @@ contract NFTDealer {
             _tokenId
         );
 
-        (bool success, bytes memory resultData) = address(_tokenAddress).call(
+        (bool success, bytes memory resultData) = address(_collectionAddress).call(
             data
         );
 
