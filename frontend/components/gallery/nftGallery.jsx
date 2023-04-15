@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import styles from "../../styles/NftGallery.module.css"
 import NftCard from "../nftCard"; 
-import { fetchCollectionNft } from "../helpers/fetchNft.js"
+import { fetchCollectionNft } from "../../helpers/fetchNft.js"
 
 export default function NFTGallery(setIsloading, collectionAddress) {
   const [nfts, setNfts] = useState();

@@ -3,7 +3,7 @@ import { useAccount } from "wagmi";
 
 import styles from "../../styles/NftGallery.module.css";
 import NftCard from "../nftCard"; 
-import { fetchUserNft } from "../helpers/fetchNft.js";
+import { fetchUserNft } from "../../helpers/fetchNft.js";
 
 export default function UserNFTGallery(setIsloading) {
   const [nfts, setNfts] = useState();
