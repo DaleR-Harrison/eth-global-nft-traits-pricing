@@ -14,7 +14,6 @@ contract PricingOracle {
 
     IChainLinkFeeds public chainLinkFeeds;
 
-    uint256 public price;
     address public owner;
 
     mapping(address => bytes32) public merkleTrees;
@@ -43,10 +42,21 @@ contract PricingOracle {
         address _priceFeed
     )
         external
+        onlyOwner
     {
         priceFeeds[_token] = IChainLinkFeeds(
             _priceFeed
         );
+    }
+
+    function getFloorPrice(
+        address _collectionAddress
+    )
+        public
+        view
+        returns (uint256)
+    {
+        return priceFeeds[_collectionAddress].latestAnswer();
     }
 
     function getLatestAnswer()
