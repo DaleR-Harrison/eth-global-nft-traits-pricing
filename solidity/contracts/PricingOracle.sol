@@ -14,14 +14,14 @@ contract PricingOracle {
 
     IChainLinkFeeds public chainLinkFeeds;
 
-    address public owner;
+    address public oracleDataSupplier;
 
     mapping(address => bytes32) public merkleTrees;
     mapping(address => IChainLinkFeeds) public priceFeeds;
 
-    modifier onlyOwner() {
+    modifier onlyDataSupplier() {
         require(
-            msg.sender == owner,
+            msg.sender == oracleDataSupplier,
             "PricingOracle: NOT_OWNER"
         );
         _;
@@ -34,7 +34,7 @@ contract PricingOracle {
             _chainLinkFeeds
         );
 
-        owner = msg.sender;
+        oracleDataSupplier = msg.sender;
     }
 
     function setPriceFeed(
@@ -42,7 +42,7 @@ contract PricingOracle {
         address _priceFeed
     )
         external
-        onlyOwner
+        onlyDataSupplier
     {
         priceFeeds[_token] = IChainLinkFeeds(
             _priceFeed
