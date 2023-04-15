@@ -3,7 +3,7 @@ import { useAccount } from "wagmi";
 
 import styles from "../../styles/NftGallery.module.css"
 import NftCard from "../nftCard"; 
-import { BORED_APES_CONTRACT, MOON_BIRDS_CONTRACT } from "../../pages/constants.ts"
+import { BORED_APES_CONTRACT, MOON_BIRDS_CONTRACT } from "../../pages/constants.js"
 import { fetchCollectionNft } from "../helpers/fetchNft.js"
 
 import {
