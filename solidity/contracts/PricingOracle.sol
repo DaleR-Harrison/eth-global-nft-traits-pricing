@@ -97,7 +97,7 @@ contract PricingOracle {
 
         uint256 tokenPrice = getFloorPrice(
             _collectionAddress
-        ) * _floorPercent;
+        ) * _floorPercent / 100;
 
         if (tokenPrice > _maximumPrice) {
             tokenPrice = _maximumPrice;
