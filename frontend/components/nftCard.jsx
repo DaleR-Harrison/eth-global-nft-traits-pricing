@@ -17,6 +17,7 @@ export default function NftCard({ nft, collectionName, collectionAddress }) {
   const [opened, openModal] = useState(false);
   const [nftData, setNftData] = useState({PricingData: {}});
   const name = collectionName ?? nft.title;
+  const tokenId = nft.TokenId || nft.tokenId;
 
   const displayTraits = () => {
 
@@ -166,13 +167,9 @@ export default function NftCard({ nft, collectionName, collectionAddress }) {
     <>
       <div className={styles.card_container} onClick={() => write?.()}>
         {<div className={styles.image_container}>
-          {nft.format == "mp4" ? (
-            <video src={nft.media} controls>
-              Your browser does not support the video tag.
-            </video>
-          ) : (
-            <img src={nft.media}></img>
-          )}
+          {nft.media ? 
+            <img src={nft.media}></img> : <img src={`https://live---metadata-5covpqijaa-uc.a.run.app/images/${tokenId}`}></img>
+          }
         </div>}
         <div className={styles.info_container}>
           <div className={styles.title_container}>
@@ -184,7 +181,7 @@ export default function NftCard({ nft, collectionName, collectionAddress }) {
           {
             result && (
               <>
-                <div className={styles.borrow_button}>Borrow Now: {price && parseFloat(price).toFixed(3)} ETH (0.34% APY)</div>
+                <div className={styles.borrow_button}>Borrow: {price && parseFloat(price).toFixed(3)} ETH</div>
               </>
             )
           }

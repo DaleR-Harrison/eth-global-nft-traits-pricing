@@ -1,5 +1,5 @@
 import getNftMetadata from "../pages/api/getNftMetadata";
-import { BORED_APES_CONTRACT, MOON_BIRDS_CONTRACT } from "./constants";
+import { BORED_APES_CONTRACT, DOODLES_CONTRACT, MOON_BIRDS_CONTRACT } from "./constants";
 
 export async function fetchUserNft(address, setNfts) {
     const endpoint = "/api/getNftsForOwner";
@@ -22,7 +22,7 @@ export async function fetchUserNft(address, setNfts) {
     }
 }
 
-export function fetchCollectionNft(collectionAddress, setCollectionName, setNfts, boredApes, moonBirds) { 
+export function fetchCollectionNft(collectionAddress, setCollectionName, setNfts, boredApes, moonBirds, doodles) { 
 
     if (collectionAddress === BORED_APES_CONTRACT && boredApes) {
         setNfts(boredApes.CollectionTokens);
@@ -31,6 +31,10 @@ export function fetchCollectionNft(collectionAddress, setCollectionName, setNfts
     if (collectionAddress === MOON_BIRDS_CONTRACT && moonBirds) {
         setNfts(moonBirds.CollectionTokens);
         setCollectionName(moonBirds.CollectionName);
+    }
+    if (collectionAddress === DOODLES_CONTRACT && doodles) {
+        setNfts(doodles.CollectionTokens);
+        setCollectionName(doodles.CollectionName);
     }
 }
 

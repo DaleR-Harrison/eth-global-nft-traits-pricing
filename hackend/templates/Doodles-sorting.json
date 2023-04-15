@@ -17,10 +17,12 @@
                 "6"
             ],
             "happy": [
-                "4"
+                "4",
+                "7702"
             ],
             "surprised": [
-                "7"
+                "7",
+                "2864"
             ],
             "in love": [
                 "8"
@@ -66,11 +68,18 @@
             ],
             "pink toque": [
                 "1829"
+            ],
+            "holographic afro": [
+                "2864"
+            ],
+            "yellow bowlcut": [
+                "7702"
             ]
         },
         "body": {
             "blue and yellow jacket": [
-                "0"
+                "0",
+                "7702"
             ],
             "purple sweater with satchel": [
                 "1"
@@ -102,6 +111,9 @@
             ],
             "green blazer": [
                 "1829"
+            ],
+            "pink and white jacket": [
+                "2864"
             ]
         },
         "background": {
@@ -134,11 +146,18 @@
             ],
             "pink": [
                 "10"
+            ],
+            "orange": [
+                "2864"
+            ],
+            "space": [
+                "7702"
             ]
         },
         "head": {
             "tan": [
-                "0"
+                "0",
+                "2864"
             ],
             "gradient 2": [
                 "1",
@@ -161,7 +180,8 @@
                 "8"
             ],
             "green": [
-                "10"
+                "10",
+                "7702"
             ]
         },
         "piercing": {
@@ -177,5 +197,5 @@
             ]
         }
     },
-    "GenerationTime": "2023-04-15T11:36:04.719Z"
+    "GenerationTime": "2023-04-15T19:03:00.627Z"
 }
