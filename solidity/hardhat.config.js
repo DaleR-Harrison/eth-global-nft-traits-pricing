@@ -13,6 +13,13 @@ module.exports = {
             }
         },
     },
+    live: {
+        chainId: 1337,
+        allowUnlimitedContractSize: false,
+        blockGasLimit: 100000000,
+        callGasLimit: 100000000,
+        url: "http://127.0.0.1:9540/"
+    },
     solidity: {
         version: "0.8.19",
         settings: {
